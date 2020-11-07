@@ -4,7 +4,9 @@
   "description": "This is an API for Neku, a web development focused on eSports in \u001b[B\u001b[C\u001b[C\u001b[C\u001b[\u001b[ Llatin America",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "standard --fix | snazzy"
   },
   "keywords": [
     "neku",
@@ -14,6 +16,15 @@
     "tournaments",
     "news"
   ],
-  "author": "bit bast",
-  "license": "ISC"
+  "author": "bitbast",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.1"
+  }
 }
