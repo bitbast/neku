@@ -1,0 +1,19 @@
+{
+  "name": "neku-api",
+  "version": "1.0.0",
+  "description": "This is an API for Neku, a web development focused on eSports in \u001b[B\u001b[C\u001b[C\u001b[C\u001b[\u001b[ Llatin America",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "neku",
+    "esports",
+    "videogames",
+    "gamers",
+    "tournaments",
+    "news"
+  ],
+  "author": "bit bast",
+  "license": "ISC"
+}
