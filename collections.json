@@ -1,0 +1,64 @@
+newsCollection = {
+    "article" : {
+        "title" : "Título del artículo",
+        "bodytext" : "Cuerpo de la nota",        
+        "picture" : "Foto de la nota",
+        "author" : "Autor de la nota",
+        "source" : "Fuente de la nota",
+        "date" : "Fecha de la nota"
+    }
+}
+
+tournamentsCollection = {
+    "tournament" : { 
+        "tournamentName" : "Nombre del torneo",
+        "game": "Juego",
+        "county": "País",
+        "country-flag": "Imagen de la bandera del país",
+        "format": "formato del torneo",
+        "date": "fecha de torneo",
+        "time": "hora del torneo",
+        "winner": "jugador ganador",
+        "winner-team": "equipo ganador",
+        "picture": "Foto del torneo"
+    }
+}
+
+teamsCollection {
+    "team":{
+        "team-name": "Nombre del equipo",
+        "team-country": "País de origen del equipo",
+        "team-logo": "Logotipo del equipo",
+        "members": {
+            "gamer": {
+                "name": "nombre del jugador",
+                "father-lastname": "Apellido paterno",
+                "mother-lastname": "Apellido materno",
+                "nick-name": "Sobrenombre del jugador",
+                "gamer-picture" : "Fotografía del jugador",
+                "gamer-profile": "Breve resumen del perfil del jugador",
+                "games-played": {
+                    "game": {
+                        "game-name": "Nombre del juego",
+                        "won-games": "Número de partirdas ganas",
+                        "loose-games": "Número de patidas perdidas",
+                        "time-played": "Tiempo de juego",
+                        "avg-match-time": "Tiempo promedio de partida",
+                        "kills": "asesinatos",
+                        "deaths": "muertes",
+                        "KD": "Ratio de asesinatos/muertes",
+                        "score": "score obtenido en el juego"
+                    }
+                },
+                "tournaments-played":{
+                    "tournament": {
+                        "tournament-name": "nombre del torneo",
+                        "ranking": "Posición obtenida en el torneo",
+                    }
+                } 
+            }
+        }
+    }
+}
+
+
