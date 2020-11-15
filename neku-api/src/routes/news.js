@@ -62,12 +62,12 @@ router.post('/', async (request, response) => {
 router.delete('/:id', async (request, response) => {
   try {
     const { id } = request.params
-    const deltedArticle = await articles.deleteById(id)
+    const deletedArticle = await articles.deleteById(id)
     response.json({
       sucess: true,
       message: 'Article deleted',
       data: {
-        article: deltedArticle
+        article: deletedArticle
       }
     })
   } catch (error) {
