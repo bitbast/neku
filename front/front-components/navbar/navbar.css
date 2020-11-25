@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .navbar {
-    background-color:black;
+    background-color:#121121;
     height: 80px;
 }
 
-.navbar-nav {
+.nav-link {
+    /* width: 25px; */
+    /* height: auto; */
+    margin: 0 .8rem 0 .8rem;
+}
 
+.fas {
+    width: fit-content;
+}
+
+.fab {
+    width: fit-content;
 }
 
 .navbar-toggler:focus, .navbar-toggler:active {
@@ -12,29 +25,32 @@
     box-shadow: none !important;
 }
 
-.fas.fa-plus-circle:hover {
-    background: rgb(251,176,59);
-    background: linear-gradient(90deg, rgba(251,176,59,1) 0%, rgba(209,8,81,1) 35%, rgba(246,22,103,1) 100%);
-}
-
 .form-control {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Oswald", sans-serif;
     border: 0;
     border-radius: 2px;
     margin:0;
 }
 
-.btn {
-    background-color:black;
+.icon-cog {
     color: white;
-    font-family: "Open Sans", sans-serif;
-    border: 1px, solid, #F61667;
+}
+
+.fa-stack:hover{
+    color: #F2AE2E;
+}
+
+.btn {
+    background-color:#A41A21;
+    color: white;
+    font-family: "Exo", sans-serif;
+    border: 2px, solid, #A41A21;
     border-radius: 2px;
     margin:0;
 }
 
-.btn-outline-success:hover {
-    background-color:#F61667;
+.btn:hover {
+    background-color:#F2AE2E;
+    border: 2px, solid, #F2AE2E;
     color: white;
-    border:0;
 }
