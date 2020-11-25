@@ -38,12 +38,12 @@
   height: fit-content;
 }
 
-.carrousel {
+.carousel {
   width: 100%;
   height: fit-content;
 }
 
-img {
+.carousel-item img {
   width: fit-content;
   opacity: .7;
 }
