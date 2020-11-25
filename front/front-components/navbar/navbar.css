@@ -1,0 +1,40 @@
+.navbar {
+    background-color:black;
+    height: 80px;
+}
+
+.navbar-nav {
+
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.fas.fa-plus-circle:hover {
+    background: rgb(251,176,59);
+    background: linear-gradient(90deg, rgba(251,176,59,1) 0%, rgba(209,8,81,1) 35%, rgba(246,22,103,1) 100%);
+}
+
+.form-control {
+    font-family: "Open Sans", sans-serif;
+    border: 0;
+    border-radius: 2px;
+    margin:0;
+}
+
+.btn {
+    background-color:black;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    border: 1px, solid, #F61667;
+    border-radius: 2px;
+    margin:0;
+}
+
+.btn-outline-success:hover {
+    background-color:#F61667;
+    color: white;
+    border:0;
+}

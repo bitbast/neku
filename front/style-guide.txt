@@ -1,0 +1,8 @@
+COLORES:
+    mage-neku: #F61667
+    mage-light: #F84787
+    mage-dark: #D10851
+    mage-dim: #FA78A7
+    mustard: #FBB03B
+    
+FONTS:
