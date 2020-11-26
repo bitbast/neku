@@ -2,68 +2,199 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-    <link rel="stylesheet" href="/front/front-components/main/main.css">
-    <title>navbar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="Enter your description here" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
+  <link rel="stylesheet" href="/front/front-components/main/main.css" />
+  <title>main</title>
 </head>
 
 <body>
-    <!-- MAIN -->
+  <!-- MAIN -->
+  <div class="main">
     <div class="container-fluid">
       <div class="row">
-          <div class="col-12">
-              <h1>SECCIONES (page-anchors)</h1>
+        <div id="heading-category" class="col-12">
+          <h2>SUBE TU NIVEL DE JUEGO</h2>
+          <h5>Descubre lo último que tenemos para ti:</h5>
+        </div>
+        <!-- CATEGORIAS -->
+        <div id="games" class="home-category col-12 col-sm-12 col-md-6 col-lg-3">
+          <h2>Juegos</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x500" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-12">
-              <h1>CONVIÉRTETE EN PRO</h1>
-              <h2>Juegos</h2>
-              <p>Card-video-thumb</p>
-              <h2>Ligas</h2>
-              <p>card-video-thumb</p>
-              <h2>Gadgets</h2>
-              <p>card-video-thumb</p>
-              <h2>Guarida</h2>
-              <p>card-video-thumb</p>
+        </div>
+        <div id="leagues" class="home-category col-12 col-sm-12 col-md-6 col-lg-3">
+          <h2>Ligas</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x500" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
           </div>
+        </div>
+        <div id="gadgets" class="home-category col-12 col-sm-12 col-md-6 col-lg-3">
+          <h2>Gadgets</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x500" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="den" class="home-category col-12 col-sm-12 col-md-6 col-lg-3">
+          <h2>Guarida</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x500" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- NOTICIAS -->
       <div class="row">
-          <div class="col-12">
-              <h1>NOTICIAS</h1>
-              <p>card-video-thumb</p>
-              <p>resumen</p>
-              <button>boton</button>
+        <div id="games" class="home-news col-12">
+          <h2>NOTICIAS</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x400" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-12">
-              <h1>TORNEOS</h1>
-              <p>card-video-thumb</p>
-              <p>resumen</p>
-              <button>boton</button>
+          <p>resumen</p>
+          <button>boton</button>
+        </div>
+        <div id="games" class="home-news col-12">
+          <h2>TORNEOS</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x200" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-12">
-              <h1>RESULTADOS</h1>
-              <p>card-video-thumb</p>
-              <p>resumen</p>
-              <button>boton</button>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <button>boton</button>
+        </div>
+        <div id="games" class="home-news col-12">
+          <h2>RESULTADOS</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x200" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-12">
-              <h1>COMUNIDAD</h1>
-              <p>card-video-thumb</p>
-              <p>resumen</p>
-              <button>boton</button>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <button>boton</button>
+        </div>
+        <div id="games" class="home-news col-12">
+          <h2>COMUNIDAD</h2>
+          <div class="card">
+            <div class="card-body">
+              <img src="https://source.unsplash.com/random/800x200" class="card-img-top" alt="...">
+              <div class="card-caption centered">
+                <h5>Title</h5>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
           </div>
+          <p>resumen</p>
+          <button>boton</button>
+        </div>
       </div>
+    </div>
   </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ COLORES OFICIALES:
     Dark-blue: #0A1E59
     Deep-purple: #181733
     Yellow: #F2AE2E
-    Live-red: #A41A21
+    Live-red: #D42C34
     
 FONTS:
     Oswald: 
