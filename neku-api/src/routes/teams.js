@@ -1,19 +1,18 @@
 const express = require('express')
-const teams = require('../models/teams')
 
-const tournaments = require('../usecases/teams')
+const teams = require('../usecases/teams')
 
 const router = express.Router()
 
 router.get('/', async (request, response) => {
   try {
-    const allTeams = await tournaments.getAll()
+    const allTeams = await teams.getAll()
 
     response.json({
       success: true,
       message: 'All Teams',
       data: {
-        tournament: allTeams
+        team: allTeams
       }
     })
   } catch (error) {
@@ -35,7 +34,7 @@ router.post('/', async (request, response) => {
     } = request.body
 
     if (!teamName) throw new Error('Team Name is required')
-    if (teamCountry) throw new Error('Team County is required')
+    if (!teamCountry) throw new Error('Team Country is required')
     if (!teamLogo) throw new Error('Logo is required')
 
     const newTeam = await teams.create({ teamName, teamCountry, teamLogo, members })

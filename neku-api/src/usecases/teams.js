@@ -12,12 +12,12 @@ function deleteById (id) {
   return Teams.findByIdAndDelete(id)
 }
 
-function updateById (id, newTournamentData) {
-  return Teams.findByIdAndUpdate(id, newTournamentData, { useFindAndModify: false })
+function updateById (id, newTeamData) {
+  return Teams.findByIdAndUpdate(id, newTeamData, { useFindAndModify: false })
 }
 
-function create (tournamentData) {
-  return Teams.create(tournamentData)
+function create (teamData) {
+  return Teams.create(teamData)
 }
 
 module.exports = {

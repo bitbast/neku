@@ -8,7 +8,6 @@ const teamsSchema = new mongoose.Schema({
   },
   teamCountry: {
     type: String,
-    required: true,
     minlength: 2
   },
   teamLogo: {
