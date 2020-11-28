@@ -36,11 +36,6 @@ const tournamentSchema = new mongoose.Schema({
     required: true,
     minlength: 2
   },
-  time: {
-    type: String,
-    required: true,
-    minlength: 2
-  },
   winner: {
     type: String,
     required: true,
