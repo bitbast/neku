@@ -41,13 +41,13 @@
 }
 
 .TournamentTitle{
-    font-size: 40px !important;
+    font-size: 1em !important;
     color: white;
     font-weight: bold;
 }
 
 .TournamentData{
-    font-size: 40px !important;
+    font-size: 1em !important;
     color: #F2AE2E;
     font-weight: bold;
 }
