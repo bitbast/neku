@@ -5,8 +5,10 @@
   box-sizing: border-box;
 }
 
+/* ------------ NAVBAR ------------- */
+
 .navbar {
-    background-color:#06133b;
+    background-color:#121121;
     height: 80px;
 }
 
@@ -74,6 +76,7 @@
     color: white;
 }
 
+/* ------------ HEADER ------------- */
 
 .header {
   padding: 3rem 2rem 3rem 2rem;
@@ -113,7 +116,7 @@
 
 .carousel-item img {
   width: fit-content;
-  opacity: .7;
+  opacity: .9;
 }
 
 .carousel-caption h5, p {
@@ -130,9 +133,24 @@
   opacity: .8;
 }
 
+/* ------------ MAIN SECTION ------------- */
+
+.main h1, h2, h3 {
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.main h4, h5, h6 {
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  color: #F2AE2E;
+}
+
 .main {
   height: 100%;
   padding: 2rem;
+  background-color: #181733;
 }
 
 .heading-category h1, h2, h3 {
@@ -154,7 +172,11 @@
 }
 
 .home-category {
-  padding: 20px;
+  padding: 5px;
+}
+
+.home-ranker {
+  padding: 5px;
 }
 
 .card-body {
@@ -198,13 +220,10 @@
   margin: 25px 0 25px 0;
 }
 
-.logo-col {
-  margin: 2rem 0 2rem 0;
-}
+/* ------------ FOOTER ------------- */
 
-#logo-footer {
-  width: 50%;
-  height: auto;
+.footer {
+  background-color: #121121;
 }
 
 .footer-menu {
@@ -213,8 +232,20 @@
   display: flex;
   flex-direction: column;
   color: white; 
-  margin-top: 2rem; 
-  margin-left: 1rem;
+  margin-top: 2rem;
+  padding-top:1rem;
+  padding-left: 2rem;
+}
+
+.footer-link {
+  color: white;
+}
+.footer-link:hover {
+  color: #F2AE2E;
+}
+
+.footer-menu:hover {
+  color: #F2AE2E;
 }
 
 .social-icons-footer {
@@ -235,6 +266,10 @@
   color: white;
 }
 
+.social-icon .fab:hover {
+  color: #F2AE2E;
+}
+
 #aviso {
   background-color: #D42C34;
   color: white;
@@ -248,19 +283,30 @@
   font-family: oswald, sans-serif;
   font-weight: 500;
   margin: 0;
-  padding-right: 1rem;
 }
 
 @media only screen and (min-width: 467px) {
+  .logo-col {
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   
-.social-icons-footer {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+  #logo-footer {
+    transform: scale(1);
+    width:100%;
+    height: auto;
+  }
+
+  .social-icons-footer {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
   }
   
   #search-icon {
@@ -273,4 +319,15 @@
     display: none;
   }
 
+  .logo-col {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+
+  #logo-footer {
+    transform: scale(.7);
+    width: 100%;
+    height: auto;
+  }
 }

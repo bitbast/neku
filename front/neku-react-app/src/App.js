@@ -1,13 +1,13 @@
+// CSS //
 import './App.css';
-// import NavBar from './components/NavBar'
-import NavBar from './components/NavBar'
 
+// COMPONENTS //
+import Navigation from './components/Navigation'
 
 function App() {
   return (
     <div>
-        {/* <NavBar /> */}
-          <NavBar />
+      <Navigation />
     </div>
   );
 }
