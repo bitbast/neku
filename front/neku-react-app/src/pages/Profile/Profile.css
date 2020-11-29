@@ -34,3 +34,24 @@
     font-weight: 900;
     color: #F2AE2E;
 }
+
+.TournamentCard{
+    background: #181733;
+    border-radius: 25px !important;
+}
+
+.TournamentTitle{
+    font-size: 40px !important;
+    color: white;
+    font-weight: bold;
+}
+
+.TournamentData{
+    font-size: 40px !important;
+    color: #F2AE2E;
+    font-weight: bold;
+}
+
+.TournametImg{
+    border-radius: 25px 25px 0 0  !important;
+}

@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Profile.css"
 
@@ -16,7 +16,7 @@ class Profile extends Component {
                             <img width="100%" height="250" src="https://picsum.photos/200" alt="Card image cap" />
                     </Col> 
                 </Row>
-                <Row>
+                <Row className="mt-5">
                     <Col md="4" className="d-flex flex-column justify-content-center align-items center" >
                         <p className="profileStatsTitle text-center mt-5 mb-2">Total de Partidas</p>
                         <h3 className="profileStatsData text-center mb-5">200</h3>
@@ -55,8 +55,81 @@ class Profile extends Component {
                         <h3 className="profileStatsData text-center mb-5">4</h3>
                     </Col>
                 </Row>
-                <Row>
-                    <Col></Col>
+                <Row className="mt-5">
+                    <Col >
+                        <Card className="TournamentCard m-5">
+                            <CardImg top width="100%" height="200" src="https://picsum.photos/200" alt="Tournament" className="TournametImg" />
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Juego:</CardTitle>
+                                <CardText className="TournamentData ml-2">Apex</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Rank:</CardTitle>
+                                <CardText className="TournamentData ml-2">15</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Fecha:</CardTitle>
+                                <CardText className="TournamentData ml-2">Abril 2020</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Tiempo:</CardTitle>
+                                <CardText className="TournamentData ml-2">4 hrs</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">KD:</CardTitle>
+                                <CardText className="TournamentData ml-2">50%</CardText>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card className="TournamentCard m-5">
+                            <CardImg top width="100%" height="200" src="https://picsum.photos/200" alt="Tournament" className="TournametImg" />
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Juego:</CardTitle>
+                                <CardText className="TournamentData ml-2">Apex</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Rank:</CardTitle>
+                                <CardText className="TournamentData ml-2">15</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Fecha:</CardTitle>
+                                <CardText className="TournamentData ml-2">Abril 2020</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Tiempo:</CardTitle>
+                                <CardText className="TournamentData ml-2">4 hrs</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">KD:</CardTitle>
+                                <CardText className="TournamentData ml-2">50%</CardText>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card className="TournamentCard m-5">
+                            <CardImg top width="100%" height="200" src="https://picsum.photos/200" alt="Tournament" className="TournametImg" />
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Juego:</CardTitle>
+                                <CardText className="TournamentData ml-2">Apex</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Rank:</CardTitle>
+                                <CardText className="TournamentData ml-2">15</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Fecha:</CardTitle>
+                                <CardText className="TournamentData ml-2">Abril 2020</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">Tiempo:</CardTitle>
+                                <CardText className="TournamentData ml-2">4 hrs</CardText>
+                            </CardBody>
+                            <CardBody className="d-flex justify-content-center align-items center ">
+                                <CardTitle className="TournamentTitle mr-2" tag="h5">KD:</CardTitle>
+                                <CardText className="TournamentData ml-2">50%</CardText>
+                            </CardBody>
+                        </Card></Col>
                 </Row>
             </Container>
         )
