@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* ---- NAVBAR ---- */
+.navbar {
+    background-color: #121121;;
+    height: 60px;
+}
+
+.navbar-brand {
+    width:100px;
+    height: auto;
+    margin:0;
+    padding:0;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navlinks {
+    margin: 0;
+    padding: 0;
+}
+
+.navlinks p {
+    font-family: oswald, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+    margin:0;
+}
+
+.navlinks p:hover {
+    color:  #F61667;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn p {
+    margin:0;
+    font-family: exo, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+}
+
+/* ---- HEADER ---- */
+.header {
+    background-color: #0C256E;
+    height: auto;
+
+}
+
+.header h1 {
+    font-family: exo, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    line-height: .8;
+}
+
+.header h4 {
+    font-family: oswald, sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #F61667;
+    line-height: .8;
+}
+
+/* ---- CATEGORY CARDS ---- */
+
+.homeCategory {
+    background-color: #181733;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.catCard {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.cardContainer {
+    position: relative;
+    border: 0 !important;
+}
+
+.categoryImg {
+    border-radius: 0 !important;
+}
+
+.titleBox {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px #121121;
+}
+
+/* ---- LATEST NEWS ---- */
+
+.Headings {
+    padding: 2rem 0 2rem 0;
+    height: auto;
+    background-color: #181733;
+}
+
+.Headings h1 {
+    font-family: exo, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    line-height: .8;
+}
+
+.Headings h4 {
+    font-family: oswald, sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #F61667;
+    line-height: .8;
+}
+
+.newsCarousel {
+    padding-bottom: 2em;
+    background-color: #181733;
+}
+
+/* ---- TOURNAMENTS ---- */
+
+.tourStat {
+    display:flex;
+    justify-content: space-between;
+    background-color: #181733 !important;
+    padding-bottom: 2em;
+    height:100%;
+}
+
+.tourImg {
+    border-radius: 0 !important;
+}
+
+.tourTitleBox {
+    position: absolute;
+    top: 1rem;
+    left: .5rem;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px #121121;
+}
+
+/* ---- RANKERS ---- */
+.rankers {
+    background-color: #181733 !important;
+}
+
+.rankCard {
+    padding: 0 0 5em 0;
+}
+
+
+/* ---- FOOTER ---- */
+
+.footer {
+    background-color: #121121;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-evenly;
+}
+
+.nekuLogoFooter {
+    width: 100%;
+    transform: scale(.5);
+    display:flex;
+    justify-content: center;
+}
+
+.footerLinks p {
+    color: white;
+    font-family: exo, sans-serif;
+    font-weight: 300;
+    padding: 0;
+}
+
+.socialIcons {
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aviso {
+    width: 100%;
+    background-color: #F61667;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.aviso p {
+    font-family: oswald, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 570px) {
+    .footer {
+        background-color: #121121;
+        display:flex;
+        align-items:flex-start;
+        justify-content: space-around;
+        padding-top: 1rem;
+    }
+
+    .footerLinks p {
+        color: white;
+        font-family: exo, sans-serif;
+        font-weight: 300;
+        padding: 0;
+        margin-bottom: 0;
+    }   
+
+}
