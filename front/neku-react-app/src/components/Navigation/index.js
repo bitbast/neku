@@ -6,21 +6,9 @@ import {
   Container,
   Row,
   Col,
-  
-  // LATEST NEWS //
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
 
-  // CATEGORIES AND RANKERS //
-  Card,
   CardImg,
-  CardText,
-  CardBody,
   CardTitle,
-  CardSubtitle
 } from 'reactstrap';
 
 // REACT BOOTSTRAP //
@@ -30,7 +18,11 @@ import {
   NavDropdown,
   Form,
   FormControl,
-  Button
+  Table,
+  Button,
+  Carousel,
+  CardDeck,
+  Card
 } from 'react-bootstrap';
 
 
@@ -68,39 +60,6 @@ const Navigation = (props) => {
   // NAVBAR //
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  
-  // NEWS CAROUSEL //
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  }
-
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  }
-
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  }
-
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-      </CarouselItem>
-    );
-  });
 
   return (
     <div>
@@ -129,13 +88,7 @@ const Navigation = (props) => {
               <p>Blog</p>
             </Nav.Link>
           </Nav>
-          <Form inline className="px-3">
-            <FormControl size="sm" type="text" className="searchInput mr-sm-2 p-0" />
-            <Button style={{"background-color":"#F61667", "border":"0"}} size="md" className="btn">
-              <p>BUSCA</p>
-            </Button>
-          </Form>
-          <NavDropdown class="dropdownProfile" title={
+          <NavDropdown class="dropdownProfile order-2" title={
             <IconContext.Provider value={{ color:"white", size:"1.5em"}}>
               <BsController />
             </IconContext.Provider>
@@ -168,26 +121,22 @@ const Navigation = (props) => {
         <Row className="homeCategory">
           <Col className="catCard" xs="6" sm="3" md="3" lg="3">
             <Card className="cardContainer">
-              <CardImg className="categoryImg" top width="100%" src="/front/neku-react-app/src/images/neku-category-cards-juegos.png" alt="Card image cap" />
-              <CardTitle className="titleBox" tag="h5">Juegos</CardTitle>
+              <CardImg className="categoryImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-juegos.png?raw=true" alt="Card image cat" />
             </Card>
           </Col>
           <Col className="catCard" xs="6" sm="3" md="3" lg="3">
             <Card className="cardContainer">
-              <CardImg className="categoryImg" top width="100%" src="/front/neku-react-app/src/images/neku-category-cards-equipos.png" alt="Card image cap" />
-              <CardTitle className="titleBox" tag="h5">Equipos</CardTitle>
+              <CardImg className="categoryImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-equipos.png?raw=true" alt="Card image cat" />
             </Card>          
           </Col>
           <Col className="catCard" xs="6" sm="3" md="3" lg="3">
             <Card className="cardContainer">
-              <CardImg className="categoryImg" top width="100%" src="/front/neku-react-app/src/images/neku-category-cards-gamers.png" alt="Card image cap" />
-              <CardTitle className="titleBox" tag="h5">Gamers</CardTitle>
+              <CardImg className="categoryImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-gamers.png?raw=true" alt="Card image cat" />
             </Card>
           </Col>
           <Col className="catCard" xs="6" sm="3" md="3" lg="3">
             <Card className="cardContainer">
-              <CardImg className="categoryImg" top width="100%" src="/front/neku-react-app/src/images/neku-category-cards-extras.png" alt="Card image cap" />
-              <CardTitle className="titleBox" tag="h5">Extras</CardTitle>
+              <CardImg className="categoryImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-extras.png?raw=true" alt="Card image cat" />
             </Card>
           </Col>
         </Row>
@@ -203,14 +152,41 @@ const Navigation = (props) => {
         </Row>
         <Row>
           <Col className="newsCarousel">
-            <Carousel
-              activeIndex={activeIndex}
-              next={next}
-              previous={previous}>
-              <CarouselIndicators className="slides" items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-              {slides}
-              <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-              <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+            <Carousel interval={1000000}>
+              <Carousel.Item className="carCaption">
+                <img
+                  className="d-block w-100"
+                  src="https://fortnitebr.news/wp-content/uploads/2020/12/Fortnite-Mando-1000x600-364x205.jpg"
+                  alt="First slide"
+                />
+                <Carousel.Caption>
+                  <h3>The Mandalorian en Fortnite</h3>
+                  <p>La Temporada 5 del Capítulo 2 ya está disponible</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item className="carCaption">
+                <img
+                  className="d-block w-100"
+                  src="https://s.yimg.com/ny/api/res/1.2/BLrNn0JfDybDKB.YzCIotA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cosmopolitan_438/c2f19de4a5740bf2988b43a6858b4742"
+                  alt="Third slide"
+                />
+                <Carousel.Caption>
+                  <h3>Congresista revela que jugar LoL la ayudó mentalmente para su trabajo</h3>
+                  <p>Alexandria Ocasio-Cortez estaba lista para los conflictos políticos</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item className="carCaption">
+                <img
+                  className="d-block w-100"
+                  src="https://cdn1.dotesports.com/wp-content/uploads/2020/03/31162532/EUdqZwpXQAEmVop.jpg"
+                  alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                  <h3>Pokémon GO Niantic volvió a aumentar el límite de almacenamiento</h3>
+                  <p>El juego recibió varias mejoras para que administres tu colección de Pokémon</p>
+                </Carousel.Caption>
+              </Carousel.Item>
             </Carousel>
           </Col>
         </Row>
@@ -225,16 +201,211 @@ const Navigation = (props) => {
           </Col>
         </Row>
         <Row className="tourStat">
-          <Col className="tourCard" xs="6" sm="6" md="6" lg="7">
+          <Col className="tourCard" xs="12" sm="12" md="6" lg="7">
             <Card className="tourContainer">
-              <CardImg className="tourImg" top width="100%" src="https://picsum.photos/id/247/300/200" alt="Card image cap" />
-              <CardTitle className="tourTitleBox" tag="h5">EN PROGRESO</CardTitle>
+              <CardImg className="tourImg" top width="100%" src="https://www.dailyesports.gg/wp-content/uploads/2019/07/lol_front-800x400.jpg" alt="Card image cap" />
+              <CardTitle className="tourTitleBox-p" tag="h5">EN PROGRESO</CardTitle>
+              <Table className="tourProgress" striped bordered hover variant="dark">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Alias</th>
+                    <th>Equipo</th>
+                    <th>Puntos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Luis Bastida</td>
+                    <td>BitBast</td>
+                    <td>Koders</td>
+                    <td className="text-right">3,985</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Luis Gomez</td>
+                    <td>Lucho</td>
+                    <td>Koders</td>
+                    <td className="text-right">3,183</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Carlos Silva</td>
+                    <td>DeMentor</td>
+                    <td>Backend</td>
+                    <td className="text-right">2,535</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Lionel Messi</td>
+                    <td>Messi</td>
+                    <td>Barça</td>
+                    <td className="text-right">2,244</td>
+                  </tr>
+                </tbody>
+              </Table>
             </Card>
           </Col>
-          <Col className="tourCard" xs="6" sm="6" md="6" lg="5">
+          <Col className="tourCard" xs="12" sm="12" md="6" lg="5">
             <Card className="tourContainer">
-              <CardImg className="tourImg" top width="100%" src="https://picsum.photos/id/37/300/200" alt="Card image cap" />
-              <CardTitle className="tourTitleBox" tag="h5">CONCLUIDOS</CardTitle>
+              <CardTitle className="tourTitleBox-c" tag="h5">CONCLUIDOS</CardTitle>
+              <Carousel interval={100000} className="tourCarousel">
+                <Carousel.Item className="tourCaption">
+                  <img
+                    className="d-block w-100"
+                    src="https://cdn2.unrealengine.com/11br-competitive-evergreen-blue-newsheader-1920x1080-957497914.jpg"
+                    alt="First slide"
+                  />
+                  <Carousel.Caption className="carTitles">
+                    <h3>FORTNITE</h3>
+                  </Carousel.Caption>
+                  <Table className="tourConclude" striped bordered hover variant="dark">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Alias</th>
+                        <th>Equipo</th>
+                        <th>Puntos</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Luis Bastida</td>
+                        <td>BitBast</td>
+                        <td>Koders</td>
+                        <td className="text-right">3,985</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Luis Gomez</td>
+                        <td>Lucho</td>
+                        <td>Koders</td>
+                        <td className="text-right">3,183</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Carlos Silva</td>
+                        <td>DeMentor</td>
+                        <td>Backend</td>
+                        <td className="text-right">2,535</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Lionel Messi</td>
+                        <td>Messi</td>
+                        <td>Barça</td>
+                        <td className="text-right">2,244</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Carousel.Item>
+                <Carousel.Item className="tourCaption">
+                  <img
+                    className="d-block w-100"
+                    src="https://cdn.game.tv/game-tv-content/images_3/e412a7c3eb24413110362fd06686cc92/Banners.jpg"
+                    alt="Third slide"
+                  />
+                  <Carousel.Caption className="carTitles">
+                    <h3>AMONG US</h3>
+                  </Carousel.Caption>
+                  <Table className="tourConclude" striped bordered hover variant="dark">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Alias</th>
+                        <th>Equipo</th>
+                        <th>Puntos</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Luis Bastida</td>
+                        <td>BitBast</td>
+                        <td>Koders</td>
+                        <td className="text-right">3,985</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Luis Gomez</td>
+                        <td>Lucho</td>
+                        <td>Koders</td>
+                        <td className="text-right">3,183</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Carlos Silva</td>
+                        <td>DeMentor</td>
+                        <td>Backend</td>
+                        <td className="text-right">2,535</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Lionel Messi</td>
+                        <td>Messi</td>
+                        <td>Barça</td>
+                        <td className="text-right">2,244</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Carousel.Item>
+                <Carousel.Item className="tourCaption">
+                  <img
+                    className="d-block w-100"
+                    src="https://d1fs8ljxwyzba6.cloudfront.net/assets/article/2019/09/10/smash-ultimate-european-circuit-times-tournaments-details-header_feature.jpg"
+                    alt="Third slide"
+                  />
+                  <Carousel.Caption className="carTitles">
+                    <h3>SUPER SMASH BROTHERS ULTIMATE</h3>
+                  </Carousel.Caption>
+                  <Table className="tourConclude" striped bordered hover variant="dark">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Alias</th>
+                        <th>Equipo</th>
+                        <th>Puntos</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Luis Bastida</td>
+                        <td>BitBast</td>
+                        <td>Koders</td>
+                        <td className="text-right">3,985</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Luis Gomez</td>
+                        <td>Lucho</td>
+                        <td>Koders</td>
+                        <td className="text-right">3,183</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Carlos Silva</td>
+                        <td>DeMentor</td>
+                        <td>Backend</td>
+                        <td className="text-right">2,535</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Lionel Messi</td>
+                        <td>Messi</td>
+                        <td>Barça</td>
+                        <td className="text-right">2,244</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Carousel.Item>
+              </Carousel>
             </Card>          
           </Col>
         </Row>
@@ -249,29 +420,125 @@ const Navigation = (props) => {
           </Col>
         </Row>
         <Row className="rankers">
-          <Col className="rankCard col-3 col-sm-3 col-md-3 col-lg-3 px-1">
-            <Card className="rankContainer">
-              <CardImg className="rankImg" top width="100%" src="https://picsum.photos/id/247/300/200" alt="Card image cap" />
-              <CardTitle className="rankTitleBox" tag="h5">Luis Bastida</CardTitle>
-            </Card>
-          </Col>
-          <Col className="rankCard col-3 col-sm-3 col-md-3 col-lg-3 px-1">
-            <Card className="rankContainer">
-              <CardImg className="rankImg" top width="100%" src="https://picsum.photos/id/37/300/200" alt="Card image cap" />
-              <CardTitle className="rankTitleBox" tag="h5">Lucho Gomez</CardTitle>
-            </Card>          
-          </Col>
-          <Col className="rankCard col-3 col-sm-3 col-md-3 col-lg-3 px-1">
-            <Card className="rankContainer">
-              <CardImg className="rankImg" top width="100%" src="https://picsum.photos/id/247/300/200" alt="Card image cap" />
-              <CardTitle className="rankTitleBox" tag="h5">Carl Haggan</CardTitle>
-            </Card>
-          </Col>
-          <Col className="rankCard col-3 col-sm-3 col-md-3 col-lg-3 px-1">
-            <Card className="rankContainer">
-              <CardImg className="rankImg" top width="100%" src="https://picsum.photos/id/37/300/200" alt="Card image cap" />
-              <CardTitle className="rankTitleBox" tag="h5">Patricio Nueva</CardTitle>
-            </Card>          
+          <Col>
+            <CardDeck className="rankCard">
+              <Card>
+                <Card.Img variant="top" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976853.png" />
+                <Card.Body>
+                  <Card.Title><h5>Allan Negrete</h5></Card.Title>
+                  <Card.Text>
+                    <p>nickname</p>
+                  </Card.Text>
+                  <Table hover size="sm">
+                    <thead>
+                      <tr>
+                        <th>Juego</th>
+                        <th>Ranking</th>
+                        <th>Tiempo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>League of Legends</td>
+                        <td>4</td>
+                        <td>3,000 hrs</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                  <Button variant="outline-dark">VER PERFIL</Button>
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </Card>
+              <Card className="rankerCard">
+                <Card.Img variant="top" src="https://a.espncdn.com/i/headshots/college-football/players/full/4565313.png" />
+                <Card.Body>
+                  <Card.Title><h5>Bryan Torres</h5></Card.Title>
+                  <Card.Text>
+                    <p>nickname</p>
+                  </Card.Text>
+                  <Table hover size="sm">
+                    <thead>
+                      <tr>
+                        <th>Juego</th>
+                        <th>Ranking</th>
+                        <th>Tiempo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>League of Legends</td>
+                        <td>4</td>
+                        <td>3,000 hrs</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                  <Button variant="outline-dark">VER PERFIL</Button>
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </Card>
+              <Card className="rankerCard">
+                <Card.Img variant="top" src="https://a.espncdn.com/i/headshots/nhl/players/full/3941970.png" />
+                <Card.Body>
+                  <Card.Title><h5>Caldiano Sampsa</h5></Card.Title>
+                  <Card.Text>
+                    <p>nickname</p>
+                  </Card.Text>
+                  <Table hover size="sm">
+                    <thead>
+                      <tr>
+                        <th>Juego</th>
+                        <th>Ranking</th>
+                        <th>Tiempo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>League of Legends</td>
+                        <td>4</td>
+                        <td>3,000 hrs</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                  <Button variant="outline-dark">VER PERFIL</Button>
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </Card>
+              <Card className="rankerCard">
+                <Card.Img variant="top" src="https://a.espncdn.com/i/headshots/nhl/players/full/3114770.png" />
+                <Card.Body>
+                  <Card.Title><h5>Enrique Gonzalez</h5></Card.Title>
+                  <Card.Text>
+                    <p>nickname</p>
+                  </Card.Text>
+                  <Table hover size="sm">
+                    <thead>
+                      <tr>
+                        <th>Juego</th>
+                        <th>Ranking</th>
+                        <th>Tiempo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>League of Legends</td>
+                        <td>4</td>
+                        <td>3,000 hrs</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                  <Button variant="outline-dark">VER PERFIL</Button>
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </Card>
+            </CardDeck>
           </Col>
         </Row>
       </Container>

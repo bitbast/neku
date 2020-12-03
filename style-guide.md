@@ -26,6 +26,9 @@ FONTS:
 
 
 DEPENDENCIAS INSTALADAS:
+- Node modules:
+    npm install
+
 - React Bootstrap: https://react-bootstrap.github.io/
     npm install react-bootstrap bootstrap
 

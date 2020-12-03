@@ -2,12 +2,12 @@
 import './App.css';
 
 // COMPONENTS //
-import Navigation from './components/Navigation'
+import NavBar from './components/NavBar'
 
 function App() {
   return (
     <div>
-      <Navigation />
+      <NavBar />
     </div>
   );
 }
