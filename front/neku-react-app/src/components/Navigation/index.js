@@ -88,12 +88,6 @@ const Navigation = (props) => {
               <p>Blog</p>
             </Nav.Link>
           </Nav>
-          <Form inline className="px-3">
-            <FormControl size="sm" type="text" className="searchInput mr-sm-2 p-0 col-7 offset-1" />
-            <Button  className="btn col-4" style={{"background-color":"#F61667", "border":"0"}} size="md">
-              <p>BUSCA</p>
-            </Button>
-          </Form>
           <NavDropdown class="dropdownProfile order-2" title={
             <IconContext.Provider value={{ color:"white", size:"1.5em"}}>
               <BsController />
