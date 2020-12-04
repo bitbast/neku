@@ -1,0 +1,19 @@
+.news {
+  background-color: #121121;
+  padding-bottom: 3rem;
+}
+
+.heading {
+  padding: 4rem 0 1rem 0;
+}
+
+.heading h1 {
+  color: white;
+  line-height: 1;
+}
+
+.heading h4 {
+  color: #F61667;
+  line-height: 1;
+}
+
