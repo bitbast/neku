@@ -28,7 +28,6 @@ import {
 
 // COMPONENTES //
 import nekuLogoNav from "../../svg/neku-logo_grad-white-text-white.svg";
-import nekuLogoFooter from "../../svg/neku-logo_grad-white-text-white.svg"
 import SocialIcons from '../SocialIcons';
 import { BsController } from 'react-icons/bs'
 import { IconContext } from "react-icons";

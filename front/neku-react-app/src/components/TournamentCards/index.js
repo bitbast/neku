@@ -17,10 +17,10 @@ const TournamentCards = (props) => {
   return (
     <Container>
       <Row>
-        <CardDeck>
+        <CardDeck id="ongoingTournament">
           <Card>
             <CardHeader>Torneos En Curso</CardHeader>
-            <CardImg top width="100%" src="https://www.dailyesports.gg/wp-content/uploads/2019/07/lol_front-800x400.jpg" alt="Card image cap" />
+            <CardImg top src="https://www.dailyesports.gg/wp-content/uploads/2019/07/lol_front-800x400.jpg" alt="Card image cap" />
             <CardBody>
               <CardTitle tag="h5">League Of Legends</CardTitle>
               <CardSubtitle tag="h6" className="mb-2 text-muted">Ubicación: </CardSubtitle>
