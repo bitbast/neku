@@ -23,15 +23,14 @@ const TournamentCards = (props) => {
           <CardTitle tag="h5">League Of Legends</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">Ubicación: </CardSubtitle>
           <TableResults />
-          <Button>DESCUBRE MÁS INFORMACIÓN</Button>
         </CardBody>
+        <Button>DESCUBRE MÁS INFORMACIÓN</Button>
         <CardFooter className="text-muted">Tiempo de juego: </CardFooter>
       </Card>
-      <Card>
-        <CardBody>
+      <Card id="cardCarousel">
           <CardHeader>Torneos Concluidos</CardHeader>
           <CarouselTour />
-        </CardBody>
+          <Button>DESCUBRE MÁS INFORMACIÓN</Button>
         <CardFooter className="text-muted">Tiempo de juego: </CardFooter>
       </Card>
     </CardDeck>
