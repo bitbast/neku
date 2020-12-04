@@ -12,14 +12,13 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  NavbarText
+  DropdownItem
 } from 'reactstrap';
 
 // ------------- CSS ------------- //
 import './NavBar.css';
 
-// ------------- SMALL COMPONENTS ------------- //
+// ------------- SMALLER COMPONENTS ------------- //
 import nekuLogoNav from "../../svg/neku-logo_grad-white-text-white.svg";
 import { BsController } from 'react-icons/bs'
 import { IconContext } from "react-icons";
@@ -35,7 +34,11 @@ const NavBar = (props) => {
         <NavbarBrand className="col-6 col-sm-3 col-md-3 col-lg-3 p-0 m-0" href="/">
           <img src={nekuLogoNav} className="nekulogoNav" alt="neku logo" />
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+          <NavbarToggler onClick={toggle}>
+            <IconContext.Provider value={{ color:"white", size:"2em"}}>
+              NAME
+            </IconContext.Provider>
+          </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
@@ -52,9 +55,11 @@ const NavBar = (props) => {
             </NavItem>
           </Nav>
           <UncontrolledDropdown inNavbar>
-              <DropdownToggle id="controllerButton">
+              <DropdownToggle>
                 <IconContext.Provider value={{ color:"white", size:"2em"}}>
-                  <BsController />
+                  <div id="controllerButton">
+                    <BsController />
+                  </div>
                 </IconContext.Provider>
               </DropdownToggle>
               <DropdownMenu right>
