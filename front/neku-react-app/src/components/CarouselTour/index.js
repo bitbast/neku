@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import {
+  CardBody,
+  CardTitle,
+  CardSubtitle,
   Carousel,
   CarouselItem,
   CarouselControl,
@@ -58,6 +61,10 @@ const CarouselNews = (props) => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
+        <CardBody>
+          <CardTitle tag="h5">League Of Legends</CardTitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">Ubicación: </CardSubtitle>
+        </CardBody>
         <TableResults />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
