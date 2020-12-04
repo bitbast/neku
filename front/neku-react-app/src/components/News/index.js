@@ -8,7 +8,7 @@ import './News.css';
 
 // ------------- SMALLER COMPONENTS ------------- //
 import Heading from '../Heading';
-import Carousel from '../Carousel';
+import CarouselNews from '../CarouselNews';
 
 const News = (props) => {
   return (
@@ -16,7 +16,7 @@ const News = (props) => {
       <Heading />
       <Row>
         <Col>
-          <Carousel />
+          <CarouselNews />
         </Col>
       </Row>
     </Container>

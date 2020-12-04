@@ -11,30 +11,30 @@ const TableResults = (props) => {
     <Table borderless>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>País</th>
+          <th>Nombre</th>
+          <th>@</th>
+          <th>Puntuación</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <th scope="row">🇲🇽</th>
+          <td>Luis Bastida</td>
+          <td>bitbast</td>
+          <td>16,345 pts</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <th scope="row">🇦🇷</th>
+          <td>Lucho Gomez</td>
+          <td>gommorin</td>
+          <td>14,369 pts</td>
         </tr>
         <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+          <th scope="row">🇲🇽</th>
+          <td>Charlie Silva</td>
+          <td>deMentor</td>
+          <td>14,123 pts</td>
         </tr>
       </tbody>
     </Table>
