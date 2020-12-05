@@ -3,7 +3,7 @@ import ProfileStats from "../../components/profileStats/index"
 import ProfileTourCard from "../../components/profileTourCard/index"
 import ProfileGames from "../../components/profileGames/index"
 import ProfileSocialMedia from "../../components/profileSocialMedia/index"
-import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
+import { Container, Row, Col} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Profile.css";
 
@@ -17,7 +17,7 @@ class Profile extends Component {
                         <p className= "playerName">Luis Bastida</p>
                     </Col>
                     <Col xs="12" md="4" className="d-flex justify-content-center align-items-center">
-                            <img max width="100%" src="https://i.ytimg.com/vi/qMIWHHdp-VE/maxresdefault.jpg" alt="Gamer img" />
+                            <img max width="100%" height="250" src="https://i.ytimg.com/vi/qMIWHHdp-VE/maxresdefault.jpg" alt="Gamer img" />
                     </Col> 
                 </Row>
                 <ProfileStats/>
