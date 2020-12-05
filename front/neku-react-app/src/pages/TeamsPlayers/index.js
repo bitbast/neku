@@ -12,7 +12,7 @@ class TeamsPlayers extends Component {
                         <p className= "playerName">Equipos!</p>
                     </Col>
                     <Col xs="12" md="4" className="d-flex justify-content-center align-items-center">
-                            <img max width="100%" src="https://www.techgames.com.mx/wp-content/uploads/2019/08/Telcel-LVP-Mexico-equipos.jpg" alt="Gamer img" />
+                            <img max width="100%" height="250" src="https://www.techgames.com.mx/wp-content/uploads/2019/08/Telcel-LVP-Mexico-equipos.jpg" alt="Gamer img" />
                     </Col> 
                 </Row>
                 <Row >

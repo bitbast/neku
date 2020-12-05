@@ -2,6 +2,7 @@ import "./App.css";
 
 import Profile from "./pages/Profile";
 import TeamsPlayers from "./pages/TeamsPlayers";
+import Gamers from "./pages/Gamers"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -21,14 +22,11 @@ function App() {
           </Route>
           <Route path="/profile" component={Profile} />
           <Route path="/Teams" component={TeamsPlayers} />
+          <Route path="/Gamers" component={Gamers} />
         </Switch>
         <Footer />
       </div>
     </Router>
-      
-     
-      
-
   );
 }
 
