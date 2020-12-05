@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
+import { Row, Col, Card, CardImg, CardBody } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import './profileTourCard.css'
 
