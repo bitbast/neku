@@ -14,12 +14,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import NavBar from './components/NavBar'
 // import Footer from './components/Footer'
 // import Home from "./pages/Home";
-import Signup from './components/Signup'
+import SignupGamer from './components/SignupGamer'
+import SignupTeam from './components/SignupTeam'
+
 
 function App() {
   return (
     <div>
-      <Signup />
+      <SignupGamer />
+      <SignupTeam />
     </div>
     // <Router>
     //   <div>

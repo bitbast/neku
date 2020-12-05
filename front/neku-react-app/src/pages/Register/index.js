@@ -1,25 +1,22 @@
 import React from 'react';
 
-import Signup from '../../components/Signup'
+import { Button } from 'reactstrap';
+
+import Signup from '../../components/SignupGamer'
 
 import './Register.css'
 
 class Form extends Component {
   render () {
       return (
-          <Container fluid className="profileContainer">
-              <Row className="d-flex justify-content-center align-items-center playerNameBox">
-                  <Col xs="12" md="6" className= "d-flex justify-content-center align-items-center">
-                      <p className= "playerName">Luis Bastida</p>
-                  </Col>
-                  <Col xs="12" md="4" className="d-flex justify-content-center align-items-center">
-                          <img max width="100%" height="250" src="https://i.ytimg.com/vi/qMIWHHdp-VE/maxresdefault.jpg" alt="Gamer img" />
-                  </Col> 
-              </Row>
-              <ProfileStats/>
-              <ProfileTourCard/>
-              <ProfileGames/>
-              <ProfileSocialMedia/>
+          <Container fluid className="registerContainer">
+            <h1>Selecciona una opción y regístrate</h1>
+            <Button size="lg">
+                REGíSTRATE COMO GAMER
+            </Button>
+            <Button size="lg">
+                REGISTRA A TU EQUIPO
+            </Button>
           </Container>
       )
   }
