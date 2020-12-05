@@ -1,44 +1,41 @@
 import "./App.css";
 
-// import Profile from "./pages/Profile";
-// import Teams from "./pages/Teams";
-// import Gamers from "./pages/Gamers";
-// import Videogames from "./pages/Videogames";
-// import TeamPlayers from "./pages/TeamPlayers";
-import Registration from './pages/Register';
+import Profile from "./pages/Profile";
+import Teams from "./pages/Teams";
+import Gamers from "./pages/Gamers";
+import Videogames from "./pages/Videogames";
+import TeamPlayers from "./pages/TeamPlayers";
+import RegisterChoose from './pages/RegisterChoose';
+import FormGamer from './pages/FormGamer';
+import FormTeam from './pages/FormTeam';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 // COMPONENTS //
-// import NavBar from './components/NavBar'
-// import Footer from './components/Footer'
-// import Home from "./pages/Home";
-// import SignupGamer from './components/SignupGamer'
-// import SignupTeam from './components/SignupTeam'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import Home from "./pages/Home";
 
 
 function App() {
   return (
-    // <div>
-    //   <SignupGamer />
-    //   <SignupTeam />
-    // </div>
     <Router>
       <div>
-        {/* <NavBar /> */}
-        <Registration />
+        <NavBar />
         <Switch>
-          {/* <Route exact path="/" component={Home}>
+          <Route exact path="/" component={Home}>
           </Route>
           <Route path="/profile" component={Profile} />
           <Route path="/Teams" component={Teams} />
           <Route path="/Gamers" component={Gamers} />
           <Route path="/Videogames" component={Videogames} />
-          <Route path="/TeamPlayers" component={TeamPlayers} /> */}
-          <Route path="/Register" component={Registration} />
+          <Route path="/TeamPlayers" component={TeamPlayers} />
+          <Route path="/RegisterChoose" component={RegisterChoose} />
+          <Route path="/FormGamer" component={FormGamer} />
+          <Route path="/FormTeam" component={FormTeam} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );

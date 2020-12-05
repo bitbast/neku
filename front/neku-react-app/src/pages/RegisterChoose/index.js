@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 
 import { Container, Row, Col, Button } from 'reactstrap';
 
-import Signup from '../../components/SignupGamer'
+import './RegisterChoose.css'
 
-import './Register.css'
-
-class Registration extends Component {
+class RegisterChoose extends Component {
   render () {
       return (
         <Container fluid className="registerContainer">
@@ -17,12 +15,12 @@ class Registration extends Component {
             </Row>
             <Row>
                 <Col className="registerButtons col-12">
-                    <a href="">
+                    <a href="/FormGamer">
                         <Button id="gamerButton">
                             <h3>GAMER</h3>
                         </Button>
                     </a>
-                    <a href="">
+                    <a href="/FormTeam">
                         <Button id="teamButton">
                             <h3>EQUIPO</h3>
                         </Button>
@@ -34,4 +32,4 @@ class Registration extends Component {
   }
 }
 
-export default Registration;
+export default RegisterChoose;
