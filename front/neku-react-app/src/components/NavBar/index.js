@@ -31,9 +31,11 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar dark expand="sm">
-        <NavbarBrand className="col-6 col-sm-3 col-md-3 col-lg-3 p-0 m-0" href="/">
+        <a href="/">
+        <NavbarBrand className="col-6 col-sm-3 col-md-3 col-lg-3 p-0 m-0 mb-2" href="/">
           <img src={nekuLogoNav} className="nekulogoNav" alt="neku logo" />
         </NavbarBrand>
+        </a>
           <NavbarToggler onClick={toggle}>
             <IconContext.Provider value={{ color:"white", size:"2em"}}>
               NAME

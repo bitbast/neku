@@ -13,12 +13,18 @@ import SocialIcons from "../SocialIcons"
 
 const Example = (props) => {
   return (
+<<<<<<< HEAD
     <Container fluid>
       <Row xs="1" sm="2" md="3" lg="3">
         <Col className="nekuLogo">
+=======
+    <Container fluid >
+      <Row >
+        <Col xs="12" md="6" className="nekuLogo">
+>>>>>>> development
           <img src={nekuLogoNav} alt="neku logo navbar" />
         </Col>
-        <Col>
+        <Col xs="12" md="6">
         <Nav className="footerLinks">
           <NavItem>
             <NavLink href="#">
