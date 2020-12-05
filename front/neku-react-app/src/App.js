@@ -5,19 +5,30 @@ import TeamsPlayers from "./pages/TeamsPlayers";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+
+// COMPONENTS //
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import Home from "./pages/Home";
+
 function App() {
   return (
     <Router>
       <div>
+        <NavBar />
         <Switch>
-          <Route exact path="/">
-            <h1>Home</h1>
+          <Route exact path="/" component={Home}>
           </Route>
           <Route path="/profile" component={Profile} />
           <Route path="/Teams" component={TeamsPlayers} />
         </Switch>
+        <Footer />
       </div>
     </Router>
+      
+     
+      
+
   );
 }
 

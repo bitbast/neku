@@ -1,0 +1,24 @@
+#ongoingTournament {
+    background-color: #121121 !important;
+    height: 100%;
+}
+
+#cardCarousel {
+    height: 100%;
+}
+
+.card {
+    /* padding: 0 0 3rem 0 !important; */
+    margin: 0 !important;
+}
+
+#moreInfoBtn {
+    width: 75% !important;
+    background-color: #181733;
+    border:0;
+}
+
+#moreInfoBtn:hover {
+    background-color: #F61667;
+    color: white;
+  }
