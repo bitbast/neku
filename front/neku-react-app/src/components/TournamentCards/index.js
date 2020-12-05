@@ -2,7 +2,7 @@ import React from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import {
-  Container, Row, Card, Button, CardImg, CardTitle, CardText, CardDeck,
+  Container, Row, Card, Button, CardImg, CardTitle, CardDeck,
   CardSubtitle, CardBody, CardHeader, CardFooter
 } from 'reactstrap';
 
@@ -18,7 +18,7 @@ const TournamentCards = (props) => {
     <Container>
       <Row>
         <CardDeck id="ongoingTournament">
-          <Card>
+          <Card className="tourCard">
             <CardHeader>Torneos En Curso</CardHeader>
             <CardImg top src="https://www.dailyesports.gg/wp-content/uploads/2019/07/lol_front-800x400.jpg" alt="Card image cap" />
             <CardBody>
