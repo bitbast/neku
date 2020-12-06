@@ -11,7 +11,7 @@ import nekuLogoNav from "../../svg/neku-logo_grad-white-text-white.svg";
 import SocialIcons from "../SocialIcons"
 
 
-const Example = (props) => {
+const Footer = (props) => {
   return (
     <Container fluid>
       <Row className="footer">
@@ -21,28 +21,28 @@ const Example = (props) => {
         <Col xs={12} sm={12} md={6}  lg={{ size: 5, offset: 1 }}>
           <Nav className="footerLinks">
             <NavItem>
-              <NavLink href="#">
-                <p href="http://">Explora categorías</p>
+              <NavLink href="/Categories">
+                <p>Explora Categorías</p>
                 </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">
-                <p href="http://">Equipos</p>
+              <NavLink href="/Teams">
+                <p>Equipos</p>
                 </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">
-                <p href="http://">Jugadores</p>
+              <NavLink href="/Gamers">
+                <p>Jugadores</p>
                 </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">
-                <p href="http://">Eventos</p>
+              <NavLink href="/Events">
+                <p>Eventos</p>
                 </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">
-                <p href="http://">Acerca de nosotros</p>
+              <NavLink href="/AboutUs">
+                <p>Acerca de nosotros</p>
                 </NavLink>
             </NavItem>
           </Nav>
@@ -53,7 +53,7 @@ const Example = (props) => {
       </Row>
       <Row className="banner">
         <Col id="avisoBanner">
-          <a href="">
+          <a href="/Aviso">
             <p id="aviso">Aviso de Privacidad</p>
           </a>
         </Col>
@@ -62,4 +62,4 @@ const Example = (props) => {
   );
 }
 
-export default Example;
+export default Footer;
