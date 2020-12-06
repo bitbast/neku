@@ -8,23 +8,23 @@ import './CategoryCardGroup.css'
 
 const CategoryCardGroup = (props) => {
   return (
-    <CardGroup id="homeCategories">
-      <Card className="categoriesCard border-0">
+    <CardGroup id="homeCategories" xs={12} sm={6} md={6} lg={3}>
+      <Card className="categoriesCard border-0" xs={12} sm={6} md={6} lg={3}>
         <a href="/Videogames">
           <CardImg className="border-0" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-juegos.png?raw=true" alt="Card image juegos" />
         </a>
       </Card>
-      <Card className="categoriesCard border-0">
+      <Card className="categoriesCard border-0" xs={12} sm={6} md={6} lg={3}>
         <a href="/Teams">
           <CardImg className="border-0" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-equipos.png?raw=true" alt="Card image equipos" />
         </a>
       </Card>
-      <Card className="categoriesCard border-0">
+      <Card className="categoriesCard border-0" xs={12} sm={6} md={6} lg={3}>
         <a href="/Gamers">
           <CardImg className="border-0" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-gamers.png?raw=true" alt="Card image gamers" />
         </a>
       </Card>
-      <Card className="categoriesCard border-0">
+      <Card className="categoriesCard border-0" xs={12} sm={6} md={6} lg={3}>
         <CardImg className="border-0" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-extras.png?raw=true" alt="Card image extras" />
       </Card>
     </CardGroup>
