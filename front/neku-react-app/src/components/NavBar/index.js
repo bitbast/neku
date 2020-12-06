@@ -64,7 +64,7 @@ const NavBar = (props) => {
                   </div>
                 </IconContext.Provider>
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu right id="dropdownMenuProfile">
                 <DropdownItem>
                   Perfil
                 </DropdownItem>
@@ -78,7 +78,7 @@ const NavBar = (props) => {
                 <DropdownItem>
                   Ajustes
                 </DropdownItem>
-                <DropdownItem className="bg-dark text-white">
+                <DropdownItem id="signupMenuSelect" className="mb-0">
                   <a href="/RegisterChoose">REGÍSTRATE</a>
                 </DropdownItem>
               </DropdownMenu>
