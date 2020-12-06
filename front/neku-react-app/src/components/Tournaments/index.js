@@ -7,13 +7,17 @@ import { Container, Row, Col } from 'reactstrap';
 import './Tournaments.css';
 
 // ------------- SMALLER COMPONENTS ------------- //
-import Heading from '../Heading';
 import TournamentCards from '../TournamentCards';
 
 const Tournaments = (props) => {
   return (
     <Container fluid className="tournaments">
-      <Heading />
+      <Row>
+        <Col className="heading">
+          <h1>TORNEOS</h1>
+          <h4>Quién se apunta?</h4>
+        </Col>
+      </Row>
       <Row>
         <Col>
             <TournamentCards />
