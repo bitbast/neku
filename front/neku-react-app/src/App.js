@@ -5,6 +5,10 @@ import Teams from "./pages/Teams";
 import Gamers from "./pages/Gamers";
 import Videogames from "./pages/Videogames";
 import TeamPlayers from "./pages/TeamPlayers";
+import RegisterChoose from './pages/RegisterChoose';
+import FormGamer from './pages/FormGamer';
+import FormTeam from './pages/FormTeam';
+import Aviso from './pages/AvisoPrivacidad'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -13,6 +17,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import Home from "./pages/Home";
+
 
 function App() {
   return (
@@ -27,6 +32,10 @@ function App() {
           <Route path="/Gamers" component={Gamers} />
           <Route path="/Videogames" component={Videogames} />
           <Route path="/TeamPlayers" component={TeamPlayers} />
+          <Route path="/RegisterChoose" component={RegisterChoose} />
+          <Route path="/FormGamer" component={FormGamer} />
+          <Route path="/FormTeam" component={FormTeam} />
+          <Route path="/Aviso" component={Aviso} />
         </Switch>
         <Footer />
       </div>

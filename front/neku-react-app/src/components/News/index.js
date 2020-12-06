@@ -7,13 +7,17 @@ import { Container, Row, Col } from 'reactstrap';
 import './News.css';
 
 // ------------- SMALLER COMPONENTS ------------- //
-import Heading from '../Heading';
 import CarouselNews from '../CarouselNews';
 
 const News = (props) => {
   return (
     <Container fluid className="news">
-      <Heading />
+      <Row>
+        <Col className="heading">
+          <h1>LO ÚLTIMO</h1>
+          <h4>Qué está pasando en el mundo gamer?</h4>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <CarouselNews />
