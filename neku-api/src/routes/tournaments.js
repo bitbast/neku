@@ -40,7 +40,7 @@ router.post('/', async (request, response) => {
       picture
     } = request.body
 
-    if (!tournamentName) throw new Error('Tournament Name is equired')
+    if (!tournamentName) throw new Error('Tournament Name is required')
     if (!game) throw new Error('Game is required')
     if (!country) throw new Error('Country is required')
     if (!countryFlag) throw new Error('Country flag is required')

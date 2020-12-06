@@ -1,0 +1,12 @@
+.socialIcons {
+  display: flex;
+  justify-content: space-evenly;
+  size: 1em;
+  padding: 1em 0 1em 0;
+  cursor: pointer;
+}
+
+.socialIcons:hover {
+  fill: #F61667;
+  cursor: pointer;
+}

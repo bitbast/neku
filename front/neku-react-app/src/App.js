@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Profile from "./pages/Profile";
+import Teams from "./pages/Teams";
+import Gamers from "./pages/Gamers";
+import Videogames from "./pages/Videogames";
+import TeamPlayers from "./pages/TeamPlayers";
+import RegisterChoose from './pages/RegisterChoose';
+import FormGamer from './pages/FormGamer';
+import FormTeam from './pages/FormTeam';
+import Aviso from './pages/AvisoPrivacidad'
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+
+// COMPONENTS //
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import Home from "./pages/Home";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home}>
+          </Route>
+          <Route path="/profile" component={Profile} />
+          <Route path="/Teams" component={Teams} />
+          <Route path="/Gamers" component={Gamers} />
+          <Route path="/Videogames" component={Videogames} />
+          <Route path="/TeamPlayers" component={TeamPlayers} />
+          <Route path="/RegisterChoose" component={RegisterChoose} />
+          <Route path="/FormGamer" component={FormGamer} />
+          <Route path="/FormTeam" component={FormTeam} />
+          <Route path="/Aviso" component={Aviso} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

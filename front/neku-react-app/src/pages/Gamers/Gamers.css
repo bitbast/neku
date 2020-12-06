@@ -1,0 +1,32 @@
+.teamsContainer{
+    background: #121121 !important;
+}
+
+.teamImage{
+    border-radius: 25px 25px 0 0  !important;
+}
+
+.TournamentCard{
+    background: #181733 !important;
+    border-radius: 25px !important;
+}
+
+.colTeam .div:hover{
+    border: solid;
+    border-color: #A41A21;
+    border-radius: 25px !important;
+}
+
+.gamerName{
+    font-size: 1.5rem !important;
+}
+
+.gamerRanking{
+    font-size: 2.5rem !important;
+    color: #F2AE2E !important;
+}
+
+.sectionNameBox{
+    background: linear-gradient(to bottom, #181733 15%, rgba(24, 23, 51, 0) 100%);
+    border-radius: 10px;
+}

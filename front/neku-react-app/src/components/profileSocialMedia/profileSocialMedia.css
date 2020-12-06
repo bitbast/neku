@@ -1,0 +1,11 @@
+.sectionTitle{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-weight:bold;
+    background: linear-gradient(to right, #181733 30%, rgba(24, 23, 51, 0) 100%);
+}

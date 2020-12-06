@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.navbar {
+    background-color:#121121;
+    height: 80px;
+}
+
+.nav-link {
+    /* width: 25px; */
+    /* height: auto; */
+    margin: 0 .8rem 0 .8rem;
+}
+
+.fas {
+    width: fit-content;
+}
+
+.fab {
+    width: fit-content;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control {
+    font-family: "Oswald", sans-serif;
+    border: 0;
+    border-radius: 2px;
+    margin:0;
+}
+
+.icon-cog {
+    color: white;
+}
+
+.fa-stack:hover{
+    color: #F2AE2E;
+}
+
+.btn {
+    background-color:#A41A21;
+    color: white;
+    font-family: "Exo", sans-serif;
+    border: 2px, solid, #A41A21;
+    border-radius: 2px;
+    margin:0;
+}
+
+.btn:hover {
+    background-color:#F2AE2E;
+    border: 2px, solid, #F2AE2E;
+    color: white;
+}
