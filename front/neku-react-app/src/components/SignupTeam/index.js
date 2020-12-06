@@ -13,26 +13,32 @@ const SignupTeam = (props) => {
             <Col md={6}>
               <FormGroup>
                 <Label for="signupTeamName">Nombre del Equipo</Label>
-                <Input type="text" name="name" id="signupName" placeholder="> " />
+                <Input type="text" name="teamName" id="signupTeamName" placeholder="> " />
               </FormGroup>
               <FormGroup>
-                <Label for="signupCaptain">Nombre del Capitán</Label>
-                <Input type="text" name="alias" id="signupAlias" placeholder="> " />
+                <Label for="signupCapName">Nombre del Capitán</Label>
+                <Input type="text" name="name" id="signupCapName" placeholder="> " />
               </FormGroup>
             </Col>
             <Col md={6}>
-            <FormGroup>
-                <Label for="signupEmail">Email del Equipo</Label>
-                <Input type="email" name="email" id="signupEmail" placeholder="> " />
+              <FormGroup>
+                <Label for="signupCapLastName">Apellido del Capitán</Label>
+                <Input type="text" name="lastName" id="signupCapLastName" placeholder="> " />
               </FormGroup>
               <FormGroup>
-                <Label for="signupEmail">En qué juegos participan?</Label>
-                <Input type="text" name="lastName" id="signupLastName" placeholder="> " />
+                <Label for="signupEmailTeam">Email del Capitán</Label>
+                <Input type="email" name="email" id="signupEmailTeam" placeholder="> " />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Label for="signupMembersNum">Cuántos miembros tiene el equipo?</Label>
+                <Input type="number" name="lastName" id="signupMembersNum" placeholder="" />
               </FormGroup>
             </Col>
             <Col md={6} sm={6}>
               <FormGroup>
-                <Label for="examplePassword">Contraseña</Label>
+                <Label for="signupPassword">Contraseña</Label>
                 <Input type="password" name="password" id="signupPassword" placeholder="por lo menos 8 caracteres" />
               </FormGroup>
             </Col>
