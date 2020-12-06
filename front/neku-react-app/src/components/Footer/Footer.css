@@ -1,35 +1,6 @@
 .container-fluid {
   background-color: #0A1E59;
-  height: auto;
-}
-
-.nekuLogo img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0 1rem 0;
-  margin: 0 !important;
-  transform: scale(.7) !important;
-}
-
-.footerLinks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-
-.footerLinks p {
-  color: white;
-  font-family: exo, sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  padding: 0;
-}
-
-.footerLinks p:hover {
-  color: #F61667;
+  padding-top: 3rem;
 }
 
 #socialRow {
@@ -38,9 +9,9 @@
 }
 
 #avisoBanner {
-  display: flex;
-  align-items: center;
+  width:100%;
   padding: 0;
+  margin: 0;
 }
 
 #aviso {
@@ -52,9 +23,92 @@
   justify-content: flex-end;
   align-items: center;
   margin: 0;
-  padding-right: 1rem;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  text-decoration: none !important;
 }
 
-@media only screen and (min-width: 475) {
+#aviso:hover {
+  cursor: pointer;
+  color: #F2AE2E;
+  text-decoration: none !important;
+}
 
+.socialIcons svg:hover {
+  fill: #F61667 !important;
+}
+
+@media only screen and (max-width: 640px) {  
+  .nekuLogo img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 0 1rem 0;
+    margin: 0 !important;
+    transform: scale(.7) !important;
+  }
+
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .footerLinks p {
+    color: white;
+    font-family: exo, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  .footerLinks p:hover {
+    color: #F61667;
+  }
+}
+
+@media only screen and (min-width: 639px) {
+  .footer {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .nekuLogo img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 0 1rem 0;
+    margin: 0 !important;
+  }
+  
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+  }
+
+  .footerLinks p {
+    color: white;
+    font-family: exo, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height:1;
+  }
+
+  .footerLinks p:hover {
+    color: #F61667;
+  }
+
+}
+
+@media only screen and (min-width: 991px) {
+  #socialRow {
+    padding-top: 1rem;
+    background-color: #0A1E59 !important;
+  }
 }
