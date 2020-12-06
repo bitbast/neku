@@ -1,0 +1,34 @@
+#formCardImg {
+  padding-bottom: 1rem;
+}
+
+.signupForm {
+  padding: 1rem 0 2rem 0;
+  font-family: exo, sans-serif;
+}
+
+.signupForm input {
+  font-family: exo, sans-serif;
+  font-size: 14px;
+}
+
+#acceptCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupForm .btn-secondary {
+  background-color: #F2AE2E !important;
+  border: 1px solid #F2AE2E;
+  font-family: exo, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  width: 75%;
+  height: 4vh;
+}
+
+.signupForm .btn-secondary:hover {
+  background-color: #121121 !important;
+  border: 1px solid #121121;
+}

@@ -31,9 +31,11 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar dark expand="sm">
-        <NavbarBrand className="col-6 col-sm-3 col-md-3 col-lg-3 p-0 m-0" href="/">
+        <a href="/">
+        <NavbarBrand className="col-6 col-sm-3 col-md-3 col-lg-3 p-0 m-0 mb-2" href="/">
           <img src={nekuLogoNav} className="nekulogoNav" alt="neku logo" />
         </NavbarBrand>
+        </a>
           <NavbarToggler onClick={toggle}>
             <IconContext.Provider value={{ color:"white", size:"2em"}}>
               NAME
@@ -42,16 +44,16 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Juegos</NavLink>
+              <NavLink href="/Videogames">Juegos</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#equipos">Equipos</NavLink>
+              <NavLink href="/Teams">Equipos</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#gamers">Gamers</NavLink>
+              <NavLink href="/Gamers">Gamers</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#gamers">Extras</NavLink>
+              <NavLink href="/">Extras</NavLink>
             </NavItem>
           </Nav>
           <UncontrolledDropdown inNavbar>
@@ -77,7 +79,7 @@ const NavBar = (props) => {
                   Ajustes
                 </DropdownItem>
                 <DropdownItem className="bg-dark text-white">
-                  Registro
+                  <a href="/RegisterChoose">REGÍSTRATE</a>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

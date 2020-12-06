@@ -1,0 +1,41 @@
+.registerContainer {
+  background-color: #121121;
+  color: white;
+  padding: 1rem 0 1rem 0;
+  width:100%;
+}
+
+.registerContainer h1 {
+  text-align: center;
+}
+
+.registerButtons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+}
+
+#gamerButton {
+  width:100%;
+  background-color: #F2AE2E;
+  margin:2px;
+  border:0;
+  padding: 2rem;
+}
+
+#teamButton {
+  width:100%;
+  background-color: #F61667;
+  border:0;
+  margin:2px;
+  padding: 2rem;
+}
+
+#gamerButton h3 {
+  line-height: 1;
+}
+
+#teamButton h3 {
+  line-height: 1;
+}
