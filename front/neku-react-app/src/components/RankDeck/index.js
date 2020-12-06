@@ -15,7 +15,7 @@ import TableInfo from '../TableInfo'
 
 const RankDeck = (props) => {
   return (
-  <Container fluid>
+  <Container fluid id="rankersSection">
     <Row>
       <Col className="heading">
         <h1>RANKERS</h1>

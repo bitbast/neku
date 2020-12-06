@@ -1,0 +1,5 @@
+@media only screen and (min-width: 575px) {
+  .hideCol {
+    display: none !important;
+  }
+} 

@@ -14,7 +14,7 @@ const TableInfo = (props) => {
           <th>Juego</th>
           <th>Ranking</th>
           <th>Puntuación</th>
-          <th className="timePlayCol">Tiempo de juego</th>
+          <th className="hideCol">Tiempo de juego</th>
         </tr>
       </thead>
       <tbody>
@@ -22,19 +22,19 @@ const TableInfo = (props) => {
           <td>League Of Legends</td>
           <td>1</td>
           <td>16,345 pts</td>
-          <td className="timePlayCol">2,000 hrs</td>
+          <td className="hideCol">2,000 hrs</td>
         </tr>
         <tr>
           <td>Among Us</td>
           <td>324</td>
           <td>14,369 pts</td>
-          <td className="timePlayCol">300 hrs</td>
+          <td className="hideCol">300 hrs</td>
         </tr>
         <tr>
           <td>Overwatch</td>
           <td>15</td>
           <td>14,123 pts</td>
-          <td className="timePlayCol">647 hrs</td>
+          <td className="hideCol">647 hrs</td>
         </tr>
       </tbody>
     </Table>

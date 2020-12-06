@@ -16,7 +16,7 @@ const TableResults = (props) => {
               <tr>
                 <th>País</th>
                 <th>Nombre</th>
-                <th>@</th>
+                <th className="hideCol">@</th>
                 <th>Puntuación</th>
               </tr>
             </thead>
@@ -24,19 +24,19 @@ const TableResults = (props) => {
               <tr>
                 <th scope="row">🇲🇽</th>
                 <td>Luis Bastida</td>
-                <td>bitbast</td>
+                <td className="hideCol">bitbast</td>
                 <td>16,345 pts</td>
               </tr>
               <tr>
                 <th scope="row">🇦🇷</th>
                 <td>Lucho Gomez</td>
-                <td>gommorin</td>
+                <td className="hideCol">gommorin</td>
                 <td>14,369 pts</td>
               </tr>
               <tr>
                 <th scope="row">🇲🇽</th>
                 <td>Charlie Silva</td>
-                <td>deMentor</td>
+                <td className="hideCol">deMentor</td>
                 <td>14,123 pts</td>
               </tr>
             </tbody>
