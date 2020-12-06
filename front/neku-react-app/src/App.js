@@ -8,6 +8,7 @@ import TeamPlayers from "./pages/TeamPlayers";
 import RegisterChoose from './pages/RegisterChoose';
 import FormGamer from './pages/FormGamer';
 import FormTeam from './pages/FormTeam';
+import Aviso from './pages/AvisoPrivacidad'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/RegisterChoose" component={RegisterChoose} />
           <Route path="/FormGamer" component={FormGamer} />
           <Route path="/FormTeam" component={FormTeam} />
+          <Route path="/Aviso" component={Aviso} />
         </Switch>
         <Footer />
       </div>
