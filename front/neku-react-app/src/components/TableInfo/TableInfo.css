@@ -1,3 +1,9 @@
 .tableHead {
   background-color: #F2AE2E !important;
 }
+
+@media only screen and (min-width: 575px) {
+  .timePlayCol {
+    display: none !important;
+  }
+} 

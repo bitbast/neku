@@ -72,7 +72,7 @@ const CarouselNews = (props) => {
   });
 
   return (
-    <Carousel
+    <Carousel className="carouselTour"
       activeIndex={activeIndex}
       next={next}
       previous={previous}

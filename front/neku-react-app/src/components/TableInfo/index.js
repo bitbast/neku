@@ -8,13 +8,13 @@ import './TableInfo.css'
 
 const TableInfo = (props) => {
   return (
-    <Table borderless>
+    <Table borderless table-condensed table-responsive>
       <thead className="tableHead">
         <tr>
           <th>Juego</th>
           <th>Ranking</th>
           <th>Puntuación</th>
-          <th>Tiempo de juego</th>
+          <th className="timePlayCol">Tiempo de juego</th>
         </tr>
       </thead>
       <tbody>
@@ -22,19 +22,19 @@ const TableInfo = (props) => {
           <td>League Of Legends</td>
           <td>1</td>
           <td>16,345 pts</td>
-          <td>2,000 hrs</td>
+          <td className="timePlayCol">2,000 hrs</td>
         </tr>
         <tr>
           <td>Among Us</td>
           <td>324</td>
           <td>14,369 pts</td>
-          <td>300 hrs</td>
+          <td className="timePlayCol">300 hrs</td>
         </tr>
         <tr>
           <td>Overwatch</td>
           <td>15</td>
           <td>14,123 pts</td>
-          <td>647 hrs</td>
+          <td className="timePlayCol">647 hrs</td>
         </tr>
       </tbody>
     </Table>

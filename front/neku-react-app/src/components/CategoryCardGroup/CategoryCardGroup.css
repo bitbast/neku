@@ -1,11 +1,15 @@
+#homeCategories {
+  border: 0 !important;
+}
+
 .categoriesCard .card {
-  border: 0;
+  border: 0 !important;
   border-radius: 0;
   margin: 0;
 }
 
-.categoriesCard .card-img-top {
-  border: 0 !important;
-  border-radius: 0 !important;
-  margin: 0;
+.categoriesCard:hover {
+  background: #181733;
+  opacity: 60%;
 }
+
