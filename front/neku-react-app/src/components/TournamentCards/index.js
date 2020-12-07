@@ -23,7 +23,7 @@ const TournamentCards = (props) => {
             <CardImg top src="https://www.dailyesports.gg/wp-content/uploads/2019/07/lol_front-800x400.jpg" alt="Card image cap" />
             <CardBody>
               <CardTitle tag="h5">League Of Legends</CardTitle>
-              <CardSubtitle tag="h6" className="mb-2 text-muted">Ubicación: </CardSubtitle>
+              <CardSubtitle tag="h6" className="text-muted mb-2">Ubicación: </CardSubtitle>
               <TableResults />
             </CardBody>
               <div className="d-flex justify-content-center align-items-center pb-3">

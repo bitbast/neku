@@ -1,11 +1,9 @@
-#homeCategories {
+.homeCategories {
   border: 0 !important;
 }
 
-.categoriesCard .card {
-  border: 0 !important;
-  border-radius: 0;
-  margin: 0;
+.categoriesCard {
+  margin: .8em !important;
 }
 
 .categoriesCard:hover {

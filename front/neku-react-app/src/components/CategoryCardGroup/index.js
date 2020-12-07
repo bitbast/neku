@@ -6,7 +6,7 @@ import './CategoryCardGroup.css'
 
 const CategoryCardGroup = (props) => {
   return (
-    <CardGroup id="homeCategories">
+    <CardGroup className="homeCategories">
       <Card className="categoriesCard border-0">
         <a href="/Videogames">
           <CardImg className="border-0" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-juegos.png?raw=true" alt="Card image juegos" />

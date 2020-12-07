@@ -1,3 +1,7 @@
+.carouselTour {
+  background-color: #aeaeaf;
+}
+
 .carouselTour .carousel-item img {
     object-fit: cover !important;
     width:100%;
