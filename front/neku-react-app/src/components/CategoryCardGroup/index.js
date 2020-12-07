@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Card,  CardImg, CardGroup,
-} from 'reactstrap';
+import { Card,  CardImg, CardGroup } from 'reactstrap';
 
 // CSS //
 import './CategoryCardGroup.css'

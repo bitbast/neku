@@ -21,6 +21,7 @@
     padding-right: 10px;
     border:none;
     outline:none;
+    color: white !important;
 }
 
 .navbar-toggler:hover {
