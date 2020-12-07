@@ -6,6 +6,8 @@ import { Container, Row, Col, Table } from 'reactstrap';
 // ------------- CSS ------------- //
 import './TableResults.css'
 
+let winLostAvg = {{won-games} / {lost-games}}
+
 const TableResults = (props) => {
   return (
     <Container>
@@ -16,28 +18,36 @@ const TableResults = (props) => {
               <tr>
                 <th>País</th>
                 <th>Nombre</th>
-                <th className="hideCol">@</th>
-                <th>Puntuación</th>
+                <th className="hideCol">Apodo</th>
+                <th>Puntos</th>
+                <th className="hideCol">Ranking</th>
+                <th className="hideCol">G/P</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">🇲🇽</th>
-                <td>Luis Bastida</td>
-                <td className="hideCol">bitbast</td>
-                <td>16,345 pts</td>
+                <th scope="row">{country-flag}</th>
+                <td>{{name}+{father-lastname}+{mother-lastname}}</td>
+                <td className="hideCol">{nickname}</td>
+                <td>{score} pts</td>
+                <td className="hideCol">{ranking}</td>
+                <td className="hideCol">{winLostAvg}</td>
               </tr>
               <tr>
-                <th scope="row">🇦🇷</th>
-                <td>Lucho Gomez</td>
-                <td className="hideCol">gommorin</td>
-                <td>14,369 pts</td>
+                <th scope="row">{country-flag}</th>
+                <td>{{name}+{father-lastname}+{mother-lastname}}</td>
+                <td className="hideCol">{nickname}</td>
+                <td>{score} pts</td>
+                <td className="hideCol">{ranking}</td>
+                <td className="hideCol">{winLostAvg}</td>
               </tr>
               <tr>
-                <th scope="row">🇲🇽</th>
-                <td>Charlie Silva</td>
-                <td className="hideCol">deMentor</td>
-                <td>14,123 pts</td>
+                <th scope="row">{country-flag}</th>
+                <td>{{name}+{father-lastname}+{mother-lastname}}</td>
+                <td className="hideCol">{nickname}</td>
+                <td>{score} pts</td>
+                <td className="hideCol">{ranking}</td>
+                <td className="hideCol">{winLostAvg}</td>
               </tr>
             </tbody>
           </Table>

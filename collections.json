@@ -13,7 +13,7 @@ tournamentsCollection = {
     "tournament" : { 
         "tournamentName" : "Nombre del torneo",
         "game": "Juego",
-        "county": "País",
+        "country": "País",
         "country-flag": "Imagen de la bandera del país",
         "format": "formato del torneo",
         "date": "fecha de torneo",
@@ -41,7 +41,7 @@ teamsCollection {
                     "game": {
                         "game-name": "Nombre del juego",
                         "won-games": "Número de partirdas ganas",
-                        "loose-games": "Número de patidas perdidas",
+                        "lost-games": "Número de patidas perdidas",
                         "time-played": "Tiempo de juego",
                         "avg-match-time": "Tiempo promedio de partida",
                         "kills": "asesinatos",

@@ -62,8 +62,9 @@ const CarouselNews = (props) => {
       >
         <img src={item.src} alt={item.altText} />
         <CardBody>
-          <CardTitle tag="h5">League Of Legends</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Ubicación: </CardSubtitle>
+          <CardTitle tag="h4">{tournamentName}</CardTitle>
+          <CardSubtitle tag="h5" className="mb-2 text-muted">Juego: {game}</CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">País: {country}</CardSubtitle>
         </CardBody>
         <TableResults />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
