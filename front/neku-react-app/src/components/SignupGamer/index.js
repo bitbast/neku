@@ -39,7 +39,7 @@ const SignupGamer = (props) => {
             <Col md={6} sm={6} id="acceptCheck">
               <FormGroup check>
                 <Input type="checkbox" name="check" id="checkmark"/>
-                <Label for="checkmark" check>Acepto los <a href="">terminos y condiciones</a></Label>
+                <Label for="checkmark" check>Acepto los <a href="/Aviso">terminos y condiciones</a></Label>
               </FormGroup>
             </Col>
           </Row>

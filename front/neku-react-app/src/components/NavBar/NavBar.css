@@ -1,6 +1,6 @@
 /* ---- NAVBAR ---- */
 .navbar {
-    background-color: #121121 !important;
+    background-color: #0A1E59 !important;
     padding: 0 !important;
 }
 
@@ -78,6 +78,10 @@
     padding-bottom: 0;
     text-align: right;
     line-height: 2rem;
+}
+
+.nav-link {
+    color: white !important;
 }
 
 .nav-link:hover {

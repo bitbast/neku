@@ -30,7 +30,7 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <Navbar dark expand="sm">
+      <Navbar expand="sm">
         <a href="/">
         <NavbarBrand className="col-6 col-sm-3 col-md-3 col-lg-3 p-0 m-0 mb-2" href="/">
           <img src={nekuLogoNav} className="nekulogoNav" alt="neku logo" />
