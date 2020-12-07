@@ -30,10 +30,10 @@ const RankDeck = (props) => {
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <CardTitle tag="h5">Ranker Name</CardTitle>
-                  <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
+                  <CardTitle tag="h5">Ranker Name: {{members.Gamer.name} + {members.Gamer.lastName}}</CardTitle>
+                  <CardSubtitle tag="h6" className="mb-2 text-muted">{members.Gamer.nickName}</CardSubtitle> 
                 </div>
-                <p className="countryFlag">🇲🇽</p>
+                <p className="countryFlag">{teamCountry}</p>
               </div>
               <TableInfo />
               <div className="d-flex justify-content-center align-items-center pb-3">
@@ -48,10 +48,10 @@ const RankDeck = (props) => {
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <CardTitle tag="h5">Ranker Name</CardTitle>
-                  <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
+                  <CardTitle tag="h5">Ranker Name: {{members.Gamer.name} + {members.Gamer.lastName}}</CardTitle>
+                  <CardSubtitle tag="h6" className="mb-2 text-muted">{members.Gamer.nickName}</CardSubtitle> 
                 </div>
-                <p className="countryFlag">🇲🇽</p>
+                <p className="countryFlag">{teamCountry}</p>
               </div>
               <TableInfo />
               <div className="d-flex justify-content-center align-items-center pb-3">
@@ -66,10 +66,10 @@ const RankDeck = (props) => {
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <CardTitle tag="h5">Ranker Name</CardTitle>
-                  <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
+                  <CardTitle tag="h5">Ranker Name: {{members.Gamer.name} + {members.Gamer.lastName}}</CardTitle>
+                  <CardSubtitle tag="h6" className="mb-2 text-muted">{members.Gamer.nickName}</CardSubtitle> 
                 </div>
-                <p className="countryFlag">🇲🇽</p>
+                <p className="countryFlag">{teamCountry}</p>
               </div>
               <TableInfo />
               <div className="d-flex justify-content-center align-items-center pb-3">
@@ -83,11 +83,11 @@ const RankDeck = (props) => {
             <CardImg top src="https://a.espncdn.com/i/headshots/nhl/players/full/3114770.png" alt="Card image cap" />
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">Ranker Name</CardTitle>
-                  <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
+              <div>
+                  <CardTitle tag="h5">Ranker Name: {{members.Gamer.name} + {members.Gamer.lastName}}</CardTitle>
+                  <CardSubtitle tag="h6" className="mb-2 text-muted">{members.Gamer.nickName}</CardSubtitle> 
                 </div>
-                <p className="countryFlag">🇲🇽</p>
+                <p className="countryFlag">{teamCountry}</p>
               </div>
               <TableInfo />
               <div className="d-flex justify-content-center align-items-center pb-3">

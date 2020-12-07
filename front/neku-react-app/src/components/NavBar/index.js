@@ -28,6 +28,8 @@ const NavBar = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  
+
   return (
     <div>
       <Navbar expand="sm">
@@ -38,7 +40,7 @@ const NavBar = (props) => {
         </a>
           <NavbarToggler onClick={toggle}>
             <IconContext.Provider value={{ color:"white", size:"2em"}}>
-              NAME
+              {team.members.gamer.name}
             </IconContext.Provider>
           </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>

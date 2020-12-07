@@ -6,7 +6,7 @@ import { Container, Row, Col, Table } from 'reactstrap';
 // ------------- CSS ------------- //
 import './TableResults.css'
 
-let winLostAvg = {{won-games} / {lost-games}}
+let winLostAvg = {{wonGames} / {lostGames}}
 
 const TableResults = (props) => {
   return (
@@ -26,24 +26,24 @@ const TableResults = (props) => {
             </thead>
             <tbody>
               <tr>
-                <th scope="row">{country-flag}</th>
-                <td>{{name}+{father-lastname}+{mother-lastname}}</td>
+                <th scope="row">{tournament.countryFlag}</th>
+                <td>{{team.members.gamer.name}+{team.members.gamer.fatherLastname}+{team.members.gamer.motherLastname}}</td>
                 <td className="hideCol">{nickname}</td>
                 <td>{score} pts</td>
                 <td className="hideCol">{ranking}</td>
                 <td className="hideCol">{winLostAvg}</td>
               </tr>
               <tr>
-                <th scope="row">{country-flag}</th>
-                <td>{{name}+{father-lastname}+{mother-lastname}}</td>
+                <th scope="row">{tournament.countryFlag}</th>
+                <td>{{team.members.gamer.name}+{team.members.gamer.fatherLastname}+{team.members.gamer.motherLastname}}</td>
                 <td className="hideCol">{nickname}</td>
                 <td>{score} pts</td>
                 <td className="hideCol">{ranking}</td>
                 <td className="hideCol">{winLostAvg}</td>
               </tr>
               <tr>
-                <th scope="row">{country-flag}</th>
-                <td>{{name}+{father-lastname}+{mother-lastname}}</td>
+                <th scope="row">{tournament.countryFlag}</th>
+                <td>{{team.members.gamer.name}+{team.members.gamer.fatherLastname}+{team.members.gamer.motherLastname}}</td>
                 <td className="hideCol">{nickname}</td>
                 <td>{score} pts</td>
                 <td className="hideCol">{ranking}</td>

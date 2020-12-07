@@ -19,16 +19,16 @@ import TableResults from '../TableResults'
 
 const items = [
   {
-    src: 'https://cdn2.unrealengine.com/11br-competitive-evergreen-blue-newsheader-1920x1080-957497914.jpg',
-    altText: 'FORTNITE',
+    picture: {picture},
+    tournamentName: {tournamentName}
   },
   {
-    src: 'https://cdn.game.tv/game-tv-content/images_3/e412a7c3eb24413110362fd06686cc92/Banners.jpg',
-    altText: 'AMONG US',
+    picture: {picture},
+    tournamentName: {tournamentName}
   },
   {
-    src: 'https://d1fs8ljxwyzba6.cloudfront.net/assets/article/2019/09/10/smash-ultimate-european-circuit-times-tournaments-details-header_feature.jpg',
-    altText: 'SMASH BROS ULTIMATE',
+    picture: {picture},
+    tournamentName: {tournamentName}
   }
 ];
 
@@ -63,8 +63,8 @@ const CarouselNews = (props) => {
         <img src={item.src} alt={item.altText} />
         <CardBody>
           <CardTitle tag="h4">{tournamentName}</CardTitle>
-          <CardSubtitle tag="h5" className="mb-2 text-muted">Juego: {game}</CardSubtitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">País: {country}</CardSubtitle>
+          <CardSubtitle tag="h5" className="mb-2 text-muted">Juego: {tournament.game}</CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">País: {tournament.country}</CardSubtitle>
         </CardBody>
         <TableResults />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />

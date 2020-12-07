@@ -14,19 +14,19 @@ import './CarouselNews.css'
 
 const items = [
   {
-    src: 'https://fortnitebr.news/wp-content/uploads/2020/12/Fortnite-Mando-1000x600-364x205.jpg',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    picture: {article.picture},
+    title: {article.title},
+    source: {article.source},
   },
   {
-    src: 'https://s.yimg.com/ny/api/res/1.2/BLrNn0JfDybDKB.YzCIotA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cosmopolitan_438/c2f19de4a5740bf2988b43a6858b4742',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    picture: {article.picture},
+    title: {article.title},
+    source: {article.source},
   },
   {
-    src: 'https://cdn1.dotesports.com/wp-content/uploads/2020/03/31162532/EUdqZwpXQAEmVop.jpg',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    picture: {article.picture},
+    title: {article.title},
+    source: {article.source},
   }
 ];
 
