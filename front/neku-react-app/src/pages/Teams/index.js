@@ -20,9 +20,9 @@ class Teams extends Component {
                             <img max width="100%" height="250" src="https://www.techgames.com.mx/wp-content/uploads/2019/08/Telcel-LVP-Mexico-equipos.jpg" alt="Gamer img" />
                     </Col> 
                 </Row>
-                <Row >
-                    <TeamsCard></TeamsCard>
-                </Row>
+        
+                <TeamsCard></TeamsCard>
+                
             </Container>
         )
     }

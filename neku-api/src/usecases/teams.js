@@ -8,6 +8,10 @@ function getById (id) {
   return Teams.findById(id)
 }
 
+function getTeamByTeamId (teamId) {
+  return Teams.find({ teamName: teamId })
+}
+
 function deleteById (id) {
   return Teams.findByIdAndDelete(id)
 }
@@ -25,5 +29,6 @@ module.exports = {
   getById,
   create,
   deleteById,
-  updateById
+  updateById,
+  getTeamByTeamId
 }
