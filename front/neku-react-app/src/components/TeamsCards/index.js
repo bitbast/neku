@@ -18,6 +18,7 @@ const TeamsCard = () => {
         setTeams(teamsCollection.data.team)
     }
 
+    
     return(
         <div>
             { 

@@ -14,7 +14,7 @@ function Home(props) {
     fetch("http://localhost:8080/")
       .then((response) => response.json())
       .then((data) => {
-        setPosts(data.data.entries);
+        setPosts(data.data);
       });
   }, []);
 
