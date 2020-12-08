@@ -6,15 +6,44 @@ import ProfileSocialMedia from "../../components/profileSocialMedia/index"
 import { Container, Row, Col} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Profile.css";
+import data from "@iconify/icons-mdi/facebook"
+
 
 
 class Profile extends Component {
+
+    constructor (props) {
+        super(props)
+        this.state = {
+            players: {},
+            isFetch: true
+        }
+    }   
+
+    async componentDidMount () {
+        console.log(this.props)
+        await fetch("http://localhost:8080/teams/")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          this.setState({
+            players: data.data.team[0].members[0].Gamer,
+            isFetch: false
+          });   
+        });
+    }
+
     render () {
-        return (
+        console.log(this.state.players)
+        if (this.state.isFetch) {
+            return 'Loading ...'
+
+        }
+       return (
             <Container fluid className="profileContainer">
                 <Row className="d-flex justify-content-center align-items-center playerNameBox">
                     <Col xs="12" md="6" className= "heading">
-                        <h1>LUIS BASTIDA</h1>
+                        <h1> {this.state.players.name} </h1>
                         <h4>@bitbast</h4>
                     </Col>
                     <Col xs="12" md="4" className="d-flex justify-content-center align-items-center">

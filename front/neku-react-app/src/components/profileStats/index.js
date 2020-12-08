@@ -5,6 +5,7 @@ import './profileStats.css'
 
 class ProfileStats extends Component {
     render() {
+        
         return (
             <Row className="mt-2 ">
                     <Col md="12" className="sectionTitle">Estadísticas</Col>

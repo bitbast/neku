@@ -1,5 +1,9 @@
 import React, {Component} from "react"
+<<<<<<< HEAD
 import { Row, Col } from "reactstrap";
+=======
+import {  Row, Col, } from "reactstrap";
+>>>>>>> 8dbe802e78949337975754f6b59107a8c0846a53
 import 'bootstrap/dist/css/bootstrap.css';
 import { Icon} from "@iconify/react";
 import facebookIcon from "@iconify/icons-mdi/facebook";
