@@ -22,13 +22,13 @@ import './NavBar.css';
 import nekuLogoNav from "../../svg/neku-logo_grad-white-text-white.svg";
 import { BsController } from 'react-icons/bs'
 import { IconContext } from "react-icons";
+import { IoMenu } from 'react-icons/io5'
 
 const NavBar = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   
+  
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
@@ -40,7 +40,7 @@ const NavBar = (props) => {
         </a>
           <NavbarToggler onClick={toggle}>
             <IconContext.Provider value={{ color:"white", size:"2em"}}>
-              NOMBRE LOGIN
+              <IoMenu />
             </IconContext.Provider>
           </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
