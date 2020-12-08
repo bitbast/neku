@@ -1,43 +1,57 @@
 import React from 'react';
 
 // ------------- REACTSTRAP ------------- //
-import { Table } from 'reactstrap';
+import { Container, Row, Col, Table } from 'reactstrap';
 
 // ------------- CSS ------------- //
 import './TableResults.css'
 
 const TableResults = (props) => {
   return (
-    <Table borderless>
-      <thead>
-        <tr>
-          <th>País</th>
-          <th>Nombre</th>
-          <th>@</th>
-          <th>Puntuación</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">🇲🇽</th>
-          <td>Luis Bastida</td>
-          <td>bitbast</td>
-          <td>16,345 pts</td>
-        </tr>
-        <tr>
-          <th scope="row">🇦🇷</th>
-          <td>Lucho Gomez</td>
-          <td>gommorin</td>
-          <td>14,369 pts</td>
-        </tr>
-        <tr>
-          <th scope="row">🇲🇽</th>
-          <td>Charlie Silva</td>
-          <td>deMentor</td>
-          <td>14,123 pts</td>
-        </tr>
-      </tbody>
-    </Table>
+    <Container>
+      <Row>
+        <Col>
+          <Table borderless table-condensed table-responsive>
+            <thead>
+              <tr>
+                <th>País</th>
+                <th>Nombre</th>
+                <th className="hideCol">Apodo</th>
+                <th>Puntos</th>
+                <th className="hideCol">Ranking</th>
+                <th className="hideCol">G/P</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">México</th>
+                <td>Luis Perez</td>
+                <td className="hideCol">gameProPlayer</td>
+                <td>10,000 pts</td>
+                <td className="hideCol">1</td>
+                <td className="hideCol">3/5</td>
+              </tr>
+              <tr>
+                <th scope="row">México</th>
+                <td>Luis Perez</td>
+                <td className="hideCol">gameProPlayer</td>
+                <td>10,000 pts</td>
+                <td className="hideCol">2</td>
+                <td className="hideCol">4/9</td>
+              </tr>
+              <tr>
+                <th scope="row">México</th>
+                <td>Luis Perez</td>
+                <td className="hideCol">gameProPlayer</td>
+                <td>10,000 pts</td>
+                <td className="hideCol">3</td>
+                <td className="hideCol">15/54</td>
+              </tr>
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

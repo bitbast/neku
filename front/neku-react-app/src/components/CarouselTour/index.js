@@ -19,16 +19,16 @@ import TableResults from '../TableResults'
 
 const items = [
   {
-    src: 'https://cdn2.unrealengine.com/11br-competitive-evergreen-blue-newsheader-1920x1080-957497914.jpg',
-    altText: 'FORTNITE',
+    src: 'https://i.pcmag.com/imagery/lineups/06dxdkd5h3MmSKAaMczRpbQ-1..1569492889.jpg',
+    altText: 'Torneo 1'
   },
   {
-    src: 'https://cdn.game.tv/game-tv-content/images_3/e412a7c3eb24413110362fd06686cc92/Banners.jpg',
-    altText: 'AMONG US',
+    src: 'https://mk0logisticsoftiiud5.kinstacdn.com/wp-content/uploads/2019/07/Article-Key-Image-01989-800x420.jpg',
+    altText: 'Torneo 2'
   },
   {
-    src: 'https://d1fs8ljxwyzba6.cloudfront.net/assets/article/2019/09/10/smash-ultimate-european-circuit-times-tournaments-details-header_feature.jpg',
-    altText: 'SMASH BROS ULTIMATE',
+    src: 'https://cdn1.dotesports.com/wp-content/uploads/2020/08/18201155/EftgMHEXgAEYnua.jpg',
+    altText: 'Torneo 3'
   }
 ];
 
@@ -62,8 +62,9 @@ const CarouselNews = (props) => {
       >
         <img src={item.src} alt={item.altText} />
         <CardBody>
-          <CardTitle tag="h5">League Of Legends</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Ubicación: </CardSubtitle>
+          <CardTitle tag="h4"></CardTitle>
+          <CardSubtitle tag="h5" className="mb-2 text-muted">Juego: </CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">País: </CardSubtitle>
         </CardBody>
         <TableResults />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
@@ -72,7 +73,7 @@ const CarouselNews = (props) => {
   });
 
   return (
-    <Carousel
+    <Carousel className="carouselTour"
       activeIndex={activeIndex}
       next={next}
       previous={previous}

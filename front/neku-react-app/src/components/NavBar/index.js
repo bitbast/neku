@@ -28,9 +28,11 @@ const NavBar = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  
+
   return (
     <div>
-      <Navbar dark expand="sm">
+      <Navbar expand="sm">
         <a href="/">
         <NavbarBrand className="col-6 col-sm-3 col-md-3 col-lg-3 p-0 m-0 mb-2" href="/">
           <img src={nekuLogoNav} className="nekulogoNav" alt="neku logo" />
@@ -38,7 +40,7 @@ const NavBar = (props) => {
         </a>
           <NavbarToggler onClick={toggle}>
             <IconContext.Provider value={{ color:"white", size:"2em"}}>
-              NAME
+              NOMBRE LOGIN
             </IconContext.Provider>
           </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
@@ -64,7 +66,7 @@ const NavBar = (props) => {
                   </div>
                 </IconContext.Provider>
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu right id="dropdownMenuProfile">
                 <DropdownItem>
                   Perfil
                 </DropdownItem>
@@ -78,7 +80,7 @@ const NavBar = (props) => {
                 <DropdownItem>
                   Ajustes
                 </DropdownItem>
-                <DropdownItem className="bg-dark text-white">
+                <DropdownItem id="signupMenuSelect" className="mb-0">
                   <a href="/RegisterChoose">REGÍSTRATE</a>
                 </DropdownItem>
               </DropdownMenu>

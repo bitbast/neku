@@ -1,0 +1,36 @@
+{
+  [
+    {
+      "title": "Artículo 1",
+      "bodytext" : "Vamos a probar que funcione",        
+      "picture" : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/most-popular-video-games-of-2020-1582141293.png",
+      "author" : "luis gomez",
+      "source" : "http://facebook.com",
+      "date" : "15/11/2020"
+    },
+    {
+      "title": "Articulo 2",
+      "bodytext" : "Una prueba más",
+      "picture" : "https://imgix.kotaku.com.au/content/uploads/sites/3/2020/04/assassins-creed-valhalla-1.jpg?ar=16%3A9&auto=format&fit=crop&q=65&w=1280",
+      "author" : "luis bastida",
+      "source" : "http://facebook.com",
+      "date" : "13/11/2020"
+    },
+    {
+      "title": "Articulo 3",
+      "bodytext" : "subtitulo distinto",
+      "picture" : "https://i0.wp.com/twinfinite.net/wp-content/uploads/2019/12/fortnite02-1.jpg?resize=1000%2C600&ssl=1",
+      "author" : "charlie silva",
+      "source" : "http://facebook.com",
+      "date" : "08/09/2020"
+    },
+    {
+      "title": "Articulo 4",
+      "bodytext" : "un nuevo subtitulo articulo 4",
+      "picture" : "https://cdn.gaminggorilla.com/wp-content/uploads/2020/05/Most-Popular-Video-Games-Super-Smash-Bros-Ultimate.jpg",
+      "author" : "israel salinas",
+      "source" : "http://facebook.com",
+      "date" : "03/12/2020"
+    },
+  ]
+}

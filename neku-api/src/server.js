@@ -13,7 +13,7 @@ app.use('/teams', teamsRouter)
 
 app.get('/', (request, response) => {
   response.json({
-    sucees: true,
+    success: true,
     message: 'Neku APIv1'
   })
 })
