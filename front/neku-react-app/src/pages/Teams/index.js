@@ -1,10 +1,13 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 import { Container, Row, Col} from "reactstrap";
-import TeamsCard from "../../components/TeamsCards"
+import TeamsCard from "../../components/TeamsCards";
 import 'bootstrap/dist/css/bootstrap.css';
-import "./Teams.css"
+import "./Teams.css";
+
+
 
 class Teams extends Component {
+
     render() {
         return(
             <Container fluid className="teamsContainer">
@@ -18,11 +21,6 @@ class Teams extends Component {
                     </Col> 
                 </Row>
                 <Row >
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
                     <TeamsCard></TeamsCard>
                 </Row>
             </Container>
