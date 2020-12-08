@@ -27,7 +27,7 @@ const TeamsCard = () => {
                         <a href="/TeamPlayers">
                             <div className="p-2 TournamentCard">
                                 <img width="100%" height="200" src={item.teamLogo} alt="Tournament" className="teamImage" />
-                                <p className=" teamName text-center text-white"> {item.name} </p>
+                                <p className=" teamName text-center text-white"> {item.teamName} </p>
                                 <img width="50" height="50" src={item.teamCountry} alt="pais flag" className="rounded-circle mx-auto d-block"/>
                             </div>
                         </a>
