@@ -40,7 +40,7 @@ const NavBar = (props) => {
         </a>
           <NavbarToggler onClick={toggle}>
             <IconContext.Provider value={{ color:"white", size:"2em"}}>
-              {team.members.gamer.name}
+              NOMBRE LOGIN
             </IconContext.Provider>
           </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>

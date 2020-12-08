@@ -6,8 +6,6 @@ import { Container, Row, Col, Table } from 'reactstrap';
 // ------------- CSS ------------- //
 import './TableResults.css'
 
-let winLostAvg = {{wonGames} / {lostGames}}
-
 const TableResults = (props) => {
   return (
     <Container>
@@ -26,28 +24,28 @@ const TableResults = (props) => {
             </thead>
             <tbody>
               <tr>
-                <th scope="row">{tournament.countryFlag}</th>
-                <td>{{team.members.gamer.name}+{team.members.gamer.fatherLastname}+{team.members.gamer.motherLastname}}</td>
-                <td className="hideCol">{nickname}</td>
-                <td>{score} pts</td>
-                <td className="hideCol">{ranking}</td>
-                <td className="hideCol">{winLostAvg}</td>
+                <th scope="row">México</th>
+                <td>Luis Perez</td>
+                <td className="hideCol">gameProPlayer</td>
+                <td>10,000 pts</td>
+                <td className="hideCol">1</td>
+                <td className="hideCol">3/5</td>
               </tr>
               <tr>
-                <th scope="row">{tournament.countryFlag}</th>
-                <td>{{team.members.gamer.name}+{team.members.gamer.fatherLastname}+{team.members.gamer.motherLastname}}</td>
-                <td className="hideCol">{nickname}</td>
-                <td>{score} pts</td>
-                <td className="hideCol">{ranking}</td>
-                <td className="hideCol">{winLostAvg}</td>
+                <th scope="row">México</th>
+                <td>Luis Perez</td>
+                <td className="hideCol">gameProPlayer</td>
+                <td>10,000 pts</td>
+                <td className="hideCol">2</td>
+                <td className="hideCol">4/9</td>
               </tr>
               <tr>
-                <th scope="row">{tournament.countryFlag}</th>
-                <td>{{team.members.gamer.name}+{team.members.gamer.fatherLastname}+{team.members.gamer.motherLastname}}</td>
-                <td className="hideCol">{nickname}</td>
-                <td>{score} pts</td>
-                <td className="hideCol">{ranking}</td>
-                <td className="hideCol">{winLostAvg}</td>
+                <th scope="row">México</th>
+                <td>Luis Perez</td>
+                <td className="hideCol">gameProPlayer</td>
+                <td>10,000 pts</td>
+                <td className="hideCol">3</td>
+                <td className="hideCol">15/54</td>
               </tr>
             </tbody>
           </Table>

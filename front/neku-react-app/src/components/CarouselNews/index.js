@@ -14,19 +14,22 @@ import './CarouselNews.css'
 
 const items = [
   {
-    picture: {article.picture},
-    title: {article.title},
-    source: {article.source},
+    src: 'https://gamespot1.cbsistatic.com/uploads/screen_kubrick/123/1239113/3320903-thumb.jpg',
+    altText: 'Título Novedades',
+    caption: 'Gaming News',
+    sub: 'subtitle 1'
   },
   {
-    picture: {article.picture},
-    title: {article.title},
-    source: {article.source},
+    src: 'https://wearesocial-net.s3.amazonaws.com/wp-content/uploads/2020/11/gamer_room.jpg',
+    altText: 'Título Univ',
+    caption: 'Universal',
+    sub: 'subtitle 2'
   },
   {
-    picture: {article.picture},
-    title: {article.title},
-    source: {article.source},
+    src: 'https://assets.geekinsider.com/2020/06/image1-4.jpeg',
+    altText: 'Título',
+    caption: 'Reforma.com',
+    sub: 'subtitle 3'
   }
 ];
 
@@ -59,7 +62,7 @@ const CarouselNews = (props) => {
           key={item.src}
         >
           <img src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <CarouselCaption captionText={item.sub} captionHeader={item.caption} />
         </CarouselItem>
     );
   });
