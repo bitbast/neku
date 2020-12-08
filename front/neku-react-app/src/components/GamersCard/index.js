@@ -6,7 +6,6 @@ import "./GamersCard.css"
 class GamersCard extends Component {
     render() {
         return(
-        
             <Col xs={{size: 10, offset: 1}} md={{size: 6, offset: 0}} lg="3" className=" mb-3 mt-3 colTeam p-2" >
                 <a href="/Profile">
                     <div className="p-2 TournamentCard">
