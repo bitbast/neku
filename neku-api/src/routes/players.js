@@ -44,6 +44,26 @@ router.get('/:teamId', async (request, response) => {
   }
 })
 
+router.get('/id/:id', async (request, response) => {
+  try {
+    const teamPlayers = await players.getById(request.params.id)
+
+    response.json({
+      success: true,
+      message: 'Single Player',
+      data: {
+        team: teamPlayers
+      }
+    })
+  } catch (error) {
+    response.status(404)
+    response.json({
+      succes: false,
+      error: error.message
+    })
+  }
+})
+
 router.post('/', async (request, response) => {
   try {
     const {

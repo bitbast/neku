@@ -24,7 +24,7 @@ const TeamPlayersHeader = () => {
     }
 
     return(
-        <Row>
+        <div>
             {
                 gamers.map( item => (
                     <Row className="d-flex justify-content-center align-items-center sectionNameBox">
@@ -32,15 +32,12 @@ const TeamPlayersHeader = () => {
                             <p className= "playerName"> {item.teamName} </p>
                         </Col>
                         <Col xs="12" md="4" className="d-flex justify-content-center align-items-center">
-                                <img max width="100%" height="250" src={item.teamLogo} alt="Gamer img" />
+                            <img max width="100%" height="250" src={item.teamLogo} alt="Gamer img" />
                         </Col> 
                     </Row>
                 ))
             }
-        </Row>
-
-        
- 
+       </div>
     )
 }
 

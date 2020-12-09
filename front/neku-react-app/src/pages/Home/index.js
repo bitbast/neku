@@ -8,17 +8,7 @@ import Tournaments from '../../components/Tournaments'
 import RankDeck from '../../components/RankDeck'
 
 function Home(props) {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8080/")
-      .then((response) => response.json())
-      .then((data) => {
-        setPosts(data.data);
-      });
-  }, []);
-
-  const middlePosts = posts.slice(0, 4);
+  
   console.log(props);
   return (
     <div>
