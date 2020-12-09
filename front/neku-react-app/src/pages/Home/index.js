@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import Header from '../../components/Header'
 import News from '../../components/News'
 import Tournaments from '../../components/Tournaments'
-// import RankDeck from '../../components/RankDeck'
+import RankDeck from '../../components/RankDeck'
 
 function Home(props) {
   const [posts, setPosts] = useState([]);
@@ -25,7 +25,7 @@ function Home(props) {
       <Header />
       <News />
       <Tournaments />
-      {/* <RankDeck /> */}
+      <RankDeck />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import { Table } from 'reactstrap';
@@ -8,13 +8,10 @@ import './TableInfo.css'
 
 const TableInfo = (props) => {
 
-  const [gameStats, setGameStats] = useState({});
+  const [gameStats, setGameStats] = useState([]);
 
   useEffect(() => {
-    // console.log('mountComponent')
     obtainData()
-
-    // console.log(news)
   },[])
 
   const obtainData = async () => {
@@ -22,7 +19,6 @@ const TableInfo = (props) => {
       const gameStatsCollection = await data.json()
       console.log(gameStatsCollection)
       setGameStats(gameStatsCollection.data.team) // de este key es de donde estoy jalando la info del json
-      console.log(gameStats)
   }
 
   return (
@@ -35,24 +31,22 @@ const TableInfo = (props) => {
           <th className="hideCol">Equipo</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          {
-            gameStats.map((item) => {          
-              return (
-              <td
-                key={item._id}
-                >
-                {item.gamesPlayed.game.gameName}
-              </td>
-                <td>{item.gamesPlayed.game.points}</td>
-                <td>{item.tournamentsPlayed.tournament.totalEvents}</td>
-                <td className="hideCol">{item.team}</td>
-              )
-            })
-          }
-        </tr>
-      </tbody>
+      {
+        gameStats.map((item) => {          
+          return (
+            <Fragment>
+              <tbody>
+                <tr>
+                  <td key={item._id}>{item.gamesPlayed[0].game.gameName}</td>
+                  <td>{item.gamesPlayed[0].game.points}</td>
+                  <td>{item.tournamentsPlayed[0].tournament.totalEvents}</td>
+                  <td className="hideCol">{item.team}</td>
+                </tr>
+              </tbody>
+            </Fragment>
+          )
+        })
+      }
     </Table>
   );
 }
