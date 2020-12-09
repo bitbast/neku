@@ -16,20 +16,20 @@ const items = [
   {
     picture: 'https://gamespot1.cbsistatic.com/uploads/screen_kubrick/123/1239113/3320903-thumb.jpg',
     title: 'Título 1',
-    caption: 'Gaming',
-    bodytext: 'Subtitle 1'
+    caption: 'Subtítulo 1',
+    source: 'https://www.gameinformer.com/'
   },
   {
     picture: 'https://wearesocial-net.s3.amazonaws.com/wp-content/uploads/2020/11/gamer_room.jpg',
     title: 'Título 2',
-    caption: 'Universal',
-    bodytext: 'Subtitle 2'
+    caption: 'Subtitle 2',
+    source: 'https://www.levelup.com/noticias'
   },
   {
     picture: 'https://assets.geekinsider.com/2020/06/image1-4.jpeg',
     title: 'Título 3',
-    caption: 'Reforma',
-    bodytext: 'Subtitle 3'
+    caption: 'Subtitle 2',
+    source: 'https://computerhoy.com/noticias/gaming'
   }
 ];
 
@@ -57,7 +57,7 @@ const CarouselNews = (props) => {
     setActiveIndex(newIndex);
   }
 
-  let slides = []
+  // let slides = []
 
   useEffect(() => {
     // console.log('mountComponent')
@@ -79,22 +79,22 @@ const CarouselNews = (props) => {
       activeIndex={activeIndex}
       next={next}
       previous={previous}
-      interval={100000}
+      interval={false}
       className="carouselNewsCard"
     >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {
-        news.map((item) => {
+      { 
+        news.map((item) => {          
           return (
               <CarouselItem
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item._id}
               >
-                <a href={}>
+                <a href={item.source}>
                 <img src={item.picture} alt={item.title} />
                 </a>
-                <CarouselCaption captionText={item.bodytext} captionHeader={item.title} />
+                <CarouselCaption captionText={item.caption} captionHeader={item.title} />
               </CarouselItem>
           )
         })

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import { Table } from 'reactstrap';
@@ -7,34 +7,50 @@ import { Table } from 'reactstrap';
 import './TableInfo.css'
 
 const TableInfo = (props) => {
+
+  const [gameStats, setGameStats] = useState({});
+
+  useEffect(() => {
+    // console.log('mountComponent')
+    obtainData()
+
+    // console.log(news)
+  },[])
+
+  const obtainData = async () => {
+      const data = await fetch("http://localhost:8080/players")
+      const gameStatsCollection = await data.json()
+      console.log(gameStatsCollection)
+      setGameStats(gameStatsCollection.data.team) // de este key es de donde estoy jalando la info del json
+      console.log(gameStats)
+  }
+
   return (
     <Table borderless table-condensed table-responsive>
       <thead className="tableHead">
         <tr>
           <th>Juego</th>
-          <th>Ranking</th>
-          <th>Puntuación</th>
-          <th className="hideCol">Tiempo de juego</th>
+          <th>Puntos</th>
+          <th>Torneos Jugados</th>
+          <th className="hideCol">Equipo</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>League Of Legends</td>
-          <td>1</td>
-          <td>16,345 pts</td>
-          <td className="hideCol">2,000 hrs</td>
-        </tr>
-        <tr>
-          <td>Among Us</td>
-          <td>324</td>
-          <td>14,369 pts</td>
-          <td className="hideCol">300 hrs</td>
-        </tr>
-        <tr>
-          <td>Overwatch</td>
-          <td>15</td>
-          <td>14,123 pts</td>
-          <td className="hideCol">647 hrs</td>
+          {
+            gameStats.map((item) => {          
+              return (
+              <td
+                key={item._id}
+                >
+                {item.gamesPlayed.game.gameName}
+              </td>
+                <td>{item.gamesPlayed.game.points}</td>
+                <td>{item.tournamentsPlayed.tournament.totalEvents}</td>
+                <td className="hideCol">{item.team}</td>
+              )
+            })
+          }
         </tr>
       </tbody>
     </Table>

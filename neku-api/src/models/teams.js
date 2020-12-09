@@ -18,3 +18,6 @@ const teamsSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('teams', teamsSchema)
+
+// Acceso a DB
+// mongodb+srv://LuisFernandoGomezMorin:sn7IsPipktgYGjrD@kodemia-bootcamp.frxxh.mongodb.net/neku

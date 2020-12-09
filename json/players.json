@@ -1,0 +1,156 @@
+[
+  {
+    "name" : "Carlos",
+    "fatherLastName" : "Miranda",
+    "motherLastName" : "Hinojosa",
+    "nickname" : "bugha",
+    "gamerPicture" : "https://www.invitetogame.com/wp-content/uploads/2019/11/Methodz_Anthony_Zinni_PL2_2019-300x300.png",
+    "country" : "MEX",
+    "team" : "Cuervos",
+    "gamesPlayed" : {
+      "game" : {
+        "gameName" : "Fortnite",
+        "points" : "133,203"
+      }
+    },
+    "tournamentsPlayed" : {
+      "tournament" : {
+        "totalEvents" : "10",
+        "tournamentScore" : "14,754",
+        "ranking" : "1"
+      }
+    }
+  },
+  {
+    "name" : "Luis",
+    "fatherLastName" : "Hernandez",
+    "motherLastName" : "Lugo",
+    "nickname" : "Liquid STROMADON",
+    "gamerPicture" : "https://www.orlandopiratesfc.com/application/files/7715/0709/5394/esports-shuaib-hassen-headshot-orlando-pirates-brandon-barnard-photographer-DSC7192.png",
+    "country" : "BOL",
+    "team" : "Liquids",
+    "gamesPlayed" : {
+      "game" : {
+        "gameName" : "Fortnite",
+        "points" : "112,134"
+      }
+    },
+    "tournamentsPlayed" : {
+      "tournament" : {
+        "totalEvents" : "24",
+        "tournamentScore" : "17,876",
+        "ranking" : "3"
+      }
+    }
+  },
+  {
+    "name" : "Javier",
+    "fatherLastName" : "Torres",
+    "motherLastName" : "Navieti",
+    "nickname" : "NRG Clix",
+    "gamerPicture" : "https://www.sau.edu/assets/images/student-profiles/alex-denton/alex-denton-cutout-500x500.png",
+    "country" : "ARG",
+    "team" : "D10ses del sur",
+    "gamesPlayed" : {
+      "game" : {
+        "gameName" : "Call of Duty Black Ops",
+        "points" : "182,253"
+      }
+    },
+    "tournamentsPlayed" : {
+      "tournament" : {
+        "totalEvents" : "54",
+        "tournamentScore" : "34,235",
+        "ranking" : "1"
+      }
+    }
+  },
+  {
+    "name" : "Alejandro",
+    "fatherLastName" : "Caleiro",
+    "motherLastName" : "Sanchez",
+    "nickname" : "Venom Killshot",
+    "gamerPicture" : "https://apiesltv.imgix.net/images/player/d/386-db7f0fef-77fd-4918-8c27-d37a766e0280.png",
+    "country" : "COL",
+    "team" : "D10ses del sur",
+    "gamesPlayed" : {
+      "game" : {
+        "gameName" : "Call of Duty Black Ops",
+        "points" : "159,637"
+      }
+    },
+    "tournamentsPlayed" : {
+      "tournament" : {
+        "totalEvents" : "45",
+        "tournamentScore" : "33,235",
+        "ranking" : "2"
+      }
+    }
+  },
+  {
+    "name" : "Ignacio",
+    "fatherLastName" : "Ayala",
+    "motherLastName" : "Fuentes",
+    "nickname" : "Chacho_EL_DURO",
+    "gamerPicture" : "https://futhead.cursecdn.com/static/img/champions/players/29.png",
+    "country" : "ESP",
+    "team" : "",
+    "gamesPlayed" : {
+      "game" : {
+        "gameName" : "FIFA 21",
+        "points" : "154,087"
+      }
+    },
+    "tournamentsPlayed" : {
+      "tournament" : {
+        "totalEvents" : "20",
+        "tournamentScore" : "18,323",
+        "ranking" : "2"
+      }
+    }
+  },
+  {
+    "name" : "Lucia",
+    "fatherLastName" : "Tinoco",
+    "motherLastName" : "Escutia",
+    "nickname" : "TxChaddy",
+    "gamerPicture" : "https://i.pinimg.com/originals/52/96/c2/5296c2bc585bc1db5e2b4edd26a5608f.png",
+    "country" : "MEX",
+    "team" : "Lollipops",
+    "gamesPlayed" : {
+      "game" : {
+        "gameName" : "Fortnite",
+        "points" : "54,840"
+      }
+    },
+    "tournamentsPlayed" : {
+      "tournament" : {
+        "totalEvents" : "15",
+        "tournamentScore" : "6,782",
+        "ranking" : "8"
+      }
+    }
+  },
+  {
+    "name" : "Abraham",
+    "fatherLastName" : "Ramirez",
+    "motherLastName" : "de Anda",
+    "nickname" : "FIAkkA",
+    "gamerPicture" : "https://static.wikia.nocookie.net/cod_esports_gamepedia_en/images/c/cb/Dashy_CDL_2020.png",
+    "country" : "MEX",
+    "team" : "Malandros",
+    "gamesPlayed" : {
+      "game" : {
+        "gameName" : "Rocket League",
+        "points" : "38,426"
+      }
+    },
+    "tournamentsPlayed" : {
+      "tournament" : {
+        "totalEvents" : "22",
+        "tournamentScore" : "17,285",
+        "ranking" : "76"
+      }
+    }
+  }
+]

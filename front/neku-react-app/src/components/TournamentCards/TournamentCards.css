@@ -14,6 +14,10 @@
     margin: 0 !important;
 }
 
+.tourCard h5 {
+    color: black;
+}
+
 #moreInfoBtn {
     width: 75% !important;
     background-color: #181733;
@@ -27,4 +31,8 @@
 
 #cardCarousel .text-muted {
     color: white !important;
+}
+
+#nextTournaments{
+    background-color: white !important;    
 }

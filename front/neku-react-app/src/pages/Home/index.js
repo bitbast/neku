@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // Components
 import Header from '../../components/Header'
 import News from '../../components/News'
-// import Tournaments from '../../components/Tournaments'
+import Tournaments from '../../components/Tournaments'
 // import RankDeck from '../../components/RankDeck'
 
 function Home(props) {
@@ -24,8 +24,8 @@ function Home(props) {
     <div>
       <Header />
       <News />
-      {/* <Tournaments />
-      <RankDeck /> */}
+      <Tournaments />
+      {/* <RankDeck /> */}
     </div>
   );
 }

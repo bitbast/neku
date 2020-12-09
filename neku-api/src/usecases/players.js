@@ -1,7 +1,7 @@
 const Players = require('../models/players')
 
 function getAll () {
-  return Players.find()
+  return Players.find().limit(3)
 }
 
 function getById (id) {
