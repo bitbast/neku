@@ -40,6 +40,10 @@ const playersSchema = new mongoose.Schema({
     type: String,
     required: false
   },
+  email: {
+    type: String,
+    required: true
+  },
   gamesPlayed: {
     type: Array,
     game: {

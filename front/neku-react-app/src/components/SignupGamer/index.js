@@ -5,28 +5,28 @@ import './SignupGamer.css'
 
 const SignupGamer = (props) => {
 
-  // const [register, setRegister] = useState({
-  //   name: '',
-  //   fatherLastName: '',
-  //   motherLastName: '',
-  //   nickName: '',
-  //   email: '',
-  //   teamName: '',
-  //   tournamentsPlayed: '',
-  //   gamesPlayed: '',
-  //   gamerProfile: '',
-  //   gamerPicture: '',
-  //   password: '',
-  // });
+  const [ gamerForm, setGamerForm ] = useState({
+    "name": '',
+    "fatherLastName":'',
+    "motherLastName":'',
+    "nickname":'',
+    "email": '',
+    "gamerPicture":'',
+    "country":'',
+    "team":'',
+    "password":'',
+  }
+
+
 
   return (
   <Fragment>
     <Card className="formCard border-0 p-3">
       <Col sm="12" md={{ size: 8, offset: 2 }} lg={{ size: 10, offset: 1 }}>
-        <CardImg id="formCardImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-forms-banner.png?raw=true" alt="Card image cap" />
+        <CardImg id="formCardImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-forms-banner-gamers.png?raw=true" alt="Card image cap" />
         <Form className="signupForm">
           <Row form>
-            <Col md={4}>
+            <Col md={6}>
               <FormGroup>
                 <Label for="signupName">Nombre</Label>
                 <Input
@@ -55,9 +55,34 @@ const SignupGamer = (props) => {
                 <Label for="signupAlias">Alias</Label>
                 <Input
                   type="text"
-                  name="nickName"
+                  name="nickname"
                   id="signupNickName"
                   placeholder="> " />
+              </FormGroup>
+              <FormGroup>
+                <Label for="signupPassword">Contraseña</Label>
+                <Input
+                  type="password"
+                  name="password"
+                  id="signupPassword"
+                  placeholder="por lo menos 8 caracteres" />
+              </FormGroup>
+            </Col>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="signupTeam">Equipo</Label>
+                <Input
+                  type="text"
+                  name="team"
+                  id="signupTeam"
+                  placeholder="> " />
+              </FormGroup>
+              <FormGroup>
+                <Label for="signupCountry">País</Label>
+                <Input
+                  type="text"
+                  name="country"
+                  id="signupGamerProfile" />
               </FormGroup>
               <FormGroup>
                 <Label for="signupEmail">Email</Label>
@@ -67,70 +92,18 @@ const SignupGamer = (props) => {
                   id="signupEmail"
                   placeholder="> " />
               </FormGroup>
-            </Col>
-            <Col md={4}>
-              <FormGroup>
-                <Label for="signupTeamName">Equipo</Label>
-                <Input
-                  type="text"
-                  name="teamName"
-                  id="signupTeamName"
-                  placeholder="> " />
-              </FormGroup>
-              <FormGroup>
-                <Label for="signupTournamentsPlayed">Torneos</Label>
-                <Input
-                  type="number"
-                  name="tournamentsPlayed"
-                  id="signupTournamentsPlayed"
-                  placeholder="> " />
-              </FormGroup>
-              <FormGroup>
-                <Label for="signupGamesPlayed">Juego</Label>
-                <Input
-                  type="text"
-                  name="gamesPlayed"
-                  id="signupGamesPlayed"
-                  placeholder="> " />
-              </FormGroup>
-              <FormGroup>
-                <Label for="signupGamerProfile">Bio</Label>
-                <Input
-                  type="textarea"
-                  name="gamerProfile"
-                  id="signupGamerProfile"
-                  placeholder="Cuéntanos algo de ti" />
-              </FormGroup>
-            </Col>
-            <Col md={4} sm={6}>
-              <FormGroup>
-                <Label for="signupPassword">Contraseña</Label>
-                <Input
-                  type="password"
-                  name="password"
-                  id="signupPassword"
-                  placeholder="por lo menos 8 caracteres" />
-              </FormGroup>
               <FormGroup>
                 <Label for="signupGamerPicture">Foto de Perfil</Label>
                 <Input
                   type="file"
                   name="gamerPicture"
                   id="signupGamerPicture" />
-              </FormGroup>
-            </Col>
-            <Col>
-              <FormGroup check className="mt-1 mb-4">
-                <Input
-                type="checkbox"
-                name="check"
-                id="checkmark"/>
-                <Label for="checkmark" check>Acepto los <a href="/Aviso">términos y condiciones</a></Label>
+                <caption className="pt-0" id="pictureCaption">Sólo en formatos .jpg / .png y no mayor a 1000x1000px.</caption>
               </FormGroup>
             </Col>
           </Row>
           <Row className="d-flex justify-content-center py-2">
-            <Button>REGÍSTRATE</Button>
+            <Button type="submit">REGÍSTRATE</Button>
           </Row>
         </Form>
       </Col>

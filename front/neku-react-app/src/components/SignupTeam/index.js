@@ -7,7 +7,7 @@ const SignupTeam = (props) => {
   return (
     <Card className="formCard border-0 p-3">
       <Col sm={12} md={{ size: 8, offset: 2 }} lg={{ size: 10, offset: 1 }}>
-        <CardImg id="formCardImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-forms-banner.png?raw=true" alt="Card image cap" />
+        <CardImg id="formCardImg" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-forms-banner-teams.png?raw=true" alt="Card image cap" />
         <Form className="signupForm">
           <Row form>
             <Col md={6}>
