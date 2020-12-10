@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {  Row, Col, } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Icon} from "@iconify/react";
 import facebookIcon from "@iconify/icons-mdi/facebook";

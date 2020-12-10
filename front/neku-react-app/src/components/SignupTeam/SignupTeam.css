@@ -32,3 +32,9 @@
   background-color: #121121 !important;
   border: 1px solid #121121;
 }
+
+#pictureCaption {
+  font-family: exo, sans-serif;
+  width: 400px;
+  font-size: 13px;
+}

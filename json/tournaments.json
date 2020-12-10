@@ -1,0 +1,42 @@
+[
+  {
+    "tournamentname" : "World Cup 2020",
+    "game" : "League Of Legends",
+    "country" : "Estados Unidos",
+    "countryFlag" : "🇺🇸",
+    "format" : "Battle Royale",
+    "gameGenre" : "Multiplayer Online Battle Arena",
+    "date" : "12/12/2021",
+    "picture" : "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/pa/17/22/26/55/17222655_bf1106"
+  },
+  {
+    "tournamentname" : "K1NG Cup",
+    "game" : "Fortnite",
+    "country" : "Estados Unidos",
+    "countryFlag" : "🇺🇸",
+    "format" : "Battle Royale",
+    "gameGenre" : "Multiplayer Online Battle Arena",
+    "date" : "21/12/2020",
+    "picture" : "https://pbs.twimg.com/media/EnS7CrdWMAAVLdu.jpg"
+  },
+  {
+    "tournamentname" : "COD Mobile Championship",
+    "game" : "Call Of Duty",
+    "country" : "Estados Unidos",
+    "countryFlag" : "🇺🇸",
+    "format" : "Shooter",
+    "gameGenre" : "First-person Shooter",
+    "date" : "28/12/2020",
+    "picture" : "https://cdn1.dotesports.com/wp-content/uploads/2019/10/21105729/c0f81745888a9ac0aa729bd73d7bef34.png"
+  },
+  {
+    "tournamentname" : "Global Series",
+    "game" : "FIFA 21",
+    "country" : "Alemania",
+    "countryFlag" : "🇩🇪",
+    "format" : "Battle Royale",
+    "gameGenre" : "Deportes Futbol",
+    "picture" : "https://static1-es.millenium.gg/articles/9/29/65/9/@/136563-fifa-21-open-amp_main_media_schema-2.jpg"
+  }
+
+]

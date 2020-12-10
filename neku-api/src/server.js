@@ -17,7 +17,7 @@ app.use('/players', playersRouter)
 
 app.get('/', (request, response) => {
   response.json({
-    sucees: true,
+    success: true,
     message: 'Neku APIv1'
   })
 })

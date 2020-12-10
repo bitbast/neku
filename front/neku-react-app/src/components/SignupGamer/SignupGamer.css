@@ -12,12 +12,6 @@
   font-size: 14px;
 }
 
-#acceptCheck {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .signupForm .btn-secondary {
   background-color: #F2AE2E !important;
   border: 1px solid #F2AE2E;

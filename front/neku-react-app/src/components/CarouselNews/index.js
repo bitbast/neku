@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import {
@@ -14,23 +14,29 @@ import './CarouselNews.css'
 
 const items = [
   {
-    src: 'https://fortnitebr.news/wp-content/uploads/2020/12/Fortnite-Mando-1000x600-364x205.jpg',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    picture: 'https://gamespot1.cbsistatic.com/uploads/screen_kubrick/123/1239113/3320903-thumb.jpg',
+    title: 'Título 1',
+    caption: 'Subtítulo 1',
+    source: 'https://www.gameinformer.com/'
   },
   {
-    src: 'https://s.yimg.com/ny/api/res/1.2/BLrNn0JfDybDKB.YzCIotA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/cosmopolitan_438/c2f19de4a5740bf2988b43a6858b4742',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    picture: 'https://wearesocial-net.s3.amazonaws.com/wp-content/uploads/2020/11/gamer_room.jpg',
+    title: 'Título 2',
+    caption: 'Subtitle 2',
+    source: 'https://www.levelup.com/noticias'
   },
   {
-    src: 'https://cdn1.dotesports.com/wp-content/uploads/2020/03/31162532/EUdqZwpXQAEmVop.jpg',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    picture: 'https://assets.geekinsider.com/2020/06/image1-4.jpeg',
+    title: 'Título 3',
+    caption: 'Subtitle 2',
+    source: 'https://computerhoy.com/noticias/gaming'
   }
 ];
 
 const CarouselNews = (props) => {
+
+  const [news, setNews] = useState([]);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -51,27 +57,48 @@ const CarouselNews = (props) => {
     setActiveIndex(newIndex);
   }
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-      </CarouselItem>
-    );
-  });
+  // let slides = []
+
+  useEffect(() => {
+    // console.log('mountComponent')
+    obtainData()
+
+    // console.log(news)
+  },[])
+
+  const obtainData = async () => {
+      const data = await fetch("http://localhost:8080/news")
+      const newsCollection = await data.json()
+      console.log(newsCollection)
+      setNews(newsCollection.data.articles) // de este key es de donde estoy jalando la info del json
+      console.log(news)
+  }
 
   return (
     <Carousel
       activeIndex={activeIndex}
       next={next}
       previous={previous}
+      interval={false}
+      className="carouselNewsCard"
     >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
+      { 
+        news.map((item) => {          
+          return (
+              <CarouselItem
+                onExiting={() => setAnimating(true)}
+                onExited={() => setAnimating(false)}
+                key={item._id}
+              >
+                <a href={item.source}>
+                <img src={item.picture} alt={item.title} />
+                </a>
+                <CarouselCaption captionText={item.caption} captionHeader={item.title} />
+              </CarouselItem>
+          )
+        })
+      }
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
