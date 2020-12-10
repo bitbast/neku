@@ -10,17 +10,7 @@ const ProfileStats = () => {
     const {playerId} = useParams()
     console.log(playerId)
     
-    const [player, setPlayer] = useState({
-        "name": '',
-        "fatherLastName":'',
-        "motherLastName":'',
-        "nickname":'',
-        "gamerPicture":'',
-        "gamerProfile":'',
-        "team":'',
-        "country":'',
-        "email": '',
-    })
+    const [player, setPlayer] = useState({})
 
     useEffect(() => {
         obtainData()
@@ -30,7 +20,7 @@ const ProfileStats = () => {
         const data = await fetch(`http://localhost:8080/players/id/${playerId}`)
         const playerData = await data.json()
         console.log(playerData)
-        setPlayer(playerData.data)
+        setPlayer(playerData.data.team)
     }
 
     return (
@@ -38,7 +28,7 @@ const ProfileStats = () => {
             <Col md="12" className="sectionTitle">Estadísticas</Col>
             <Col md="4" className="d-flex flex-column justify-content-center align-items center" >
                 <p className="profileStatsTitle text-center mb-2">Total de Partidas</p>
-                <h3 className="profileStatsData text-center mb-5">200</h3>
+                <h3 className="profileStatsData text-center mb-5"> {player.name} </h3>
             </Col>
             <Col md="4" className="d-flex flex-column justify-content-center align-items center">
                 <p className="profileStatsTitle text-center mb-2">% Ganados</p>
@@ -50,7 +40,7 @@ const ProfileStats = () => {
             </Col>
             <Col md="4" className="d-flex flex-column justify-content-center align-items center">
                 <p className="profileStatsTitle text-center mb-2">Equipo</p>
-                <img width="100" height="100" src={player.gamerPicture} alt="Equipo logo" className="rounded-circle mx-auto d-block mb-5" />
+                <img width="100" height="100" src="" alt="Equipo logo" className="rounded-circle mx-auto d-block mb-5" />
 
             </Col>
             <Col md="4" className="d-flex flex-column justify-content-center align-items center">
