@@ -44,35 +44,15 @@ router.get('/:teamId', async (request, response) => {
   }
 })
 
-router.get('/:teamId', async (request, response) => {
+router.get('/id/:id', async (request, response) => {
   try {
-    const teamPlayers = await players.getPlayersByTeamId(request.params.teamId)
-
-    response.json({
-      success: true,
-      message: 'Team Players',
-      data: {
-        team: teamPlayers
-      }
-    })
-  } catch (error) {
-    response.status(404)
-    response.json({
-      succes: false,
-      error: error.message
-    })
-  }
-})
-
-router.get('/:id', async (request, response) => {
-  try {
-    const teamPlayers = await players.getPlayersByTeamId(request.params.Id)
+    const singlePlayer = await players.getById(request.params.id)
 
     response.json({
       success: true,
       message: 'Single Players',
       data: {
-        team: teamPlayers
+        team: singlePlayer
       }
     })
   } catch (error) {
@@ -141,7 +121,7 @@ router.delete('/:id', async (request, response) => {
     const deletedPlayer = await players.deleteById(id)
     response.json({
       sucess: true,
-      message: 'Team deleted',
+      message: 'Player deleted',
       data: {
         team: deletedPlayer
       }
