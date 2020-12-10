@@ -6,7 +6,7 @@ const playersSchema = new mongoose.Schema({
     required: true,
     minlength: 2
   },
-  fatherLastname: {
+  fatherLastName: {
     type: String,
     required: true,
     minlength: 2

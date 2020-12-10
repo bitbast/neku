@@ -1,14 +1,14 @@
 import "./App.css";
 
-// import Profile from "./pages/Profile";
-// import Teams from "./pages/Teams";
-// import Gamers from "./pages/Gamers";
-// import Videogames from "./pages/Videogames";
-// import TeamPlayers from "./pages/TeamPlayers";
-// import RegisterChoose from './pages/RegisterChoose';
-// import FormGamer from './pages/FormGamer';
-// import FormTeam from './pages/FormTeam';
-// import Aviso from './pages/AvisoPrivacidad'
+import Profile from "./pages/Profile";
+import Teams from "./pages/Teams";
+import Gamers from "./pages/Gamers";
+import Videogames from "./pages/Videogames";
+import TeamPlayers from "./pages/TeamPlayers";
+import RegisterChoose from './pages/RegisterChoose';
+import FormGamer from './pages/FormGamer';
+import FormTeam from './pages/FormTeam';
+import Aviso from './pages/AvisoPrivacidad'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -26,7 +26,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route path="/profile" component={Profile} />
+          <Route path="/profile" component={Profile} />
           <Route path="/Teams" component={Teams} />
           <Route path="/Gamers" component={Gamers} />
           <Route path="/Videogames" component={Videogames} />
@@ -34,7 +34,7 @@ function App() {
           <Route path="/RegisterChoose" component={RegisterChoose} />
           <Route path="/FormGamer" component={FormGamer} />
           <Route path="/FormTeam" component={FormTeam} />
-          <Route path="/Aviso" component={Aviso} /> */}
+          <Route path="/Aviso" component={Aviso} />
         </Switch>
         <Footer />
       </div>
