@@ -24,15 +24,10 @@ function App() {
       <div>
         <NavBar />
         <Switch>
-<<<<<<< HEAD
           <Route exact path="/" component={Home}>
           </Route>
           <Route path="/TeamPlayers/:teamId" component={TeamPlayers} />
           <Route path="/Profile/:playerId" component={Profile} />
-=======
-          <Route exact path="/" component={Home} />
-          <Route path="/profile" component={Profile} />
->>>>>>> c81655ae11b2e7a98eeb102e1019ee5e66de4e71
           <Route path="/Teams" component={Teams} />
           <Route path="/Gamers" component={Gamers} />
           <Route path="/Videogames" component={Videogames} />

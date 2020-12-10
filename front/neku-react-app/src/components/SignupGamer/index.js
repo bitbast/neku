@@ -15,10 +15,7 @@ const SignupGamer = (props) => {
     "country":'',
     "team":'',
     "password":'',
-  }
-
-
-
+  })
   return (
   <Fragment>
     <Card className="formCard border-0 p-3">
