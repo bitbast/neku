@@ -87,8 +87,8 @@ router.post('/', async (request, response) => {
     } = request.body
 
     if (!name) throw new Error('Gamer Name is required')
-    if (!motherLastname) throw new Error('Mother Lastname Country is required')
-    if (!fatherLastname) throw new Error('Father Last Name is required')
+    if (!fatherLastname) throw new Error('Father Lastname is required')
+    if (!motherLastname) throw new Error('Mother Lastname is required')
     if (!nickName) throw new Error('Nickname is required')
     if (!gamerPicture) throw new Error('GamerPicture is required')
     if (!gamerProfile) throw new Error('GamerProfile is required')
