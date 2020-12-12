@@ -74,6 +74,14 @@ router.post('/', async (request, response) => {
       gamerPicture,
       gamerProfile,
       team,
+      country,
+      email,
+      totalMatches,
+      winPercentage,
+      ranking,
+      teamLogo,
+      countryLogo,
+      gameTime,
       gamesPlayed,
       tournamentsPlayed
     } = request.body
@@ -81,10 +89,18 @@ router.post('/', async (request, response) => {
     if (!name) throw new Error('Team Name is required')
     if (!motherLastname) throw new Error('Team Country is required')
     if (!fatherLastname) throw new Error('Logo is required')
-    if (!nickName) throw new Error('Logo is required')
-    if (!gamerPicture) throw new Error('Logo is required')
-    if (!gamerProfile) throw new Error('Logo is required')
-    if (!team) throw new Error('Logo is required')
+    if (!nickName) throw new Error('Nickname is required')
+    if (!gamerPicture) throw new Error('GamerPicture is required')
+    if (!gamerProfile) throw new Error('GamerProfile is required')
+    if (!team) throw new Error('Team is required')
+    if (!country) throw new Error('Country is required')
+    if (!email) throw new Error('Emailis required')
+    if (!totalMatches) throw new Error('TotalMatches is required')
+    if (!winPercentage) throw new Error('Win Percentae is required')
+    if (!ranking) throw new Error('Ranking is required')
+    if (!teamLogo) throw new Error('Team Logo is required')
+    if (!countryLogo) throw new Error('Country Logo is required')
+    if (!gameTime) throw new Error('Game Time is required')
     if (!gamesPlayed) throw new Error('Logo is required')
     if (!tournamentsPlayed) throw new Error('Logo is required')
 

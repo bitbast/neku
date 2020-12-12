@@ -60,7 +60,7 @@
             "score": "1200"
             "totalEvents": "3"
         },
-        "game3" :{
+        "game4" :{
             "gameName": "FIFA 20",
             "gameLogo": "https://i.blogs.es/dc4249/fifa20-navtile-16x9-championsedition/1366_2000.jpeg",
             "points": "130000",
