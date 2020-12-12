@@ -112,6 +112,14 @@ router.post('/', async (request, response) => {
       gamerPicture,
       gamerProfile,
       team,
+      country,
+      email,
+      totalMatches,
+      winPercentage,
+      ranking,
+      teamLogo,
+      countryLogo,
+      gameTime,
       gamesPlayed,
       tournamentsPlayed
     })
