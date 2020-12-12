@@ -17,7 +17,7 @@ const ProfileStats = () => {
     }, [])
 
     const obtainData = async () => {
-        const data = await fetch(`http://localhost:8080/players/id/${playerId}`)
+        const data = await fetch(`https://nekuapi-sleepy-kudu-wm.mybluemix.net/players/id/${playerId}`)
         const playerData = await data.json()
         console.log(playerData)
         setPlayer(playerData.data.team)

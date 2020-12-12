@@ -17,7 +17,7 @@ const GamersCard = () => {
     },[])
 
     const obtainData = async () => {
-        const data = await fetch(`http://localhost:8080/players/${teamId}`)
+        const data = await fetch(`https://nekuapi-sleepy-kudu-wm.mybluemix.net/players/${teamId}`)
         const gamersCollection = await data.json()
         console.log(gamersCollection)
         setGamers(gamersCollection.data.team)

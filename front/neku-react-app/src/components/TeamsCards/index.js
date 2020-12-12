@@ -13,7 +13,7 @@ const TeamsCard = () => {
     },[])
 
     const obtainData = async () => {
-        const data = await fetch("http://localhost:8080/teams/")
+        const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/teams/")
         const teamsCollection = await data.json()
         console.log(teamsCollection)
         setTeams(teamsCollection.data.team)

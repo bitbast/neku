@@ -17,7 +17,7 @@ const TeamPlayersHeader = () => {
     },[])
 
     const obtainData = async () => {
-        const data = await fetch(`http://localhost:8080/teams/${teamId}`)
+        const data = await fetch(`https://nekuapi-sleepy-kudu-wm.mybluemix.net/teams/${teamId}`)
         const gamersCollection = await data.json()
         console.log(gamersCollection)
         setGamers(gamersCollection.data.team)

@@ -18,7 +18,7 @@ const TableResults = (props) => {
   },[])
 
   const obtainData = async () => {
-    const data = await fetch("http://localhost:8080/tournament/")
+    const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/tournament/")
     const tourCollection = await data.json()
     console.log(tourCollection)
     setGamer(tourCollection.data.-----)

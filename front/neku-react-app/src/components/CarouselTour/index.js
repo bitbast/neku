@@ -51,7 +51,7 @@ const CarouselNews = (props) => {
   },[])
 
   const obtainData = async () => {
-      const data = await fetch("http://localhost:8080/tournaments")
+      const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/tournaments")
       const tournamentsCollection = await data.json()
       console.log(tournamentsCollection)
       setTournament(tournamentsCollection.data.tournament) // de este key es de donde estoy jalando la info del json
