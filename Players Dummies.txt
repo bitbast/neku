@@ -1,0 +1,109 @@
+{
+    "name": "Luis",
+    "fatherLastname": "Esponja",
+    "motherLastname": "Pantalones cuadrados",
+    "nickName": "@bobesponja",
+    "gamerPicture": "https://media.revistagq.com/photos/5ca5f6a77a3aec0df5496c59/16:9/w_1920,c_limit/bob_esponja_9564.png",
+    "gamerProfile": "Jugador amateur con ganas de profesionalizarse",
+    "team": "Infinity",
+    "country": "Fondo de Bikini",
+    "email": "bobesponja@gmail.com",
+    "totalMatches": "100",
+    "winPercentage": "40",
+    "ranking": "50",
+    "teamLogo": "https://i.pinimg.com/originals/fe/a2/80/fea280d54e819c32f2629a71dd0e3ed9.jpg",
+    "countryLogo": "https://i2.wp.com/www.comprarbanderas.es/blog/wp-content/uploads/2015/08/bandera-de-la-paz.jpg?ssl=1",
+    "gameTime": "40",
+    "gamesPlayed": {
+        "game1" :{
+            "gameName": "Apex",
+            "gameLogo": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/10/apex-legends_8.jpg",
+            "points": "130000",
+            "earnings": "5000",
+            "wonGames": "30",
+            "lostGames": "20",
+            "timePlayed": "20",
+            "avgMatchTime": "2",
+            "kills": "35",
+            "deaths": "12",
+            "KD": "25",
+            "score": "1200"
+            "totalEvents": "3"
+        },
+        "game2" :{
+            "gameName": "League of Legends",
+            "gameLogo": "https://esports.eldesmarque.com/wp-content/uploads/2019/09/LoL2.jpg",
+            "points": "130000",
+            "earnings": "5000",
+            "wonGames": "30",
+            "lostGames": "20",
+            "timePlayed": "20",
+            "avgMatchTime": "2",
+            "kills": "35",
+            "deaths": "12",
+            "KD": "25",
+            "score": "1200"
+            "totalEvents": "3"
+        },
+        "game3" :{
+            "gameName": "Super Smash Bros",
+            "gameLogo": "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1600w.jpg",
+            "points": "130000",
+            "earnings": "5000",
+            "wonGames": "30",
+            "lostGames": "20",
+            "timePlayed": "20",
+            "avgMatchTime": "2",
+            "kills": "35",
+            "deaths": "12",
+            "KD": "25",
+            "score": "1200"
+            "totalEvents": "3"
+        },
+        "game3" :{
+            "gameName": "FIFA 20",
+            "gameLogo": "https://i.blogs.es/dc4249/fifa20-navtile-16x9-championsedition/1366_2000.jpeg",
+            "points": "130000",
+            "earnings": "5000",
+            "wonGames": "30",
+            "lostGames": "20",
+            "timePlayed": "20",
+            "avgMatchTime": "2",
+            "kills": "35",
+            "deaths": "12",
+            "KD": "25",
+            "score": "1200"
+            "totalEvents": "3"
+        }
+    },
+    "tournamentsPlayed": {
+        "tournament1" : {
+            "tournamentName": "Super Smash Bros",
+            "tournamentPicture": "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1600w.jpg",
+            "ranking": "13",
+            "tournamentDate": "2020-01-24T00:00:00Z",
+            "tournamentTotalTime": "3",
+            "tournamentKD": "30",
+            "tournamentScore": "5300"
+        },
+        "tournament2" : {
+            "tournamentName": "APEX",
+            "tournamentPicture": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/10/apex-legends_8.jpg",
+            "ranking": "13",
+            "tournamentDate": "2020-01-24T00:00:00Z",
+            "tournamentTotalTime": "3",
+            "tournamentKD": "30",
+            "tournamentScore": "5300"
+        },
+        "tournament3" : {
+            "tournamentName": "FIFA 20",
+            "tournamentPicture": "https://i.blogs.es/dc4249/fifa20-navtile-16x9-championsedition/1366_2000.jpeg",
+            "ranking": "13",
+            "tournamentDate": "2020-01-24T00:00:00Z",
+            "tournamentTotalTime": "3",
+            "tournamentKD": "30",
+            "tournamentScore": "5300"
+        }
+    }        
+        
+}

@@ -44,6 +44,30 @@ const playersSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  totalMatches: {
+    type: String,
+    required: true
+  },
+  winPercentage: {
+    type: Number,
+    required: true
+  },
+  ranking: {
+    type: String,
+    required: true
+  },
+  teamLogo: {
+    type: String,
+    required: true
+  },
+  countryLogo: {
+    type: String,
+    required: true
+  },
+  gameTime: {
+    type: Number,
+    required: true
+  },
   gamesPlayed: {
     type: Array,
     game: {
@@ -52,6 +76,10 @@ const playersSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 2
+      },
+      gameLogo: {
+        type: String,
+        required: true
       },
       points: {
         type: Number,
@@ -63,13 +91,23 @@ const playersSchema = new mongoose.Schema({
         required: true,
         minlength: 2
       },
+      wonGames: {
+        type: Number,
+        required: true,
+        minlength: 2
+      },
+      lostGames: {
+        type: Number,
+        required: true,
+        minlength: 2
+      },
       timePlayed: {
-        type: Date,
+        type: Number,
         required: false,
         minlength: 2
       },
       avgMatchTime: {
-        type: Date,
+        type: Number,
         required: false,
         minlength: 2
       },
@@ -89,8 +127,13 @@ const playersSchema = new mongoose.Schema({
         minlength: 2
       },
       score: {
-        type: String,
+        type: Number,
         required: true,
+        minlength: 2
+      },
+      totalEvents: {
+        type: Number,
+        required: false,
         minlength: 2
       }
     }
@@ -99,13 +142,13 @@ const playersSchema = new mongoose.Schema({
     type: Array,
     tournament: {
       type: Object,
-      tournamentName: {
+      tournamentGameName: {
         type: String,
         required: true,
         minlength: 2
       },
-      totalEvents: {
-        type: Number,
+      tournamentPicture: {
+        type: String,
         required: true
       },
       ranking: {
@@ -118,8 +161,8 @@ const playersSchema = new mongoose.Schema({
         required: false,
         minlength: 2
       },
-      tournamentEndHour: {
-        type: Date,
+      tournamentTotalTime: {
+        type: Number,
         required: false,
         minlength: 2
       },
@@ -133,6 +176,13 @@ const playersSchema = new mongoose.Schema({
         required: false,
         minlength: 2
       }
+    }
+  },
+  socialMedia: {
+    type: Array,
+    socialMediaName: {
+      type: String,
+      minlength: 2
     }
   }
 })

@@ -39,7 +39,7 @@ const TableInfo = (props) => {
                 <tr>
                   <td key={item._id}>{item.gamesPlayed[0].game.gameName}</td>
                   <td>{item.gamesPlayed[0].game.points}</td>
-                  <td>{item.tournamentsPlayed[0].tournament.totalEvents}</td>
+                  <td>{item.gamesPlayed[0].game.totalEvents}</td>
                   <td className="hideCol">{item.team}</td>
                 </tr>
               </tbody>
