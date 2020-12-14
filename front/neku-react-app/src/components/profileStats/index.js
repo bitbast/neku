@@ -54,15 +54,15 @@ const ProfileStats = () => {
             </Col>
             <Col md="4" className="d-flex flex-column justify-content-center align-items center">
                 <p className="profileStatsTitle text-center mb-2">Torneos jugados</p>
-                <h3 className="profileStatsData text-center mb-5">{player.gamesPlayed[0].game1.totalEvents}</h3>
+                <h3 className="profileStatsData text-center mb-5"></h3>
             </Col>{}
             <Col md="4" className="d-flex flex-column justify-content-center align-items center">
                 <p className="profileStatsTitle text-center mb-2">Score</p>
-                <h3 className="profileStatsData text-center mb-5">{player.gamesPlayed[0].game1.score}</h3>
+                <h3 className="profileStatsData text-center mb-5"></h3>
             </Col>
             <Col md="4" className="d-flex flex-column justify-content-center align-items center">
                 <p className="profileStatsTitle text-center mb-2">Tiempo promedio</p>
-                <h3 className="profileStatsData text-center mb-5">{player.gamesPlayed[0].game1.avgMatchTime}</h3>
+                <h3 className="profileStatsData text-center mb-5"></h3>
             </Col>
         </Row>
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import ProfileStats from "../../components/profileStats/index"
 import ProfileTourCard from "../../components/profileTourCard/index"
 import ProfileGames from "../../components/profileGames/index"
@@ -6,7 +6,6 @@ import ProfileSocialMedia from "../../components/profileSocialMedia/index"
 import { Container, Row, Col} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Profile.css";
-import data from "@iconify/icons-mdi/facebook"
 
 
 
