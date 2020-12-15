@@ -1,0 +1,4 @@
+applications:
+- name: nekuapi
+  random-route: true
+  memory: 256M

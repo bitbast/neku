@@ -24,8 +24,10 @@ function App() {
       <div>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/profile" component={Profile} />
+          <Route exact path="/" component={Home}>
+          </Route>
+          <Route path="/TeamPlayers/:teamId" component={TeamPlayers} />
+          <Route path="/Profile/:playerId" component={Profile} />
           <Route path="/Teams" component={Teams} />
           <Route path="/Gamers" component={Gamers} />
           <Route path="/Videogames" component={Videogames} />

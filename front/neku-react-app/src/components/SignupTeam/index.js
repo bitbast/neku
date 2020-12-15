@@ -40,7 +40,7 @@ const SignupTeam = (props) => {
         </Form>
       </Col>
     </Card>
-  );
+  )
 }
 
 export default SignupTeam;

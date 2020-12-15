@@ -15,7 +15,7 @@ const TableInfo = (props) => {
   },[])
 
   const obtainData = async () => {
-      const data = await fetch("http://localhost:8080/players")
+      const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/players")
       const gameStatsCollection = await data.json()
       console.log(gameStatsCollection)
       setGameStats(gameStatsCollection.data.team) // de este key es de donde estoy jalando la info del json
@@ -39,7 +39,7 @@ const TableInfo = (props) => {
                 <tr>
                   <td key={item._id}>{item.gamesPlayed[0].game.gameName}</td>
                   <td>{item.gamesPlayed[0].game.points}</td>
-                  <td>{item.tournamentsPlayed[0].tournament.totalEvents}</td>
+                  <td>{item.gamesPlayed[0].game.totalEvents}</td>
                   <td className="hideCol">{item.team}</td>
                 </tr>
               </tbody>

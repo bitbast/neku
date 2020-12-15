@@ -11,7 +11,7 @@ function Home(props) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/")
+    fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data.data);

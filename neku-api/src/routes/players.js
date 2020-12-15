@@ -44,6 +44,26 @@ router.get('/:teamId', async (request, response) => {
   }
 })
 
+router.get('/id/:id', async (request, response) => {
+  try {
+    const singlePlayer = await players.getById(request.params.id)
+
+    response.json({
+      success: true,
+      message: 'Single Players',
+      data: {
+        team: singlePlayer
+      }
+    })
+  } catch (error) {
+    response.status(404)
+    response.json({
+      succes: false,
+      error: error.message
+    })
+  }
+})
+
 router.post('/', async (request, response) => {
   try {
     const {
@@ -54,19 +74,35 @@ router.post('/', async (request, response) => {
       gamerPicture,
       gamerProfile,
       team,
+      country,
+      email,
+      totalMatches,
+      winPercentage,
+      ranking,
+      teamLogo,
+      countryLogo,
+      gameTime,
       gamesPlayed,
       tournamentsPlayed
     } = request.body
 
-    if (!name) throw new Error('Team Name is required')
-    if (!motherLastname) throw new Error('Team Country is required')
-    if (!fatherLastname) throw new Error('Logo is required')
-    if (!nickName) throw new Error('Logo is required')
-    if (!gamerPicture) throw new Error('Logo is required')
-    if (!gamerProfile) throw new Error('Logo is required')
-    if (!team) throw new Error('Logo is required')
-    if (!gamesPlayed) throw new Error('Logo is required')
-    if (!tournamentsPlayed) throw new Error('Logo is required')
+    if (!name) throw new Error('Gamer Name is required')
+    if (!fatherLastname) throw new Error('Father Lastname is required')
+    if (!motherLastname) throw new Error('Mother Lastname is required')
+    if (!nickName) throw new Error('Nickname is required')
+    if (!gamerPicture) throw new Error('GamerPicture is required')
+    if (!gamerProfile) throw new Error('GamerProfile is required')
+    if (!team) throw new Error('Team is required')
+    if (!country) throw new Error('Country is required')
+    if (!email) throw new Error('Email is required')
+    if (!totalMatches) throw new Error('TotalMatches is required')
+    if (!winPercentage) throw new Error('Win Percentae is required')
+    if (!ranking) throw new Error('Ranking is required')
+    if (!teamLogo) throw new Error('Team Logo is required')
+    if (!countryLogo) throw new Error('Country Logo is required')
+    if (!gameTime) throw new Error('Game Time is required')
+    if (!gamesPlayed) throw new Error('Games Played is required')
+    if (!tournamentsPlayed) throw new Error('Tournaments Played is required')
 
     const newPlayer = await players.create({
       name,
@@ -76,6 +112,14 @@ router.post('/', async (request, response) => {
       gamerPicture,
       gamerProfile,
       team,
+      country,
+      email,
+      totalMatches,
+      winPercentage,
+      ranking,
+      teamLogo,
+      countryLogo,
+      gameTime,
       gamesPlayed,
       tournamentsPlayed
     })
@@ -101,7 +145,7 @@ router.delete('/:id', async (request, response) => {
     const deletedPlayer = await players.deleteById(id)
     response.json({
       sucess: true,
-      message: 'Team deleted',
+      message: 'Player deleted',
       data: {
         team: deletedPlayer
       }
