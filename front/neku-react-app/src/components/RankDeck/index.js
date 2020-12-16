@@ -37,8 +37,8 @@ const RankDeck = (props) => {
       </Col>
     </Row>
     <Row>
-      <Col xs={12} sm={6} md={6} lg={3}>
-        <RankCard />
+      <Col>
+        <RankCard/>
       </Col>
     </Row>
   </Container>

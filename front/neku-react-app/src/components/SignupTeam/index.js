@@ -4,7 +4,7 @@ import { Col, Row, Button, Form, FormGroup, Label, Input, Card, CardImg } from '
 
 import './SignupTeam.css'
 
-class SignupTeam extends Component (props) {
+class SignupTeam extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,7 +33,7 @@ class SignupTeam extends Component (props) {
     };
     console.log(newTeam);
 
-    fetch("http://localhost:8080/teams/", {
+    fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/teams/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,8 +41,10 @@ class SignupTeam extends Component (props) {
       body: JSON.stringify(newTeam),
     })
       .then((response) => response.json())
-      .then(() => {
-        this.props.history.push("/");
+      .then((data) => {
+        if(data.success){
+          window.location.href="/Teams"
+        }
       });
   }
 

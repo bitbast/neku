@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import { Col, Row, Button, Form, FormGroup, Label, Input, Card, CardImg } from 'reactstrap';
 
@@ -9,14 +9,14 @@ class SignupGamer extends Component {
     super(props);
     this.state = {
       "name": '',
-      "fatherLastName":'',
-      "motherLastName":'',
+      "fatherLastname":'',
+      "motherLastname":'',
       "nickname":'',
       "email": '',
       "gamerPicture":'',
       "country":'',
-      "team":'',
-      "password":''
+      "team":''
+      // "password":''
     };
 
     this.handleNewPostChange = this.handleNewPostChange.bind(this);
@@ -31,19 +31,19 @@ class SignupGamer extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { name, fatherLastName, motherLastName, nickname, email, gamerPicture, country, team, password } = this.state;
+    const { name, fatherLastname, motherLastname, nickname, email, gamerPicture, country, team } = this.state;
     const newGamer = {
       name: name,
-      fatherLastName: fatherLastName,
-      motherLastName: motherLastName,
+      fatherLastname: fatherLastname,
+      motherLastname: motherLastname,
       nickname: nickname,
       email:  email,
       gamerPicture: gamerPicture,
       country: country,
       team: team,
-      password: password 
+      // password: password 
     };
-    console.log(newGamer);
+    // console.log(newGamer);
 
     fetch("http://localhost:8080/players/", {
       method: "POST",
@@ -53,14 +53,19 @@ class SignupGamer extends Component {
       body: JSON.stringify(newGamer),
     })
       .then((response) => response.json())
-      .then(() => {
-        this.props.history.push("/");
+      .then((data) => {
+        console.log(data);
+        if(data.success){
+          window.location.href="/Gamers"
+        }
+        // this.props.history.push("/players");
+        // console.log(data)
       });
   }
 
 
   render() {
-    const { name, fatherLastName, motherLastName, nickname, email, gamerPicture, country, team, password } = this.state;
+    const { name, fatherLastname, motherLastname, nickname, email, gamerPicture, country, team } = this.state;
     
     return (
     <Fragment>
@@ -84,8 +89,8 @@ class SignupGamer extends Component {
                   <Label for="signupFatherLastName">Apellido Paterno</Label>
                   <Input
                     type="text"
-                    name="fatherLastName"
-                    value={fatherLastName}
+                    name="fatherLastname"
+                    value={fatherLastname}
                     onChange={this.handleNewPostChange}
                     id="signupLastName"
                     placeholder="> " />
@@ -94,8 +99,8 @@ class SignupGamer extends Component {
                   <Label for="signupMotherLastName">Apellido Materno</Label>
                   <Input
                     type="text"
-                    name="motherLastName"
-                    value={motherLastName}
+                    name="motherLastname"
+                    value={motherLastname}
                     onChange={this.handleNewPostChange}
                     id="signupMotherLastName"
                     placeholder="> " />
@@ -110,7 +115,7 @@ class SignupGamer extends Component {
                     id="signupNickName"
                     placeholder="> " />
                 </FormGroup>
-                <FormGroup>
+                {/* <FormGroup>
                   <Label for="signupPassword">Contraseña</Label>
                   <Input
                     type="password"
@@ -119,7 +124,7 @@ class SignupGamer extends Component {
                     onChange={this.handleNewPostChange}
                     id="signupPassword"
                     placeholder="por lo menos 8 caracteres" />
-                </FormGroup>
+                </FormGroup> */}
               </Col>
               <Col md={6}>
                 <FormGroup>
@@ -139,7 +144,8 @@ class SignupGamer extends Component {
                     name="country"
                     value={country}
                     onChange={this.handleNewPostChange}
-                    id="signupGamerProfile" />
+                    id="signupGamerProfile"
+                    placeholder="> "  />
                 </FormGroup>
                 <FormGroup>
                   <Label for="signupEmail">Email</Label>
@@ -158,7 +164,8 @@ class SignupGamer extends Component {
                     name="gamerPicture"
                     value={gamerPicture}
                     onChange={this.handleNewPostChange}
-                    id="signupGamerPicture" />
+                    id="signupGamerPicture" 
+                    placeholder="https:// " />
                   <caption className="pt-0" id="pictureCaption">Escribir URL de la imagen. Sólo en formatos .jpg / .png y no mayor a 1000x1000px.</caption>
                 </FormGroup>
               </Col>
