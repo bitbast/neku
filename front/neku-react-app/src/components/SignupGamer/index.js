@@ -45,7 +45,7 @@ class SignupGamer extends Component {
     };
     // console.log(newGamer);
 
-    fetch("http://localhost:8080/players/", {
+    fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/players/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
