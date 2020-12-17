@@ -52,7 +52,7 @@ const NavBar = (props) => {
               <NavLink href="/Teams">Equipos</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Gamers">Gamers</NavLink>
+              <NavLink href="/AllPlayers">Gamers</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/">Extras</NavLink>
