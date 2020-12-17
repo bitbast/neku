@@ -29,7 +29,7 @@ function App() {
           <Route path="/TeamPlayers/:teamId" component={TeamPlayers} />
           <Route path="/Profile/:playerId" component={Profile} />
           <Route path="/Teams" component={Teams} />
-          <Route path="/Gamers" component={Gamers} />
+          <Route path="/Gamers/:gameId" component={Gamers} />
           <Route path="/Videogames" component={Videogames} />
           <Route path="/TeamPlayers" component={TeamPlayers} />
           <Route path="/RegisterChoose" component={RegisterChoose} />

@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import { Container, Row, Col} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Gamers.css"
-import GamersCard from "../../components/GamersCard";
+import GamersCardbyVideogame from "../../components/GamersCardbyVideogame";
 
 class Gamers extends Component {
     render() {
@@ -17,16 +17,7 @@ class Gamers extends Component {
                         <img max width="100%" height="250" src="https://www.girlrevgaming.com/wp-content/uploads/2020/07/GIRLGAMER.jpg" alt="Gamer img" />
                     </Col> 
                 </Row>
-                <Row >
-                    <GamersCard></GamersCard>
-                    <GamersCard></GamersCard>
-                    <GamersCard></GamersCard>
-                    <GamersCard></GamersCard>
-                    <GamersCard></GamersCard>
-                    <GamersCard></GamersCard>
-                    <GamersCard></GamersCard>
-                    <GamersCard></GamersCard>
-                </Row>
+                <GamersCardbyVideogame></GamersCardbyVideogame>
             </Container>
         )
     }
