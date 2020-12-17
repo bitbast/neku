@@ -1,11 +1,15 @@
 const Players = require('../models/players')
 
 function getAll () {
-  return Players.find().limit(4)
+  return Players.find()
 }
 
 function getById (id) {
   return Players.findById(id)
+}
+
+function getFour (id) {
+  return Players.find().limit(5)
 }
 
 function deleteById (id) {
@@ -27,6 +31,7 @@ function create (playerData) {
 module.exports = {
   getAll,
   getById,
+  getFour,
   create,
   deleteById,
   updateById,

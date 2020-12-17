@@ -24,6 +24,26 @@ router.get('/', async (request, response) => {
   }
 })
 
+router.get('/players', async (request, response) => {
+  try {
+    const allRankers = await players.getFour()
+
+    response.json({
+      success: true,
+      message: 'Homepage Rankers',
+      data: {
+        team: allRankers
+      }
+    })
+  } catch (error) {
+    response.status(404)
+    response.json({
+      succes: false,
+      error: error.message
+    })
+  }
+})
+
 router.get('/:teamId', async (request, response) => {
   try {
     const teamPlayers = await players.getPlayersByTeamId(request.params.teamId)
