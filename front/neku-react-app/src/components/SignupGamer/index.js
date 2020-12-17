@@ -14,8 +14,18 @@ class SignupGamer extends Component {
       "nickname":'',
       "email": '',
       "gamerPicture":'',
+      "gamerProfile":'',
       "country":'',
-      "team":''
+      "team":'',
+      "totalMatches":'',
+      "winPercentage":'',
+      "ranking":'',
+      "teamLogo":'',
+      "countryLogo":'',
+      "gameTime":'',
+      "gamesPlayed":'',
+      "tournamentsPlayed":'',
+      "socialMedia":''
       // "password":''
     };
 
@@ -31,7 +41,7 @@ class SignupGamer extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { name, fatherLastname, motherLastname, nickname, email, gamerPicture, country, team } = this.state;
+    const { name, fatherLastname, motherLastname, nickname, email, gamerPicture, gamerProfile, country, team, totalMatches, winPercentage, ranking, teamLogo, countryLogo, gameTime, gamesPlayed, tournamentsPlayed, socialMedia } = this.state;
     const newGamer = {
       name: name,
       fatherLastname: fatherLastname,
@@ -39,8 +49,18 @@ class SignupGamer extends Component {
       nickname: nickname,
       email:  email,
       gamerPicture: gamerPicture,
+      gamerProfile: gamerProfile,
       country: country,
       team: team,
+      totalMatches: totalMatches,
+      winPercentage: winPercentage,
+      ranking: ranking,
+      teamLogo: teamLogo,
+      countryLogo: countryLogo,
+      gameTime: gameTime,
+      gamesPlayed: gamesPlayed,
+      tournamentsPlayed: tournamentsPlayed,
+      socialMedia: socialMedia
       // password: password 
     };
     // console.log(newGamer);
@@ -65,7 +85,7 @@ class SignupGamer extends Component {
 
 
   render() {
-    const { name, fatherLastname, motherLastname, nickname, email, gamerPicture, country, team } = this.state;
+    const { name, fatherLastname, motherLastname, nickname, email, gamerPicture, gamerProfile, country, team, totalMatches, winPercentage, ranking, teamLogo, countryLogo, gameTime, gamesPlayed, tournamentsPlayed, socialMedia } = this.state;
     
     return (
     <Fragment>
@@ -106,7 +126,7 @@ class SignupGamer extends Component {
                     placeholder="> " />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="signupAlias">Alias</Label>
+                  <Label for="signupAlias">Apodo</Label>
                   <Input
                     type="text"
                     name="nickname"
@@ -115,16 +135,46 @@ class SignupGamer extends Component {
                     id="signupNickName"
                     placeholder="> " />
                 </FormGroup>
-                {/* <FormGroup>
-                  <Label for="signupPassword">Contraseña</Label>
+                <FormGroup>
+                  <Label for="signupGamerProfile">Biografía</Label>
                   <Input
-                    type="password"
-                    name="password"
-                    value={password}
+                    type="text"
+                    name="gamerProfile"
+                    value={gamerProfile}
                     onChange={this.handleNewPostChange}
-                    id="signupPassword"
-                    placeholder="por lo menos 8 caracteres" />
-                </FormGroup> */}
+                    id="signupGamerProfile"
+                    placeholder="> " />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupTotalMatches">Batallas Jugadas</Label>
+                  <Input
+                    type="text"
+                    name="totalMatches"
+                    value={totalMatches}
+                    onChange={this.handleNewPostChange}
+                    id="signupTotalMatches"
+                    placeholder="> " />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupWinPercentage">Triunfos</Label>
+                  <Input
+                    type="text"
+                    name="winPercentage"
+                    value={winPercentage}
+                    onChange={this.handleNewPostChange}
+                    id="signupWinPercentage"
+                    placeholder="> " />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupGamesPlayed">Juegos</Label>
+                  <Input
+                    type="text"
+                    name="gamesPlayed"
+                    value={gamesPlayed}
+                    onChange={this.handleNewPostChange}
+                    id="signupGamesPlayed"
+                    placeholder="> " />
+                </FormGroup>
               </Col>
               <Col md={6}>
                 <FormGroup>
@@ -148,6 +198,16 @@ class SignupGamer extends Component {
                     placeholder="> "  />
                 </FormGroup>
                 <FormGroup>
+                  <Label for="signupCountryLogo">Bandera País</Label>
+                  <Input
+                    type="text"
+                    name="countryLogo"
+                    value={countryLogo}
+                    onChange={this.handleNewPostChange}
+                    id="signupCountryLogo"
+                    placeholder="> "  />
+                </FormGroup>
+                <FormGroup>
                   <Label for="signupEmail">Email</Label>
                   <Input
                     type="email"
@@ -167,6 +227,56 @@ class SignupGamer extends Component {
                     id="signupGamerPicture" 
                     placeholder="https:// " />
                   <caption className="pt-0" id="pictureCaption">Escribir URL de la imagen. Sólo en formatos .jpg / .png y no mayor a 1000x1000px.</caption>
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupRanking">Ranking</Label>
+                  <Input
+                    type="text"
+                    name="ranking"
+                    value={ranking}
+                    onChange={this.handleNewPostChange}
+                    id="signupRanking"
+                    placeholder="> " />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupTeamLogo">Logo Equipo</Label>
+                  <Input
+                    type="text"
+                    name="teamLogo"
+                    value={teamLogo}
+                    onChange={this.handleNewPostChange}
+                    id="signupTeamLogo"
+                    placeholder="> " />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupGameTime">Tiempo de Juego</Label>
+                  <Input
+                    type="text"
+                    name="gameTime"
+                    value={gameTime}
+                    onChange={this.handleNewPostChange}
+                    id="signupGameTime"
+                    placeholder="> " />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupTournamentsPlayed">Torneos Participados</Label>
+                  <Input
+                    type="text"
+                    name="tournamentsPlayed"
+                    value={tournamentsPlayed}
+                    onChange={this.handleNewPostChange}
+                    id="signupTournamentsPlayed"
+                    placeholder="> " />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="signupSocialMedia">Social Media</Label>
+                  <Input
+                    type="text"
+                    name="socialMedia"
+                    value={socialMedia}
+                    onChange={this.handleNewPostChange}
+                    id="signupSocialMedia"
+                    placeholder="> " />
                 </FormGroup>
               </Col>
             </Row>
