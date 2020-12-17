@@ -16,6 +16,13 @@ const GamersCard = () => {
         obtainData()
     },[])
 
+    // const obtainData = async () => {
+    //     const data = await fetch(`https://nekuapi-sleepy-kudu-wm.mybluemix.net/players/${teamId}`)
+    //     const gamersCollection = await data.json()
+    //     console.log(gamersCollection)
+    //     setGamers(gamersCollection.data.team)
+    // }
+
     const obtainData = async () => {
         const data = await fetch(`https://nekuapi-sleepy-kudu-wm.mybluemix.net/players/${teamId}`)
         const gamersCollection = await data.json()

@@ -18,7 +18,7 @@ router.get('/', async (request, response) => {
   } catch (error) {
     response.status(404)
     response.json({
-      succes: false,
+      success: false,
       error: error.message
     })
   }
@@ -58,7 +58,7 @@ router.get('/:teamId', async (request, response) => {
   } catch (error) {
     response.status(404)
     response.json({
-      succes: false,
+      success: false,
       error: error.message
     })
   }
@@ -78,7 +78,7 @@ router.get('/id/:id', async (request, response) => {
   } catch (error) {
     response.status(404)
     response.json({
-      succes: false,
+      success: false,
       error: error.message
     })
   }
@@ -90,7 +90,7 @@ router.post('/', async (request, response) => {
       name,
       fatherLastname,
       motherLastname,
-      nickName,
+      nickname,
       gamerPicture,
       gamerProfile,
       team,
@@ -106,29 +106,28 @@ router.post('/', async (request, response) => {
       tournamentsPlayed
     } = request.body
 
-    if (!name) throw new Error('Gamer Name is required')
-    if (!fatherLastname) throw new Error('Father Lastname is required')
-    if (!motherLastname) throw new Error('Mother Lastname is required')
-    if (!nickName) throw new Error('Nickname is required')
-    if (!gamerPicture) throw new Error('GamerPicture is required')
-    if (!gamerProfile) throw new Error('GamerProfile is required')
-    if (!team) throw new Error('Team is required')
-    if (!country) throw new Error('Country is required')
-    if (!email) throw new Error('Email is required')
-    if (!totalMatches) throw new Error('TotalMatches is required')
-    if (!winPercentage) throw new Error('Win Percentae is required')
-    if (!ranking) throw new Error('Ranking is required')
-    if (!teamLogo) throw new Error('Team Logo is required')
-    if (!countryLogo) throw new Error('Country Logo is required')
-    if (!gameTime) throw new Error('Game Time is required')
-    if (!gamesPlayed) throw new Error('Games Played is required')
-    if (!tournamentsPlayed) throw new Error('Tournaments Played is required')
+    // if (!name) throw new Error('Gamer Name is required')
+    // if (!fatherLastname) throw new Error('Father Lastname is required')
+    // if (!motherLastname) throw new Error('Mother Lastname is required')
+    // if (!nickname) throw new Error('Nickname is required')
+    // if (!gamerPicture) throw new Error('GamerPicture is required')
+    // if (!team) throw new Error('Team is required')
+    // if (!country) throw new Error('Country is required')
+    // if (!email) throw new Error('Email is required')
+    // if (!totalMatches) throw new Error('TotalMatches is required')
+    // if (!winPercentage) throw new Error('Win Percentae is required')
+    // if (!ranking) throw new Error('Ranking is required')
+    // if (!teamLogo) throw new Error('Team Logo is required')
+    // if (!countryLogo) throw new Error('Country Logo is required')
+    // if (!gameTime) throw new Error('Game Time is required')
+    // if (!gamesPlayed) throw new Error('Games Played is required')
+    // if (!tournamentsPlayed) throw new Error('Tournaments Played is required')
 
     const newPlayer = await players.create({
       name,
       fatherLastname,
       motherLastname,
-      nickName,
+      nickname,
       gamerPicture,
       gamerProfile,
       team,
@@ -153,7 +152,7 @@ router.post('/', async (request, response) => {
   } catch (error) {
     response.status(404)
     response.json({
-      succes: false,
+      success: false,
       error: error.message
     })
   }
@@ -164,7 +163,7 @@ router.delete('/:id', async (request, response) => {
     const { id } = request.params
     const deletedPlayer = await players.deleteById(id)
     response.json({
-      sucess: true,
+      success: true,
       message: 'Player deleted',
       data: {
         team: deletedPlayer
@@ -173,7 +172,7 @@ router.delete('/:id', async (request, response) => {
   } catch (error) {
     response.status(404)
     response.json({
-      succes: false,
+      success: false,
       error: error.message
     })
   }
@@ -185,7 +184,7 @@ router.patch('/:id', async (request, response) => {
     const newDataPlayer = request.body
     const playerUpdated = await players.updateById(id, newDataPlayer)
     response.json({
-      succes: true,
+      success: true,
       message: 'Player updated',
       data: {
         team: playerUpdated
@@ -194,7 +193,7 @@ router.patch('/:id', async (request, response) => {
   } catch (error) {
     response.status(404)
     response.json({
-      succes: false,
+      success: false,
       error: error.message
     })
   }

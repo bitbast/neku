@@ -31,11 +31,11 @@ const RankDeck = (props) => {
 
   return (
   <Fragment>
+    <CardDeck>
       {
-        gamerCard.map((item) => {          
+        gamerCard.map((item) => {  
           return (
-              <CardDeck>
-                  <Card className="rankerCards m-2">
+                  <Card className="rankerCards">
                     <CardImg key={item._id} top src={item.gamerPicture} className="rankerCardImg" alt="Card image cap" />
                     <CardBody>
                       <div className="d-flex justify-content-between align-items-center">
@@ -51,10 +51,10 @@ const RankDeck = (props) => {
                       </div>
                     </CardBody>
                   </Card>
-              </CardDeck>
           )
         })
       }
+    </CardDeck>
   </Fragment>
   );
 };

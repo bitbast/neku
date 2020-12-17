@@ -28,7 +28,7 @@ const playersSchema = new mongoose.Schema({
   },
   gamerProfile: {
     type: String,
-    required: true,
+    required: false,
     minlength: 2
   },
   team: {
@@ -46,27 +46,27 @@ const playersSchema = new mongoose.Schema({
   },
   totalMatches: {
     type: String,
-    required: true
+    required: false
   },
   winPercentage: {
     type: Number,
-    required: true
+    required: false
   },
   ranking: {
     type: String,
-    required: true
+    required: false
   },
   teamLogo: {
     type: String,
-    required: true
+    required: false
   },
   countryLogo: {
     type: String,
-    required: true
+    required: false
   },
   gameTime: {
     type: Number,
-    required: true
+    required: false
   },
   gamesPlayed: {
     type: Array,
@@ -74,31 +74,31 @@ const playersSchema = new mongoose.Schema({
       type: Object,
       gameName: {
         type: String,
-        required: true,
+        required: false,
         minlength: 2
       },
       gameLogo: {
         type: String,
-        required: true
+        required: false
       },
       points: {
         type: Number,
-        required: true,
+        required: false,
         minlength: 2
       },
       earnings: {
         type: Number,
-        required: true,
+        required: false,
         minlength: 2
       },
       wonGames: {
         type: Number,
-        required: true,
+        required: false,
         minlength: 2
       },
       lostGames: {
         type: Number,
-        required: true,
+        required: false,
         minlength: 2
       },
       timePlayed: {
@@ -128,7 +128,7 @@ const playersSchema = new mongoose.Schema({
       },
       score: {
         type: Number,
-        required: true,
+        required: false,
         minlength: 2
       },
       totalEvents: {
@@ -144,16 +144,16 @@ const playersSchema = new mongoose.Schema({
       type: Object,
       tournamentGameName: {
         type: String,
-        required: true,
+        required: false,
         minlength: 2
       },
       tournamentPicture: {
         type: String,
-        required: true
+        required: false
       },
       ranking: {
         type: Number,
-        required: true,
+        required: false,
         minlength: 2
       },
       tournamentDate: {
