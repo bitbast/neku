@@ -1,10 +1,10 @@
 import React, {Component} from "react"
 import { Container, Row, Col} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
-import "./Gamers.css"
-import GamersCardbyVideogame from "../../components/GamersCardbyVideogame";
+import "./AllPlayers.css"
+import GamersCardAllPlayers from "../../components/GamersCardAllPlayers";
 
-class Gamers extends Component {
+class AllPlayers extends Component {
     render() {
         return(
             <Container fluid className="teamsContainer">
@@ -17,10 +17,10 @@ class Gamers extends Component {
                         <img max width="100%" height="250" src="https://www.girlrevgaming.com/wp-content/uploads/2020/07/GIRLGAMER.jpg" alt="Gamer img" />
                     </Col> 
                 </Row>
-                <GamersCardbyVideogame></GamersCardbyVideogame>
+                <GamersCardAllPlayers></GamersCardAllPlayers>
             </Container>
         )
     }
 }
 
-export default Gamers
+export default AllPlayers

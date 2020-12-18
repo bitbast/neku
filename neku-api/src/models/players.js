@@ -69,122 +69,127 @@ const playersSchema = new mongoose.Schema({
     required: false
   },
   gamesPlayed: {
-    type: Array,
-    game: {
-      type: Object,
-      gameName: {
-        type: String,
-        required: false,
-        minlength: 2
-      },
-      gameLogo: {
-        type: String,
-        required: false
-      },
-      points: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      earnings: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      wonGames: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      lostGames: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      timePlayed: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      avgMatchTime: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      kills: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      deaths: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      KD: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      score: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      totalEvents: {
-        type: Number,
-        required: false,
-        minlength: 2
+    type: [
+      {
+        type: Object,
+        gameName: {
+          type: String,
+          required: true,
+          minlength: 2
+        },
+        gameLogo: {
+          type: String,
+          required: true
+        },
+        points: {
+          type: Number,
+          required: true,
+          minlength: 2
+        },
+        earnings: {
+          type: Number,
+          required: true,
+          minlength: 2
+        },
+        wonGames: {
+          type: Number,
+          required: true,
+          minlength: 2
+        },
+        lostGames: {
+          type: Number,
+          required: true,
+          minlength: 2
+        },
+        timePlayed: {
+          type: Number,
+          required: false,
+          minlength: 2
+        },
+        avgMatchTime: {
+          type: Number,
+          required: false,
+          minlength: 2
+        },
+        kills: {
+          type: Number,
+          required: false,
+          minlength: 2
+        },
+        deaths: {
+          type: Number,
+          required: false,
+          minlength: 2
+        },
+        KD: {
+          type: Number,
+          required: false,
+          minlength: 2
+        },
+        score: {
+          type: Number,
+          required: true,
+          minlength: 2
+        },
+        totalEvents: {
+          type: Number,
+          required: false,
+          minlength: 2
+        }
       }
-    }
+    ]
   },
   tournamentsPlayed: {
-    type: Array,
-    tournament: {
-      type: Object,
-      tournamentGameName: {
+    type: [
+      {
+        type: Object,
+        tournamentGameName: {
+          type: String,
+          required: true,
+          minlength: 2
+        },
+        tournamentPicture: {
+          type: String,
+          required: true
+        },
+        ranking: {
+          type: Number,
+          required: true,
+          minlength: 2
+        },
+        tournamentDate: {
+          type: Date,
+          required: false,
+          minlength: 2
+        },
+        tournamentTotalTime: {
+          type: Number,
+          required: false,
+          minlength: 2
+        },
+        tournamentKD: {
+          type: Number,
+          required: false,
+          minlength: 2
+        },
+        tournamentScore: {
+          type: Number,
+          required: false,
+          minlength: 2
+        }
+      }
+    ]
+  },
+
+  socialMedia: {
+    type: [
+      {
         type: String,
-        required: false,
-        minlength: 2
-      },
-      tournamentPicture: {
-        type: String,
-        required: false
-      },
-      ranking: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      tournamentDate: {
-        type: Date,
-        required: false,
-        minlength: 2
-      },
-      tournamentTotalTime: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      tournamentKD: {
-        type: Number,
-        required: false,
-        minlength: 2
-      },
-      tournamentScore: {
-        type: Number,
-        required: false,
         minlength: 2
       }
-    }
-  },
-  socialMedia: {
-    type: Array,
-    socialMediaName: {
-      type: String,
-      minlength: 2
-    }
+    ]
   }
+
 })
 
 module.exports = mongoose.model('players', playersSchema)

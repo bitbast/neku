@@ -12,6 +12,7 @@ const ProfileStats = () => {
     
     const [player, setPlayer] = useState({})
 
+
     useEffect(() => {
         obtainData()
     }, [])
@@ -22,7 +23,6 @@ const ProfileStats = () => {
         console.log(playerData)
         setPlayer(playerData.data.team)
     }
-
 
     return (
         <Row className="mt-2 ">

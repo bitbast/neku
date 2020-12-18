@@ -37,10 +37,10 @@ const TableInfo = (props) => {
             <Fragment>
               <tbody>
                 <tr>
-                  <td key={item._id}>{item.gamesPlayed[0].game.gameName}</td>
-                  <td>{item.gamesPlayed[0].game.points}</td>
-                  <td>{item.gamesPlayed[0].game.totalEvents}</td>
-                  <td className="hideCol">{item.team}</td>
+                  <td key={item._id}></td>
+                  <td></td>
+                  <td></td>
+                  <td className="hideCol"></td>
                 </tr>
               </tbody>
             </Fragment>

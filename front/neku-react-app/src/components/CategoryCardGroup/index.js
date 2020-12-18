@@ -18,7 +18,7 @@ const CategoryCardGroup = (props) => {
         </a>
       </Card>
       <Card className="categoriesCard border-0">
-        <a href="/Gamers">
+        <a href="/AllPlayers">
           <CardImg className="border-0" top width="100%" src="https://github.com/bitbast/neku/blob/lucho/front/neku-react-app/src/images/neku-category-cards-gamers.png?raw=true" alt="Card image gamers" />
         </a>
       </Card>

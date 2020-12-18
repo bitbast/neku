@@ -24,6 +24,10 @@ function getPlayersByTeamId (teamId) {
   return Players.find({ team: teamId })
 }
 
+function getPlayersByGameId (gameId) {
+  return Players.find({ gameName: gameId })
+}
+
 function create (playerData) {
   return Players.create(playerData)
 }
@@ -35,5 +39,6 @@ module.exports = {
   create,
   deleteById,
   updateById,
-  getPlayersByTeamId
+  getPlayersByTeamId,
+  getPlayersByGameId
 }

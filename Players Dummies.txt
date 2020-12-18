@@ -1,5 +1,5 @@
 {
-    "name": "Luis",
+    "name": "Bobby",
     "fatherLastname": "Esponja",
     "motherLastname": "Pantalones cuadrados",
     "nickName": "@bobesponja",

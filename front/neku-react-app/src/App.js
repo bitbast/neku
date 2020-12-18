@@ -5,6 +5,7 @@ import Teams from "./pages/Teams";
 import Gamers from "./pages/Gamers";
 import Videogames from "./pages/Videogames";
 import TeamPlayers from "./pages/TeamPlayers";
+import AllPlayers from "./pages/AllPlayers"
 import RegisterChoose from './pages/RegisterChoose';
 import FormGamer from './pages/FormGamer';
 import FormTeam from './pages/FormTeam';
@@ -29,9 +30,10 @@ function App() {
           <Route path="/TeamPlayers/:teamId" component={TeamPlayers} />
           <Route path="/Profile/:playerId" component={Profile} />
           <Route path="/Teams" component={Teams} />
-          <Route path="/Gamers" component={Gamers} />
+          <Route path="/Gamers/:gameId" component={Gamers} />
           <Route path="/Videogames" component={Videogames} />
           <Route path="/TeamPlayers" component={TeamPlayers} />
+          <Route path="/AllPlayers" component={AllPlayers} />
           <Route path="/RegisterChoose" component={RegisterChoose} />
           <Route path="/FormGamer" component={FormGamer} />
           <Route path="/FormTeam" component={FormTeam} />
