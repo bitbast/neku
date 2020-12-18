@@ -22,7 +22,7 @@ const RankDeck = (props) => {
   },[])
 
   const obtainData = async () => {
-      const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/players")
+      const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/players/players")
       const gamerCardCollection = await data.json()
       // console.log(gamerCardCollection)
       setGamerCard(gamerCardCollection.data.team) // de este key es de donde estoy jalando la info del json

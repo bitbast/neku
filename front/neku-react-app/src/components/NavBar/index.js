@@ -46,9 +46,6 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/Videogames">Juegos</NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink href="/Teams">Equipos</NavLink>
             </NavItem>
             <NavItem>

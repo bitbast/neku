@@ -8,8 +8,8 @@ function getById (id) {
   return Players.findById(id)
 }
 
-function getFour (id) {
-  return Players.find().limit(5)
+function getFour () {
+  return Players.find().limit(4)
 }
 
 function deleteById (id) {

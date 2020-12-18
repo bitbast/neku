@@ -76,7 +76,7 @@ class SignupGamer extends Component {
       .then((data) => {
         console.log(data);
         if(data.success){
-          window.location.href="/Gamers"
+          window.location.href="/AllPlayers"
         }
         // this.props.history.push("/players");
         // console.log(data)

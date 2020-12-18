@@ -37,10 +37,7 @@ const TableInfo = (props) => {
             <Fragment>
               <tbody>
                 <tr>
-                  <td key={item._id}></td>
-                  <td></td>
-                  <td></td>
-                  <td className="hideCol"></td>
+
                 </tr>
               </tbody>
             </Fragment>
