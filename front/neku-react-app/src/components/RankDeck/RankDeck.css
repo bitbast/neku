@@ -1,34 +1,12 @@
+#rankersSection {
+  background-color: #121121;
+}
+
 .card-deck {
   background-color: #121121;
   padding: 15px 10px 15px 10px;
 }
 
-.countryFlag {
-  transform: scale(2);
-}
-
-.table {
-  display: inline-flexbox;
-}
-
-.rankerCards {
-  border:none !important;
-  border-radius: 4rem 10rem 0 0 !important; 
-}
-
-.rankerCards .card-img-top {
-  border:none;
-  background: linear-gradient(0deg, rgba(242,174,46,1) 0%, rgba(246,22,103,1) 35%, rgba(18,17,33,1) 100%);
-  border-radius: 3rem 9rem 0 0;
-}
-
-#moreInfoBtn {
-  width:75%;
-  background-color: #181733;
-  border:0;
-}
-
-#moreInfoBtn:hover {
-  background-color: #F61667;
-  color: white;
+#rankCards{
+  margin: 0;
 }

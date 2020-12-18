@@ -1,6 +1,6 @@
 /* ---- NAVBAR ---- */
 .navbar {
-    background-color: #121121 !important;
+    background-color: #0A1E59 !important;
     padding: 0 !important;
 }
 
@@ -21,6 +21,7 @@
     padding-right: 10px;
     border:none;
     outline:none;
+    color: white !important;
 }
 
 .navbar-toggler:hover {
@@ -54,6 +55,36 @@
     align-items: flex-end !important;
 }
 
+#dropdownMenuProfile {
+    height: auto;
+    padding-bottom: 0;
+    text-align: right;
+    width: auto;
+    border-radius: 5px 5px 5px 5px !important;
+    border:0;
+}
+
+#dropdownMenuProfile .dropdown-item {
+    color: #F61667 !important;
+    height: auto;
+    padding-bottom: 0;
+    text-align: right;
+    line-height: 2rem;
+}
+
+#dropdownMenuProfile .dropdown-item:hover {
+    background-color: #121121;
+    color: white !important;
+    height: auto;
+    padding-bottom: 0;
+    text-align: right;
+    line-height: 2rem;
+}
+
+.nav-link {
+    color: white !important;
+}
+
 .nav-link:hover {
     color: #F61667 !important;
     transition: all .3s ease-out;
@@ -79,3 +110,23 @@
     fill: #F61667;
     transition: all .3s ease-out;
 }
+
+#signupMenuSelect {
+    background-color: #F61667;
+    margin-top: 10px;
+    border-radius: 0 0 5px 5px !important;
+}
+
+#signupMenuSelect a {
+    color: white;
+    text-decoration: none !important;
+}
+
+#signupMenuSelect:hover {
+    background-color: #121121 !important;
+}
+
+/* #signupMenuSelect a:hover {
+    color: white;
+    text-decoration: none !important;
+} */

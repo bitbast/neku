@@ -1,43 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 
 // ------------- REACTSTRAP ------------- //
-import { Table } from 'reactstrap';
+import { Container, Row, Col, Table } from 'reactstrap';
 
 // ------------- CSS ------------- //
 import './TableResults.css'
 
+
+const tournamentTest = [];
+
 const TableResults = (props) => {
+
+  const [gamer, setGamer] = useState(tournamentTest);
+
+  useEffect(() => {
+    obtainData()
+  },[])
+
+  const obtainData = async () => {
+    const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/tournament/")
+    const tourCollection = await data.json()
+    console.log(tourCollection)
+    setGamer(tourCollection.data.-----)
+  }
+
   return (
-    <Table borderless>
-      <thead>
-        <tr>
-          <th>País</th>
-          <th>Nombre</th>
-          <th>@</th>
-          <th>Puntuación</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">🇲🇽</th>
-          <td>Luis Bastida</td>
-          <td>bitbast</td>
-          <td>16,345 pts</td>
-        </tr>
-        <tr>
-          <th scope="row">🇦🇷</th>
-          <td>Lucho Gomez</td>
-          <td>gommorin</td>
-          <td>14,369 pts</td>
-        </tr>
-        <tr>
-          <th scope="row">🇲🇽</th>
-          <td>Charlie Silva</td>
-          <td>deMentor</td>
-          <td>14,123 pts</td>
-        </tr>
-      </tbody>
-    </Table>
+      <Container>
+        <Row>
+          <Col>
+            <Table borderless table-condensed table-responsive>
+              <thead>
+                <tr>
+                  <th>País</th>
+                  <th>Nombre</th>
+                  <th className="hideCol">Apodo</th>
+                  <th>Puntuación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    {
+                      gamer.map((item) => {
+                        <th key={item.gamer} scope="row">{item.country}</th>
+                        <td>{item.name}</td>
+                        <td className="hideCol">{gamer.nickName}</td>
+                        <td>{gamer.score}</td>
+                      })
+                    }
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Container>
   );
 }
 

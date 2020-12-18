@@ -6,7 +6,7 @@ const articleSchema = new mongoose.Schema({
     required: true,
     minlength: 2
   },
-  bodytext: {
+  caption: {
     type: String,
     required: true,
     minlength: 2
@@ -16,7 +16,7 @@ const articleSchema = new mongoose.Schema({
     required: true,
     minlength: 2
   },
-  author: {
+  publisher: {
     type: String,
     required: true,
     minlength: 2
@@ -34,3 +34,6 @@ const articleSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('articles', articleSchema)
+
+// Acceso a DB
+// mongodb+srv://LuisFernandoGomezMorin:sn7IsPipktgYGjrD@kodemia-bootcamp.frxxh.mongodb.net/neku

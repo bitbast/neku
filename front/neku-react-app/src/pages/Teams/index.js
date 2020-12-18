@@ -1,10 +1,13 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 import { Container, Row, Col} from "reactstrap";
-import TeamsCard from "../../components/TeamsCards"
+import TeamsCard from "../../components/TeamsCards";
 import 'bootstrap/dist/css/bootstrap.css';
-import "./Teams.css"
+import "./Teams.css";
+
+
 
 class Teams extends Component {
+
     render() {
         return(
             <Container fluid className="teamsContainer">
@@ -17,14 +20,9 @@ class Teams extends Component {
                             <img max width="100%" height="250" src="https://www.techgames.com.mx/wp-content/uploads/2019/08/Telcel-LVP-Mexico-equipos.jpg" alt="Gamer img" />
                     </Col> 
                 </Row>
-                <Row >
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                    <TeamsCard></TeamsCard>
-                </Row>
+        
+                <TeamsCard></TeamsCard>
+                
             </Container>
         )
     }

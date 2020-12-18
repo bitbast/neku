@@ -17,16 +17,9 @@ class Videogames extends Component {
                             <img max width="100%" height="250" src="https://assets.eleconomista.com.mx/__export/1581119523386/sites/eleconomista/img/2020/02/07/que-son-esports.jpg_554688468.jpg" alt="Gamer img" />
                     </Col> 
                 </Row>
-                <Row >
-                    <VideogamesCard></VideogamesCard>
-                    <VideogamesCard></VideogamesCard>
-                    <VideogamesCard></VideogamesCard>
-                    <VideogamesCard></VideogamesCard>
-                    <VideogamesCard></VideogamesCard>
-                    <VideogamesCard></VideogamesCard>
-                    <VideogamesCard></VideogamesCard>
-                    <VideogamesCard></VideogamesCard>
-                </Row>
+
+                <VideogamesCard></VideogamesCard>
+
             </Container>
         )
     }

@@ -1,38 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import {
   CardBody,
   CardTitle,
   CardSubtitle,
+  Button,
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
+  CarouselIndicators
 } from 'reactstrap';
 
 // ------------- CSS ------------- //
 import './CarouselTour.css'
 
-import TableResults from '../TableResults'
+// import TableResults from '../TableResults'
 
-const items = [
-  {
-    src: 'https://cdn2.unrealengine.com/11br-competitive-evergreen-blue-newsheader-1920x1080-957497914.jpg',
-    altText: 'FORTNITE',
-  },
-  {
-    src: 'https://cdn.game.tv/game-tv-content/images_3/e412a7c3eb24413110362fd06686cc92/Banners.jpg',
-    altText: 'AMONG US',
-  },
-  {
-    src: 'https://d1fs8ljxwyzba6.cloudfront.net/assets/article/2019/09/10/smash-ultimate-european-circuit-times-tournaments-details-header_feature.jpg',
-    altText: 'SMASH BROS ULTIMATE',
-  }
-];
+const items = [];
 
 const CarouselNews = (props) => {
+
+  const [tournaments, setTournament] = useState([]);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -53,32 +43,58 @@ const CarouselNews = (props) => {
     setActiveIndex(newIndex);
   }
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-        <CardBody>
-          <CardTitle tag="h5">League Of Legends</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Ubicación: </CardSubtitle>
-        </CardBody>
-        <TableResults />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-      </CarouselItem>
-    );
-  });
+  useEffect(() => {
+    // console.log('mountComponent')
+    obtainData()
+
+    // console.log(news)
+  },[])
+
+  const obtainData = async () => {
+      const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/tournaments")
+      const tournamentsCollection = await data.json()
+      console.log(tournamentsCollection)
+      setTournament(tournamentsCollection.data.tournament) // de este key es de donde estoy jalando la info del json
+      console.log(tournaments)
+  }
 
   return (
-    <Carousel
+    <Carousel className="carouselTour"
       activeIndex={activeIndex}
       next={next}
       previous={previous}
+      interval={false}
     >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
+      { 
+        tournaments.map((item) => {          
+          return (
+              <CarouselItem
+                onExiting={() => setAnimating(true)}
+                onExited={() => setAnimating(false)}
+                key={item._id}
+              >
+                <a href={item.source}>
+                  <img src={item.picture} alt={item.tournamentName} />
+                </a>
+                <CardBody>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <CardTitle>
+                      <h5>{item.tournamentName}</h5>
+                    </CardTitle>
+                    <p id="tourCountryFlag">{item.countryFlag}</p>
+                  </div>
+                  <div>
+                    <CardSubtitle id="tourCountry" className="mb-2 text-muted">
+                      <h6>{item.country}</h6>
+                    </CardSubtitle>
+                    <h6 className="mb-2 text-muted">{item.date}</h6>
+                  </div>
+                </CardBody>
+              </CarouselItem>
+          )
+        })
+      }
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>

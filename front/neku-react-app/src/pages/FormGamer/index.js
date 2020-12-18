@@ -12,7 +12,7 @@ class FormGamer extends Component {
             <Container fluid className="signGamer">
                 <Row>
                     <Col>
-                        <SignupGamer />
+                       <SignupGamer />
                     </Col>
                 </Row>
             </Container>

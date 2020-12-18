@@ -36,16 +36,6 @@ const tournamentSchema = new mongoose.Schema({
     required: true,
     minlength: 2
   },
-  winner: {
-    type: String,
-    required: true,
-    minlength: 2
-  },
-  winnerTeam: {
-    type: String,
-    required: true,
-    minlength: 2
-  },
   picture: {
     type: String,
     required: true,
@@ -54,3 +44,6 @@ const tournamentSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('tournaments', tournamentSchema)
+
+// Acceso a DB
+// mongodb+srv://LuisFernandoGomezMorin:sn7IsPipktgYGjrD@kodemia-bootcamp.frxxh.mongodb.net/neku

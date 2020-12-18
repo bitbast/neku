@@ -11,14 +11,14 @@ function Home(props) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/")
+    fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/")
       .then((response) => response.json())
       .then((data) => {
-        setPosts(data.data.entries);
+        setPosts(data.data);
       });
   }, []);
 
-  const middlePosts = posts.slice(0, 4);
+  // const middlePosts = posts.slice(0, 4);
   console.log(props);
   return (
     <div>

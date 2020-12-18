@@ -1,7 +1,7 @@
 const Articles = require('../models/news')
 
 function getAll () {
-  return Articles.find()
+  return Articles.find().limit(3)
 }
 
 function getById (id) {

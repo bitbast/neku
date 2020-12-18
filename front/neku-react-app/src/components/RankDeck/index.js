@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import {
-  Container, Row, Col, Card, Button, CardImg, CardTitle, CardText, CardDeck,
-  CardSubtitle, CardBody
+  Container, Row, Col
 } from 'reactstrap';
 
 // ------------- CSS ------------- //
 import './RankDeck.css'
 
 // ------------- SMALLER COMPONENTS ------------- //
-import TableInfo from '../TableInfo'
+import RankCard from '../RankCard'
 
 
 const RankDeck = (props) => {
+
+  const [gamer, setGamer] = useState([]);
+
+  useEffect(() => {
+    obtainData()
+  },[])
+
+  const obtainData = async () => {
+      const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/players")
+      const gamersCollection = await data.json()
+      // console.log(gamersCollection)
+      setGamer(gamersCollection.data.team) // de este key es de donde estoy jalando la info del json
+      // console.log(gamer)
+  }
+
   return (
-  <Container fluid>
+  <Container fluid id="rankersSection">
     <Row>
       <Col className="heading">
         <h1>RANKERS</h1>
@@ -23,72 +37,9 @@ const RankDeck = (props) => {
       </Col>
     </Row>
     <Row>
-      <CardDeck>
-        <Card className="rankerCards">
-          <CardImg top src="https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976853.png" alt="Card image cap" />
-          <CardBody>
-            <div className="d-flex justify-content-between align-items-center">
-              <div>
-                <CardTitle tag="h5">Ranker Name</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
-              </div>
-              <p className="countryFlag">🇲🇽</p>
-            </div>
-            <TableInfo />
-            <div className="d-flex justify-content-center align-items-center pb-3">
-              <Button id="moreInfoBtn">DESCUBRE MÁS INFORMACIÓN</Button>
-            </div>
-          </CardBody>
-        </Card>
-        <Card className="rankerCards">
-          <CardImg top src="https://a.espncdn.com/i/headshots/college-football/players/full/4565313.png" alt="Card image cap" />
-          <CardBody>
-            <div className="d-flex justify-content-between align-items-center">
-              <div>
-                <CardTitle tag="h5">Ranker Name</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
-              </div>
-              <p className="countryFlag">🇲🇽</p>
-            </div>
-            <TableInfo />
-            <div className="d-flex justify-content-center align-items-center pb-3">
-              <Button id="moreInfoBtn">DESCUBRE MÁS INFORMACIÓN</Button>
-            </div>
-          </CardBody>
-        </Card>
-        <Card className="rankerCards">
-          <CardImg top src="https://a.espncdn.com/i/headshots/nhl/players/full/3941970.png" alt="Card image cap" />
-          <CardBody>
-            <div className="d-flex justify-content-between align-items-center">
-              <div>
-                <CardTitle tag="h5">Ranker Name</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
-              </div>
-              <p className="countryFlag">🇲🇽</p>
-            </div>
-            <TableInfo />
-            <div className="d-flex justify-content-center align-items-center pb-3">
-              <Button id="moreInfoBtn">DESCUBRE MÁS INFORMACIÓN</Button>
-            </div>
-          </CardBody>
-        </Card>
-        <Card className="rankerCards">
-          <CardImg top src="https://a.espncdn.com/i/headshots/nhl/players/full/3114770.png" alt="Card image cap" />
-          <CardBody>
-            <div className="d-flex justify-content-between align-items-center">
-              <div>
-                <CardTitle tag="h5">Ranker Name</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">nickname</CardSubtitle>
-              </div>
-              <p className="countryFlag">🇲🇽</p>
-            </div>
-            <TableInfo />
-            <div className="d-flex justify-content-center align-items-center pb-3">
-              <Button id="moreInfoBtn">DESCUBRE MÁS INFORMACIÓN</Button>
-            </div>
-          </CardBody>
-        </Card>
-      </CardDeck>
+      <Col>
+        <RankCard/>
+      </Col>
     </Row>
   </Container>
   );

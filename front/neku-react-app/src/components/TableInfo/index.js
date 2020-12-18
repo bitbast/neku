@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 
 // ------------- REACTSTRAP ------------- //
 import { Table } from 'reactstrap';
@@ -7,36 +7,43 @@ import { Table } from 'reactstrap';
 import './TableInfo.css'
 
 const TableInfo = (props) => {
+
+  const [gameStats, setGameStats] = useState([]);
+
+  useEffect(() => {
+    obtainData()
+  },[])
+
+  const obtainData = async () => {
+      const data = await fetch("https://nekuapi-sleepy-kudu-wm.mybluemix.net/players")
+      const gameStatsCollection = await data.json()
+      console.log(gameStatsCollection)
+      setGameStats(gameStatsCollection.data.team) // de este key es de donde estoy jalando la info del json
+  }
+
   return (
-    <Table borderless>
+    <Table borderless table-condensed table-responsive>
       <thead className="tableHead">
         <tr>
           <th>Juego</th>
-          <th>Ranking</th>
-          <th>Puntuación</th>
-          <th>Tiempo de juego</th>
+          <th>Puntos</th>
+          <th>Torneos Jugados</th>
+          <th className="hideCol">Equipo</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>League Of Legends</td>
-          <td>1</td>
-          <td>16,345 pts</td>
-          <td>2,000 hrs</td>
-        </tr>
-        <tr>
-          <td>Among Us</td>
-          <td>324</td>
-          <td>14,369 pts</td>
-          <td>300 hrs</td>
-        </tr>
-        <tr>
-          <td>Overwatch</td>
-          <td>15</td>
-          <td>14,123 pts</td>
-          <td>647 hrs</td>
-        </tr>
-      </tbody>
+      {
+        gameStats.map((item) => {          
+          return (
+            <Fragment>
+              <tbody>
+                <tr>
+
+                </tr>
+              </tbody>
+            </Fragment>
+          )
+        })
+      }
     </Table>
   );
 }

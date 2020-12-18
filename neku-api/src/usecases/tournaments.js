@@ -1,7 +1,7 @@
 const Tournaments = require('../models/tournaments')
 
 function getAll () {
-  return Tournaments.find()
+  return Tournaments.find().limit(3)
 }
 
 function getById (id) {
