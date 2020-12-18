@@ -90,7 +90,7 @@ router.post('/', async (request, response) => {
       name,
       fatherLastname,
       motherLastname,
-      nickName,
+      nickname,
       gamerPicture,
       gamerProfile,
       team,
@@ -109,7 +109,7 @@ router.post('/', async (request, response) => {
     if (!name) throw new Error('Gamer Name is required')
     if (!fatherLastname) throw new Error('Father Lastname is required')
     if (!motherLastname) throw new Error('Mother Lastname is required')
-    if (!nickName) throw new Error('Nickname is required')
+    if (!nickname) throw new Error('Nickname is required')
     if (!gamerPicture) throw new Error('GamerPicture is required')
     if (!gamerProfile) throw new Error('GamerProfile is required')
     if (!team) throw new Error('Team is required')
@@ -128,7 +128,7 @@ router.post('/', async (request, response) => {
       name,
       fatherLastname,
       motherLastname,
-      nickName,
+      nickname,
       gamerPicture,
       gamerProfile,
       team,
